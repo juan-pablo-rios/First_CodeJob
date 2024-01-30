@@ -1,0 +1,16 @@
+{
+  "users" : [
+    {
+      "name" : "",
+      "email" : "",
+      "phone_number": "",
+      "password" : "",
+      "password_confirmation" : "",
+      "city" : "",
+      "website" : "",
+      "birthday" : "",
+      "cv" : ""
+    }
+  ]
+
+}
