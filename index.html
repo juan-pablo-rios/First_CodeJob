@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{First_CodeJob}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/modalsignin.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="./js/app.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="body" id="body">
+    <!-- ------------------------------------------- SIGN IN MODAL ------------------------------------------- -->
+    <!-- MODAL SIGN IN CONTAINER -->
+    <div id="signInModal" class="signInModal">
+        <div class="signInModalContent">
+            <div class="containerModalsignInCloseButton">
+                <span class="questionSignUp">¿Aún no estás registrado/a?</span>
+                <a href="./signup.html" class="signUpOption">Regístrate ahora</a>
+                <span class="closeModalSignIn" id="closeModalSignIn">&times;</span>
+            </div>
+            <div class="containerModalsignInForm">
+                <div class="signInTitleInfo">
+                    <h2>¡Hola!</h2>
+                    <p>Estás a un click de abrir miles de oportunidades</p>
+                </div>
+                <div class="containerSignInInputs">
+                    <div class="secundaryContainerSignInInputs">
+                        <input type="text" name="" id="signInEmailInput" class="signInInputs signInInputEmail" placeholder="Email">
+                        <input type="text" name="" id="signInPasswordInput" class="signInInputs signInInputPassword" placeholder="Contraseña">
+                        <a href="#" class="forgotPasswordOption">Olvidé la contraseña</a>
+                        <button type="submit" class="signInButton"><a href="#">Iniciar sesión</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------- RESPONSIVE NAVBAR ------------------------------------------->
+    <button class="button_burger" onclick="toggleMenu()"></button>
+    <div class="background"></div>
+    <div class="responsive_menu">
+        <nav>
+            <a href="./index.html" class="burger_menu_item_1" style="animation-delay: 0.1s">Inicio</a>
+            <a href="#" class="burger_menu_item_2" style="animation-delay: 0.3s">Ofertas</a>
+            <a href="#" class="burger_menu_item_3" style="animation-delay: 0.4s">Nosotros</a>
+            <a href="#" class="burger_menu_item_4" style="animation-delay: 0.5s">Perfil</a>
+            <a href="#" id="openButtonSignInResponsive" class="burger_menu_item_5" style="animation-delay: 0.6s">Iniciar Sesión</a>
+            <a href="#" class="burger_menu_item_6" style="animation-delay: 0.6s">Registrarse</a>
+        </nav>
+    </div>
+    <!-------------------------------------------- NAVBAR ------------------------------------------->
+    <nav class="container_menu">
+        <!-- TOP BOX -->
+        <div class="container_top_box">
+            <ul class="container_list_top_box">
+                <li class="item item_1"><a href="#" id="openButtonSignIn">Iniciar Sesión</a></li>
+                <li class="item item_2"><a href="./html/signup.html">Registrarse</a></li>
+                <select name="" id="" class="select_navbar">
+                    <option value="">Español</option>
+                    <option value="">Inglés</option>
+                </select>
+            </ul>
+        </div>
+        <!-- BOTTOM BOX -->
+        <div class="container_bottom_box">
+            <!-- LINKS -->
+            <ul class="container_list_bottom_box_1">
+                <li class="item item_3"><a href="./index.html">Inicio</a></li>
+                <li class="item item_4"><a href="#">Ofertas</a></li>
+            </ul>
+            <!-- TITLE -->
+            <header class="header_container">
+                <span class="brackets bracket_1">{</span>
+                <a href="#" class="title_navbar" title="{First_CodeJob}">First<span class="title_underscore">_</span>CodeJob</a>
+                <span class="brackets bracket_2">}</span>
+            </header>
+            <!-- LINKS -->
+            <ul class="container_list_bottom_box_2">
+                <li class="item item_5"><a href="#">Nosotros</a></li>
+                <li class="item item_6"><a href="#">Perfil</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- --------------------------------------------------- MAIN  --------------------------------------------------- -->
+    <section class="container-fluid indexIntro p-0">
+        <div class="row index d-flex justify-content-center">
+            <!-- Column for Intro Information -->
+            <div class="col-md-6 columnInfoIntro">
+                <!-- Title -->
+                <h1 class="titleIntro overflow-hidden">
+                    ¡Consigue tu primer EMPLEO COMO 
+                    <span class="effectTitleIntro">DESARROLLADOR</span>!
+                </h1>
+                <!-- Paragraph -->
+                <p class="parrafoIntro">
+                    Encuentra la <span class="effectParradoIntro">oportunidad</span> que
+                    te llevará al siguiente nivel en tu carrera como desarrollador.
+                    Ingresa tus <span class="effectParradoIntro">habilidades</span>,
+                    preferencias para descubrir habilidades
+                    <span class="effectParradoIntro">empleos</span> a medida que se
+                    ajusten a tus metas profesionales. Tu futuro en la
+                    <span class="effectParradoIntro">tecnología</span> comienza aquí.
+                </p>
+                <!-- Search Bar -->
+                <form class="d-flex containBarraBusqueda" role="search">
+                    <input
+                        class="form-control inputBarraBusqueda"
+                        type="search"
+                        placeholder="Frontend/Backend"
+                        aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success btnBarraBusqueda" type="submit">
+                        Buscar
+                    </button>
+                </form>
+            </div>
+            <!-- Column for Image -->
+            <div class="col-md-6 columnImgIntro d-flex justify-content-center">
+                <div class="imgIntro"></div>
+            </div>
+        </div>
+        <!-- Company Logos Section -->
+        <div class="containerEmpresas">
+            <div class="textrow">
+                <p class="d-flex justify-content-center p-2 titleEmpresas">¡Podrás ser parte de las <span class="effectParradoIntro me-1 ms-1">empresas</span> más <span class="effectParradoIntro me-1 ms-1">top</span>!</p>
+            </div>
+            <div class="row firstRow">
+                <div class="col-md-2 contenedorLogo">
+                    <img src="./assets/img/openai.svg" class="logoEmpresa" alt="logo open AI">
+                </div>
+                <div class="col-md-2 contenedorLogo">
+                <img src="./assets/img/cisco.svg" class="logoEmpresa" alt="logo cisco">
+                </div>
+                <div class="col-md-2 contenedorLogo">
+                <img src="./assets/img/redhad.png" class="logoEmpresa" alt="logo redhat">
+                </div>
+                <div class="col-md-2 contenedorLogo">
+                <img src="./assets/img/samsung.svg" class="logoEmpresa" alt="logo samsung">
+                </div>
+                <div class="col-md-2 contenedorLogo">
+                <img src="./assets/img/google.svg" class="logoEmpresa" alt="logo google">
+                </div>
+                <div class="col-md-2 contenedorLogo">
+                <img src="./assets/img/microsoft.svg" class="logoEmpresa" alt="logo google">
+                </div>
+            </div>
+            <div class="row secondRow">
+            <div class="col-md-2 contenedorLogo">
+                <img src="./assets/img/amazon.svg" class="logoEmpresa" alt="logo open AI">
+            </div>
+            <div class="col-md-2 contenedorLogo">
+                <img src="./assets/img/oracle.svg" class="logoEmpresa" alt="logo open AI">
+            </div>
+            <div class="col-md-2 contenedorLogo">
+                <img src="./assets/img/sony.svg" class="logoEmpresa" alt="logo open AI">
+            </div>
+            <div class="col-md-2 contenedorLogo">
+                <img src="./assets/img/meta.svg" class="logoEmpresa meta" alt="logo open AI">
+            </div>
+            <div class="col-md-2 contenedorLogo">
+                <img src="./assets/img/ibm.svg" class="logoEmpresa" alt="logo open AI">
+            </div>
+            </div>
+            <!-- Add similar columns for other company logos -->
+        </div>
+        </div>
+    </section>
+    <!-- Section for info page -->
+    <section class="cardsInf d-flex justify-content-center flex-column">
+    <!-- Title for info -->
+    <h2 class="titleSectionCards col-md-12 m-0">Explora Tu Futuro Tecnológico</h2>
+    <!-- Line -->
+    <hr class="col align-self-center border-1 opacity-100 hrtitleSectionCards">
+    <!-- Paragraph -->
+    <p class="paragraphSectionCards col align-self-center mb-5">Explora las siguientes rutas especializadas y elige tu camino hacia el éxito en el mundo digital. Cada ruta ofrece oportunidades únicas y desafíos emocionantes. Desplázate hacia abajo para descubrir más sobre Frontend Development, Backend Development, Cybersecurity, Data Science, iOS Development y Android Development. Haz clic en "Ver Detalles" para sumergirte en las posibilidades que cada ruta tiene reservadas para ti. ¡Prepárate para desbloquear tu potencial y construir un futuro sólido en el campo tecnológico!</p>
+    <!-- Container card -->
+    <div class="container-md containerCard">
+        <!-- Row card -->
+        <div class="row rowCard">
+        <!-- Card and Column-->
+        <div class="col-md-4 columnCard mb-5">
+            <div class="card p-3 rounded-4">
+            <div class="d-flex justify-content-center contIMG">
+                <img src="./assets/img/card1.png" class="card-img-top imgCard" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title d-flex justify-content-center">Frontend Dev</h5>
+                <hr class="border border-1 opacity-100 hrTitleCards">
+                <p class="card-text mb-4">Construye los cimientos sólidos de las aplicaciones. Desarrolla servidores potentes y maneja la lógica detrás de cada interacción.</p>
+                <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+            </div>
+            </div>
+        </div>
+        <!-- Card and Column-->
+        <div class="col-md-4 columnCard mb-5">
+            <div class="card p-3 rounded-4">
+            <div class="d-flex justify-content-center contIMG">
+                <img src="./assets/img/card2.png" class="card-img-top imgCard" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title d-flex justify-content-center">Backend Dev</h5>
+                <hr class="border border-1 opacity-100 hrTitleCards">
+                <p class="card-text mb-4">Sumérgete en la creación de experiencias visuales impactantes. Diseña interfaces intuitivas y dale vida a la interacción usuario-ordenador.</p>
+                <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+            </div>
+            </div>
+        </div>
+        <!-- Card and Column-->
+        <div class="col-md-4 columnCard mb-5">
+            <div class="card p-3 rounded-4">
+            <div class="d-flex justify-content-center contIMG">
+                <img src="./assets/img/card3.png" class="card-img-top imgCard" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title d-flex justify-content-center">Cybersecurity</h5>
+                <hr class="border border-1 opacity-100 hrTitleCards">
+                <p class="card-text mb-4">Conviértete en el guardián digital. Aprende a proteger sistemas y datos, y lucha contra amenazas cibernéticas en constante evolución.</p>
+                <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+            </div>
+            </div>
+        </div>
+        <!-- add other similar cards for the row -->
+        </div>
+        <!-- Row card -->
+        <div class="row rowCard">
+        <!-- Card and Column-->
+        <div class="col-md-4 columnCard mb-5">
+            <div class="card p-3 rounded-4">
+            <div class="d-flex justify-content-center contIMG">
+                <img src="./assets/img/data_Science.png" class="card-img-top imgCard" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title d-flex justify-content-center">Data Science</h5>
+                <hr class="border border-1 opacity-100 hrTitleCards">
+                <p class="card-text mb-4">Explora el poder de los datos. Conviértete en un científico de datos y descubre patrones, tendencias y conocimientos valiosos para la toma de decisiones.</p>
+                <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+            </div>
+            </div>
+        </div>
+        <!-- Card and Column-->
+        <div class="col-md-4 columnCard mb-5">
+            <div class="card p-3 rounded-4">
+            <div class="d-flex justify-content-center contIMG">
+                <img src="./assets/img/card4.png" class="card-img-top imgCard" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title d-flex justify-content-center">iOS Dev</h5>
+                <hr class="border border-1 opacity-100 hrTitleCards">
+                <p class="card-text mb-4">Adéntrate en el mundo de Apple. Desarrolla aplicaciones para dispositivos iOS y crea experiencias únicas para millones de usuarios.</p>
+                <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+            </div>
+            </div>
+        </div>
+        
+        <!-- Card and Column-->
+        <div class="col-md-4 columnCard mb-5">
+            <div class="card p-3 rounded-4">
+            <div class="d-flex justify-content-center contIMG">
+                <img src="./assets/img/card6.png" class="card-img-top imgCard" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title d-flex justify-content-center">Android Dev</h5>
+                <hr class="border border-1 opacity-100 hrTitleCards">
+                <p class="card-text mb-4">Domina el ecosistema Android. Construye aplicaciones para una amplia variedad de dispositivos y moldea la experiencia digital en dispositivos Android.</p>
+                
+                <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+            </div>
+            </div>
+        </div> 
+        <!-- add other similar cards for the row -->
+        </div>
+    </div>
+    </section>
+    <!-------------------------------------------- FOOTER ------------------------------------------->
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="#"><ion-icon name="logo-github"></ion-icon></a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+        </ul>
+        <p class="footer_text">&copy;2023 First_CodeJob | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{First_CodeJob}</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/navbarsignin.css">
+    <script src="../js/app.js" defer></script>
+</head>
+<body>
+    <!-------------------------------------------- RESPONSIVE NAVBAR ------------------------------------------->
+    <button class="button_burger" onclick="toggleMenu()"></button>
+    <div class="background"></div>
+    <div class="responsive_menu">
+        <nav>
+            <a href="../index.html" class="burger_menu_item_1" style="animation-delay: 0.1s">Inicio</a>
+            <a href="#" class="burger_menu_item_2" style="animation-delay: 0.3s">Ofertas</a>
+            <a href="#" class="burger_menu_item_3" style="animation-delay: 0.4s">Nosotros</a>
+            <a href="#" class="burger_menu_item_4" style="animation-delay: 0.5s">Perfil</a>
+        </nav>
+    </div>
+    <!-------------------------------------------- NAVBAR ------------------------------------------->
+    <nav class="container_menu">
+        <!-- TOP BOX -->
+        <div class="container_top_box">
+            <ul class="container_list_top_box">
+                <a href="#" class="container_profile_image">
+                    <img src="../assets/img/profile_image.jpg" alt="profile" title="Profile" class="profile_image" id="profileImage">
+                </a>
+                <select name="" id="" class="select_navbar">
+                    <option value="">Español</option>
+                    <option value="">Inglés</option>
+                </select>
+            </ul>
+        </div>
+        <!-- BOTTOM BOX -->
+        <div class="container_bottom_box">
+            <!-- LINKS -->
+            <ul class="container_list_bottom_box_1">
+                <li class="item item_3"><a href="../index.html">Inicio</a></li>
+                <li class="item item_4"><a href="#">Ofertas</a></li>
+            </ul>
+            <!-- TITLE -->
+            <header class="header_container">
+                <span class="brackets bracket_1">{</span>
+                <a href="../index.html" class="title_navbar" title="{First_CodeJob}">First<span class="title_underscore">_</span>CodeJob</a>
+                <span class="brackets bracket_2">}</span>
+            </header>
+            <!-- LINKS -->
+            <ul class="container_list_bottom_box_2">
+                <li class="item item_5"><a href="#">Nosotros</a></li>
+                <li class="item item_6"><a href="#">Perfil</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+</body>
+</html>

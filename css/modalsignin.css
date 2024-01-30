@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+/* 
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lilita One', sans-serif; 
+font-family: 'Martel Sans', sans-serif;
+colores:
+    GRISDARK FONDO: #2E2E2E
+    GRISDARK WORDS: #DADADA
+    NEGRO: #000000
+    BLANCO: #ffffff
+    VERDE: #5BB403
+*/
+/* --------------------------------------- SIGN IN MODAL -------------------------------------------- */
+.signInModal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.671); /* Opacity */
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Modal Content/Box */
+.signInModalContent {
+    background-color: #000000;
+    width: 50%;
+    height: 70%;
+    position: relative;
+    top: 13.8%;
+    left: 25%;
+    overflow-y: auto;
+    box-shadow: 0px 0px 7px 3px #5BB403;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+/* CONTAINER CLOSE BUTTON */
+.containerModalsignInCloseButton{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 28rem;
+    align-self: flex-end;
+    color: #ffffff;
+}
+/* SIGN UP OPTION */
+.signUpOption{
+    text-decoration: none;
+    color: #5BB403;
+    }
+.signUpOption:hover{
+    color: #4d9802;
+}
+
+/* CLOSE BUTTON */
+.closeModalSignIn {
+    position: relative;
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: bold;
+}
+.closeModalSignIn:hover,
+.closeModalSignIn:focus {
+    color: #5BB403;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* CONTAINER SING IN INFO */
+.containerModalsignInForm{
+    background-color: #000000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+/* SIGN IN TITLE & INFO */
+.signInTitleInfo{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    color: #ffffff;
+}
+/* CONTAINER SIGN IN INPUTS */
+.containerSignInInputs{
+    position: relative;
+    height: 70%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+/* INPUTS */
+.secundaryContainerSignInInputs{
+    width: 22rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.signInInputEmail{
+    margin: 25px 0px;
+}
+.signInInputs{
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    outline: none;
+    border-radius: 10px;
+}
+.signInInputs:hover{
+    box-shadow: 0px 0px 5px 4px #5BB403;
+    color: #ffffff;
+    background-color: #000000;
+}
+/* FORGOT PASSWORD */
+.forgotPasswordOption{
+    align-self: flex-end;
+    text-decoration: none;
+    color: #5BB403;
+    margin: 10px 0px;
+}
+/* SIGN IN BUTTON */
+.signInButton{
+    margin: 50px 0;
+    padding: 10px;
+    width: 16rem;
+    align-self: center;
+    border-radius: 10px;
+    border: none;
+    background-color: #000000;
+    box-shadow: 0px 0px 5px 4px #5BB403;
+}
+.signInButton:hover{
+    background-color: #5BB403;
+    color: #ffffff;
+    box-shadow: 0px 0px 5px 4px #ffffff;
+}
+.signInButton a{
+    text-decoration: none;
+    color: #ffffff;
+}
+/* MODAL RESPONSIVE */
+@media screen and (max-width: 900px){
+    .questionSignUp{
+        display: none;
+    }
+    .containerModalsignInCloseButton{
+        justify-content: space-evenly;
+        align-items: center;
+        width: 12rem;
+    }
+}
+@media screen and (max-width: 770px){
+    .secundaryContainerSignInInputs{
+        width: 100%;
+    }
+    .signInTitleInfo{
+        text-align: center;
+    }
+}
+  /* MODAL RESPONSIVE */
+@media screen and (max-width: 570px){
+    .signInModalContent {
+        width: 80%;
+        left: 10%;
+        overflow: hidden;
+    }
+}
