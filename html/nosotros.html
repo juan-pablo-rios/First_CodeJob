@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/stylenosotros.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Nosotros</title>
+</head>
+<body>
+    <!-------------------------------------------- RESPONSIVE NAVBAR ------------------------------------------->
+    <button class="button_burger" onclick="toggleMenu()"></button>
+    <div class="background"></div>
+    <div class="responsive_menu">
+        <nav>
+            <a href="#" class="burger_menu_item_1" style="animation-delay: 0.1s">Inicio</a>
+            <a href="#" class="burger_menu_item_2" style="animation-delay: 0.3s">Ofertas</a>
+            <a href="#" class="burger_menu_item_3" style="animation-delay: 0.4s">Nosotros</a>
+            <a href="#" class="burger_menu_item_4" style="animation-delay: 0.5s">Perfil</a>
+            <a href="#" class="burger_menu_item_5" style="animation-delay: 0.6s">Iniciar Sesión</a>
+            <a href="#" class="burger_menu_item_6" style="animation-delay: 0.6s">Registrarse</a>
+        </nav>
+    </div>
+    <!-------------------------------------------- NAVBAR ------------------------------------------->
+    <nav class="container_menu">
+        <!-- TOP BOX -->
+        <div class="container_top_box">
+            <ul class="container_list_top_box">
+                <li class="item item_1"><a href="./HTML/ofertas.html">Iniciar Sesión</a></li>
+                <li class="item item_2"><a href="./HTML/rutas.html">Registrarse</a></li>
+                <select name="" id="" class="select_navbar">
+                    <option value="">Español</option>
+                    <option value="">Inglés</option>
+                </select>
+            </ul>
+        </div>
+        <!-- BOTTOM BOX -->
+        <div class="container_bottom_box">
+            <!-- LINKS -->
+            <ul class="container_list_bottom_box_1">
+                <li class="item item_3"><a href="#">Inicio</a></li>
+                <li class="item item_4"><a href="#">Ofertas</a></li>
+            </ul>
+            <!-- TITLE -->
+            <header class="header_container">
+                <span class="brackets bracket_1">{</span>
+                <a href="#" class="title_navbar" title="{First_CodeJob}">First<span class="title_underscore">_</span>CodeJob</a>
+                <span class="brackets bracket_2">}</span>
+            </header>
+            <!-- LINKS -->
+            <ul class="container_list_bottom_box_2">
+                <li class="item item_5"><a href="#">Nosotros</a></li>
+                <li class="item item_6"><a href="#">Perfil</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container-md landing">
+        <div class="row rowLanding">
+
+            <div class="col-md-6 contenidoText">
+
+                <div class="titleInfoLanding">
+                    <h2 class="title">¿Por qué?</h2>
+                    <div class="hrLine">
+                        <hr class="lineLandig opacity-100">
+                    </div>
+                </div>
+
+                <div class="paragraphInfoLanding">
+                    <p class="paragraph">Este proyecto, <span class="effectParradoIntro">{First_CodeJob}</span>, nace en respuesta al constante <span class="effectParradoIntro">crecimiento de la industria tecnológica</span>. La creciente demanda de <span class="effectParradoIntro">desarrolladores</span> y profesionales con <span class="effectParradoIntro">habilidades técnicas</span> para implementar soluciones ha generado la necesidad de una plataforma especializada.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 infoLandingImg d-flex justify-content-center">
+                <div class="imgLanding"></div>
+            </div>
+
+        </div>
+
+        <div class="row rowLanding d-flex">
+
+            <div class="col-md-6 infoLandingImg d-flex justify-content-center">
+                <div class="imgLanding"></div>
+            </div>
+
+            <div class="col-md-6 contenidoText text-end">
+
+                <div class="titleInfoLanding">
+                    <h2 class="title">¿Para qué?</h2>
+                    <div class="hrLine hrleft">
+                        <hr class="lineLandig opacity-100">
+                    </div>
+                </div>
+
+                <div class="paragraphInfoLanding">
+                    <p class="paragraph">Este proyecto, <span class="effectParradoIntro">{First_CodeJob}</span>, nace en respuesta al constante <span class="effectParradoIntro">crecimiento de la industria tecnológica</span>. La creciente demanda de <span class="effectParradoIntro">desarrolladores</span> y profesionales con <span class="effectParradoIntro">habilidades técnicas</span> para implementar soluciones ha generado la necesidad de una plataforma especializada.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row rowLanding d-flex">
+
+            <div class="col-md-6 contenidoText">
+
+                <div class="titleInfoLanding">
+                    <h2 class="title">¿Para quién?</h2>
+                    <div class="hrLine">
+
+                        <hr class="lineLandig opacity-100">
+                    </div>
+                </div>
+
+                <div class="paragraphInfoLanding">
+                    <p class="paragraph"><span class="effectParradoIntro">First_CodeJob</span> está exclusivamente diseñado para <span class="effectParradoIntro">desarrolladores</span> que aspiran a obtener su primer empleo en el campo tecnológico. Ofrece una plataforma especializada que facilita el inicio de la carrera profesional de los desarrolladores al proporcionar oportunidades específicas y relevantes.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 infoLandingImg d-flex justify-content-center">
+                <div class="imgLanding"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-------------------------------------------- FOOTER ------------------------------------------->
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="#"><ion-icon name="logo-github"></ion-icon></a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+        </ul>
+        <p class="footer_text">&copy;2023 First_CodeJob | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

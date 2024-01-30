@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+/* 
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lilita One', sans-serif; 
+font-family: 'Martel Sans', sans-serif;
+colores:
+    GRISDARK FONDO: #2E2E2E
+    GRISDARK WORDS: #DADADA
+    NEGRO: #000000
+    BLANCO: #ffffff
+    VERDE: #5BB403
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2E2E2E;
+  color: white;
+  height: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.landing {
+  height: 100%;
+  margin-bottom: 18%;
+}
+
+.titleInfoLanding {
+  width: 100%;
+  font-family: 'Lilita One', sans-serif;
+}
+
+.title {
+  font-size: 3.2vw;
+}
+
+.paragraphInfoLanding {
+  width: 100%;
+}
+
+.lineLandig {
+  width: 60%;
+  border: 1px #80ff00 solid;
+}
+
+.hrleft {
+  display: flex;
+  justify-content: end;
+}
+
+.rowLanding {
+  height: 100%;
+  margin: 10% 0;
+}
+
+.infoLandingImg {
+  height: 30vw;
+}
+
+.paragraphInfoLanding .paragraph {
+  line-height: 2;
+  font-weight: 400;
+  font-size: 1.6vw;
+  text-align: justify;
+}
+
+.effectParradoIntro {
+  color: #5BB403;
+}
+
+.imgLanding {
+  width: 75%;
+  height: 100%;
+  background-color: #5BB403;
+}
+
+@media screen and (max-width: 767px){
+
+  .rowLanding {
+    flex-wrap: wrap-reverse;
+  }
+
+  .infoLandingImg {
+    order: -1; /* Cambiado a -1 para mover la imagen debajo del texto en pantallas pequeñas */
+    margin-top: 20px; /* Agregado un margen superior para separar el texto de la imagen */
+  }
+
+  .rowLanding {
+    margin: 8% 10%;
+  }
+
+  .titleInfoLanding {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  .hrLine {
+    display: flex;
+    justify-content: center;
+  }
+
+  .paragraphInfoLanding .paragraph {
+    font-size: 2.5vw;
+    text-align: justify;
+  }
+
+  .rowLanding {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .infoLandingImg {
+    height: 350px;
+  }
+
+}

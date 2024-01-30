@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2E2E2E;
+  height: 100vh;
+}
+
+.rowBarraBusquedaInfo {
+  height: 30%;
+}
+
+.containBarraBusqueda {
+  width: 50%;
+}
+
+.inputBarraBusqueda {
+  height: 3rem;
+  font-size: 1vw;
+  border-radius: 25px;
+  padding: 2px 25px;
+  margin-right: 2%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.inputBarraBusqueda::placeholder {
+  height: 100%;
+  color: #696969;
+  text-align: center;
+  font-weight: bold;
+  font-size: 90%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.btnBarraBusqueda {
+  width: 15%;
+  border-radius: 20px;
+  font-size: 1.1vw;
+  font-weight: bold;
+  border-color: transparent;
+  background-color: #5BB403;
+  color: #ffffff;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.btnBarraBusqueda:hover {
+  border-color: transparent;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.info {
+  color: white;
+  margin: 5% 2% 5% 2%;
+}
+.filtro {
+  width: 60%;
+  height: 350px;
+  background-color: #000000;
+}
+.espanolCheck, .presencialCheck {
+  font-size: 15px;
+}
+
+.titleModalidadFilter , .titleIdiomaFilter {
+  font-size: 20px;
+}
