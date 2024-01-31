@@ -31,36 +31,13 @@ function pressSignIn() {
 
 // JSON RECUERDE LOS COMANDOS ESTA EN EL VIDEO PARA EL FETCH
 
-{
-  "users" : [
-    {
-      "id" : "1",
-      "fullName" : "",
-      "name" : "",
-      "email" : "test@example.com",
-      "password" : "testpassword",
-      "password_confirmation" : "",
-      "phone_number" : "",
-      "country": "",
-      "city": "",
-      "birthday" : "",
-      "CV" : ""
-    },
-
-    {
-      "id" : "2",
-      "fullName" : "",
-      "name" : "",
-      "email" : "test2@example.com",
-      "password" : "testpassword2",
-      "password_confirmation" : "",
-      "phone_number" : "",
-      "country": "",
-      "city": "",
-      "birthday" : "",
-      "CV" : ""
-    }
-  ]
-}
-
-onclick="pressSignIn()"
+infoUpdated = {
+            name: signUpNameInput,
+            email: signUpEmailInput,
+            password: signUpPhoneInput,
+            password_confirmation : signUpPasswordInput,
+            phone_number : signUpConfirmPasswordInput,
+            city: signUpCityInput, 
+            birthday : signUpDateInput,
+            CV : "",
+        };
