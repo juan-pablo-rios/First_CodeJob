@@ -24,13 +24,16 @@ título académico,
 página web
 */
 
+*{
+    background-color: black;
+}
 
 /* MAIN CONTAINER */
 .containerSignUp {
     font-family: 'Josefin Sans', sans-serif;;
     background-color: #2E2E2E;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -49,6 +52,7 @@ página web
     align-items: center;
     overflow: auto; 
     color: #ffffff;
+    text-align: center;
 }
 .signUpTitleInfo span {
     color: #5BB403;
@@ -60,7 +64,7 @@ página web
     justify-content:space-evenly;
     flex-wrap: wrap;
     width: 100%;
-    height: 25rem;
+    height: 100%;
 }
 /* 1 CONTAINER SIGN UP INPUT */
 .containerInputsSignUp_1{
@@ -68,6 +72,8 @@ página web
     flex-direction: column;
     justify-content:space-evenly;
     width: 20rem;
+    height: 25rem;
+    
 }
 /* 2 CONTAINER SIGN UP INPUT */
 .containerInputsSignUp_2{
@@ -75,6 +81,7 @@ página web
     flex-direction: column;
     justify-content:space-evenly;
     width: 20rem;
+    height: 25rem;
 }
 /* 3 CONTAINER SIGN UP INPUT */
 .containerInputsSignUp_3{
@@ -82,6 +89,7 @@ página web
     flex-direction: column;
     justify-content:space-evenly;
     width: 20rem;
+    height: 25rem;
 }
 
 /* LABELS */
@@ -109,7 +117,7 @@ página web
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10rem;
+    height: 15rem;
 }
 /* SIGN UP BUTTON */
 .signUpButton{
