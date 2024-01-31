@@ -1,0 +1,50 @@
+{
+"users": [
+    {
+    "name": "",
+    "email": "test@example.com",
+    "password": "testpassword",
+    "password_confirmation": "",
+    "phone_number": "",
+    "country": "",
+    "city": "",
+    "birthday": "",
+    "CV": ""
+    },
+    {
+    "name": "",
+    "email": "test2@example.com",
+    "password": "testpassword2",
+    "password_confirmation": "",
+    "phone_number": "",
+    "country": "",
+    "city": "",
+    "birthday": "",
+    "CV": ""
+    },
+    {
+    "id": "16a9",
+    "name": "Machado Smart",
+    "email": "machadosmart@gmail.com",
+    "password": "666666",
+    "password_confirmation": "123",
+    "phone_number": {},
+    "country": "2006-06-06",
+    "city": "Costa",
+    "birthday": "www.machado.com",
+    "CV": ""
+    },
+    {
+    "id": "48e1",
+    "name": "Juan",
+    "email": "juan@gmail.com",
+    "password": "666666",
+    "password_confirmation": "123",
+    "phone_number": {},
+    "country": "1999-03-12",
+    "city": "Medellín",
+    "birthday": "www.juanweb.com",
+    "CV": ""
+    }
+]
+}

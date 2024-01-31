@@ -24,28 +24,38 @@ colores:
 }
 
 /* NAVBAR CONTIANER */
-.container_menu{
+.container_menu_signin{
     background-color: rgb(0, 0, 0);
     height: auto;
     width: 100%;
     height: 8rem;
     display: flex;
     flex-direction: column;
+    display: none;
 }
 /* TOP BOX CONTAINER */
 .container_top_box{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #ffffff;
     width: 100%;
     height: 35%;
     display: flex;
     justify-content: flex-end;
 }
 /* TOP BOX LIST CONTAINER */
-.container_list_top_box{
+.container_list_top_box_signin{
     display: flex;
-    width: 10rem;
+    width: 30rem;
     justify-content:space-evenly;
     align-items: center;
     position: relative;
+}
+.log_out_option{
+    text-decoration: none;
+    color: #5BB403;
+}
+.log_out_option:hover{
+    color: #418100;
 }
 
 /* PROFILE IMAGE */
@@ -181,21 +191,27 @@ colores:
 } */
 /* ----------------------------------------------------------- RESPONSIVE ----------------------------------------------------------- */
 /* RESPONSIVE BUTTON */
-.button_burger{
+.button_burger_signin{
     display: none;
 }
 /* CONTAINER BURGER MENU */
-.responsive_menu{
+.responsive_menu_signin{
     display: none;
 }
 /* MEDIA QUERY */
 @media screen and (max-width: 700px) {
     /* DISPLAY NONE & BOX MODIFICATIONS */
-    .container_menu{
+    .container_menu_signin{
         height: 6rem;
     }
     .item{
         display: none;
+    }
+    .log_out_option{
+        display: none;
+    }
+    .container_list_top_box_signin{
+        width: 20rem;
     }
     .container_top_box{
         height: 50%;
@@ -208,7 +224,7 @@ colores:
         align-items: center;
     }
     /* DISPLAY BLOCK ELEMENTS RESPONSIVE MENU */
-    .button_burger{
+    .button_burger_signin{
         display: block;
         position: absolute;
         background-color: transparent;
@@ -223,10 +239,10 @@ colores:
         background-position: center;
     }
     /* ------------------- BURGER MENU ------------------- */
-    body.open .button_burger {
+    body.open .button_burger_signin {
         background-image: url("../assets/img/close.svg");
     }
-    .background {
+    .background_signin {
         position: fixed;
         z-index: 2;
         top: 44px;
@@ -239,11 +255,11 @@ colores:
         opacity: 0;
         transition: 0.6s;
     }
-    body.open .background {
+    body.open .background_signin {
         height: 500vh;
         opacity: 0.9;
     }
-    .responsive_menu{
+    .responsive_menu_signin{
         position: absolute;
         z-index: 3;
         top: 0;
@@ -257,7 +273,7 @@ colores:
         transition: 0.05s;
         overflow-y: auto;
     }
-    .responsive_menu nav {
+    .responsive_menu_signin nav {
         position: absolute;
         top: 50;
         display: flex;
@@ -266,18 +282,18 @@ colores:
         align-items: flex-start;
         padding-left: 100px;
     }
-    body.open .responsive_menu  {
+    body.open .responsive_menu_signin  {
         opacity: 1;
         visibility: visible;
     }
-    body .responsive_menu nav:hover > a {
+    body .responsive_menu_signin nav:hover > a {
         opacity: 0.25;
     }
-    body .responsive_menu nav > a:hover {
+    body .responsive_menu_signin nav > a:hover {
         opacity: 1;
         translate: 8px 0;
     }
-    .responsive_menu a {
+    .responsive_menu_signin a {
         position: relative;
         color: #f1f1f1;
         font-size: 32px;
@@ -288,7 +304,7 @@ colores:
         cursor: pointer;
         transition: 0.4s;
     }
-    .responsive_menu a::after {
+    .responsive_menu_signin a::after {
         content: "";
         position: absolute;
         top: 50%;
@@ -303,7 +319,7 @@ colores:
         transition: 0.3s;
         opacity: 0;
     }
-    .responsive_menu a:hover::after {
+    .responsive_menu_signin a:hover::after {
         opacity: 1;
     }
     /* ANIMACIÓN */
@@ -316,7 +332,7 @@ colores:
             opacity: 1;
         }
     }
-    body.open .responsive_menu a {
+    body.open .responsive_menu_signin a {
         opacity: 1;
         animation: appear 0.35s backwards;
     }

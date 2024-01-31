@@ -9,25 +9,30 @@
     <script src="../js/app.js" defer></script>
 </head>
 <body>
-    <!-------------------------------------------- RESPONSIVE NAVBAR ------------------------------------------->
-    <button class="button_burger" onclick="toggleMenu()"></button>
-    <div class="background"></div>
-    <div class="responsive_menu">
+    <!-------------------------------------------- RESPONSIVE NAVBAR SIGN IN ------------------------------------------->
+    <button class="button_burger_signin" onclick="toggleMenu()"></button>
+    <div class="background_signin"></div>
+    <div class="responsive_menu_signin">
         <nav>
             <a href="../index.html" class="burger_menu_item_1" style="animation-delay: 0.1s">Inicio</a>
-            <a href="#" class="burger_menu_item_2" style="animation-delay: 0.3s">Ofertas</a>
-            <a href="#" class="burger_menu_item_3" style="animation-delay: 0.4s">Nosotros</a>
-            <a href="#" class="burger_menu_item_4" style="animation-delay: 0.5s">Perfil</a>
+            <a href="./offers.html" class="burger_menu_item_2" style="animation-delay: 0.3s">Ofertas</a>
+            <a href="./nosotros.html" class="burger_menu_item_3" style="animation-delay: 0.4s">Nosotros</a>
+            <a href="./profile.html" class="burger_menu_item_4" style="animation-delay: 0.5s">Perfil</a>
+            <a href="#" class="burger_menu_item_5" style="animation-delay: 0.5s">Cerrar sesión</a>
         </nav>
     </div>
-    <!-------------------------------------------- NAVBAR ------------------------------------------->
-    <nav class="container_menu">
+    <!-------------------------------------------- NAVBAR SIGN IN ------------------------------------------->
+    <nav class="container_menu_signin">
         <!-- TOP BOX -->
         <div class="container_top_box">
-            <ul class="container_list_top_box">
+            <ul class="container_list_top_box_signin">
                 <a href="#" class="container_profile_image">
                     <img src="../assets/img/profile_image.jpg" alt="profile" title="Profile" class="profile_image" id="profileImage">
                 </a>
+                <div class="container_name_top_box">
+                    <p>¡Bienvenido Nombre!</p>
+                </div>
+                <a href="#" id="logOutOption" class="log_out_option">Cerrar sesión</a>
                 <select name="" id="" class="select_navbar">
                     <option value="">Español</option>
                     <option value="">Inglés</option>
@@ -39,7 +44,7 @@
             <!-- LINKS -->
             <ul class="container_list_bottom_box_1">
                 <li class="item item_3"><a href="../index.html">Inicio</a></li>
-                <li class="item item_4"><a href="#">Ofertas</a></li>
+                <li class="item item_4"><a href="./offers.html">Ofertas</a></li>
             </ul>
             <!-- TITLE -->
             <header class="header_container">
@@ -49,8 +54,8 @@
             </header>
             <!-- LINKS -->
             <ul class="container_list_bottom_box_2">
-                <li class="item item_5"><a href="#">Nosotros</a></li>
-                <li class="item item_6"><a href="#">Perfil</a></li>
+                <li class="item item_5"><a href="./nosotros.html">Nosotros</a></li>
+                <li class="item item_6"><a href="./profile.html">Perfil</a></li>
             </ul>
         </div>
     </nav>

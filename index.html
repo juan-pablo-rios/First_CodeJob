@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/modalsignin.css">
+    <link rel="stylesheet" href="./css/navbarsignin.css">
     <link rel="stylesheet" href="./css/footer.css">
     <script src="./js/app.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -33,7 +34,7 @@
                         <input type="text" name="" id="signInEmailInput" class="signInInputs signInInputEmail" placeholder="Email">
                         <input type="text" name="" id="signInPasswordInput" class="signInInputs signInInputPassword" placeholder="Contraseña">
                         <a href="#" class="forgotPasswordOption">Olvidé la contraseña</a>
-                        <button type="submit" class="signInButton"><a href="#">Iniciar sesión</a></button>
+                        <button type="submit" class="signInButton"><a href="#" onclick="pressSignIn()">Iniciar sesión</a></button>
                     </div>
                 </div>
             </div>
@@ -45,11 +46,11 @@
     <div class="responsive_menu">
         <nav>
             <a href="./index.html" class="burger_menu_item_1" style="animation-delay: 0.1s">Inicio</a>
-            <a href="#" class="burger_menu_item_2" style="animation-delay: 0.3s">Ofertas</a>
-            <a href="#" class="burger_menu_item_3" style="animation-delay: 0.4s">Nosotros</a>
-            <a href="#" class="burger_menu_item_4" style="animation-delay: 0.5s">Perfil</a>
+            <a href="./html/offers.html" class="burger_menu_item_2" style="animation-delay: 0.3s">Ofertas</a>
+            <a href="./html/nosotros.html" class="burger_menu_item_3" style="animation-delay: 0.4s">Nosotros</a>
+            <a href="./html/profile.html" class="burger_menu_item_4" style="animation-delay: 0.5s">Perfil</a>
             <a href="#" id="openButtonSignInResponsive" class="burger_menu_item_5" style="animation-delay: 0.6s">Iniciar Sesión</a>
-            <a href="#" class="burger_menu_item_6" style="animation-delay: 0.6s">Registrarse</a>
+            <a href="./html/signup.html" class="burger_menu_item_6" style="animation-delay: 0.6s">Registrarse</a>
         </nav>
     </div>
     <!-------------------------------------------- NAVBAR ------------------------------------------->
@@ -70,7 +71,7 @@
             <!-- LINKS -->
             <ul class="container_list_bottom_box_1">
                 <li class="item item_3"><a href="./index.html">Inicio</a></li>
-                <li class="item item_4"><a href="#">Ofertas</a></li>
+                <li class="item item_4"><a href="./html/offers.html">Ofertas</a></li>
             </ul>
             <!-- TITLE -->
             <header class="header_container">
@@ -80,8 +81,8 @@
             </header>
             <!-- LINKS -->
             <ul class="container_list_bottom_box_2">
-                <li class="item item_5"><a href="#">Nosotros</a></li>
-                <li class="item item_6"><a href="#">Perfil</a></li>
+                <li class="item item_5"><a href="./html/nosotros.html">Nosotros</a></li>
+                <li class="item item_6"><a href="./html/profile.html">Perfil</a></li>
             </ul>
         </div>
     </nav>
