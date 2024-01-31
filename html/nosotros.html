@@ -16,6 +16,46 @@
     <title>Nosotros</title>
 </head>
 <body>
+    <!-------------------------------------------- NAVBAR SIGN IN ------------------------------------------->
+    <nav class="container_menu_signin">
+        <!-- TOP BOX -->
+        <div class="container_top_box">
+            <ul class="container_list_top_box_signin">
+                <a href="#" class="container_profile_image">
+                    <img src="../assets/img/profile_image.jpg" alt="profile" title="Profile" class="profile_image"
+                        id="profileImage">
+                </a>
+                <div class="container_name_top_box">
+                    <span id="userName"></span>
+                </div>
+                <a href="#" id="logOutOption" class="log_out_option">Cerrar sesión</a>
+                <select name="" id="languageOption" class="select_navbar">
+                    <option value="">Español</option>
+                    <option value="">Inglés</option>
+                </select>
+            </ul>
+        </div>
+        <!-- BOTTOM BOX -->
+        <div class="container_bottom_box">
+            <!-- LINKS -->
+            <ul class="container_list_bottom_box_1">
+                <li class="item item_3"><a href="../index.html">Inicio</a></li>
+                <li class="item item_4"><a href="./offers.html">Ofertas</a></li>
+            </ul>
+            <!-- TITLE -->
+            <header class="header_container">
+                <span class="brackets bracket_1">{</span>
+                <a href="../index.html" class="title_navbar" title="{First_CodeJob}">First<span
+                        class="title_underscore">_</span>CodeJob</a>
+                <span class="brackets bracket_2">}</span>
+            </header>
+            <!-- LINKS -->
+            <ul class="container_list_bottom_box_2">
+                <li class="item item_5"><a href="./nosotros.html">Nosotros</a></li>
+                <li class="item item_6"><a href="./profile.html">Perfil</a></li>
+            </ul>
+        </div>
+    </nav>
     <!-- ------------------------------------------- SIGN IN MODAL ------------------------------------------- -->
     <!-- MODAL SIGN IN CONTAINER -->
     <div id="signInModal" class="signInModal">
@@ -49,9 +89,10 @@
             <a href="../index.html" class="burger_menu_item_1" style="animation-delay: 0.1s">Inicio</a>
             <a href="./offers.html" class="burger_menu_item_2" style="animation-delay: 0.3s">Ofertas</a>
             <a href="./nosotros.html" class="burger_menu_item_3" style="animation-delay: 0.4s">Nosotros</a>
-            <a href="./profile.html" class="burger_menu_item_4" style="animation-delay: 0.5s">Perfil</a>
+            <a href="./profile.html" class="burger_menu_item_4" id="burger_menu_item_4" style="animation-delay: 0.5s">Perfil</a>
             <a href="#" id="openButtonSignInResponsive" class="burger_menu_item_5" style="animation-delay: 0.6s">Iniciar Sesión</a>
-            <a href="#" class="burger_menu_item_6" style="animation-delay: 0.6s">Registrarse</a>
+            <a href="./signup.html" class="burger_menu_item_6" style="animation-delay: 0.6s">Registrarse</a>
+            <a href="#" class="burger_menu_item_7" id="burger_menu_item_7" style="animation-delay: 0.5s">Cerrar sesión</a>
         </nav>
     </div>
     <!-------------------------------------------- NAVBAR ------------------------------------------->
