@@ -183,6 +183,10 @@ colores:
 .responsive_menu{
     display: none;
 }
+/* PROFILE OPTION */
+.burger_menu_item_4{
+    display: none;
+}
 /* MEDIA QUERY */
 @media screen and (max-width: 700px) {
     /* DISPLAY NONE & BOX MODIFICATIONS */
