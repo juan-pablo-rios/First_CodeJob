@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{First_CodeJob}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/signup.css">
     <link rel="stylesheet" href="../css/navbarsignin.css">
@@ -94,19 +95,60 @@
             </div>
             <div class="containerSignUpInputs">
                 <div class="containerInputsSignUp_1">
-                    <input type="text" id="signUpNameInput" class="signUpInputs signUpInputEmail" placeholder="Name">
-                    <input type="email" id="signUpEmailInput" class="signUpInputs signUpInputEmail" placeholder="Email">
-                    <input type="tel" name="" id="signUpPhoneInput" class="signUpInputs signUpInputPhone" placeholder="Teléfono">
+
+                    <div class="mb-3">
+                        <label for="signUpNameInput" class="form-label labelInputs">Nombre</label>
+                        <input type="text" class="form-control signUpInputs signUpInputName" id="signUpNameInput">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="signUpEmailInput" class="form-label labelInputs">Email</label>
+                        <input type="email" class="form-control signUpInputs signUpInputEmail" id="signUpEmailInput">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="signUpPhoneInput" class="form-label labelInputs">Teléfono</label>
+                        <input type="tel" class="form-control signUpInputs signUpInputPhone" id="signUpPhoneInput">
+                    </div>
+
                 </div>
                 <div class="containerInputsSignUp_2">
-                    <input type="password" id="signUpPasswordInput" class="signUpInputs signUpInputPassword" placeholder="Contraseña">
-                    <input type="password" id="signUpConfirmPasswordInput" class="signUpInputs signUpInputConfirmPassword" placeholder="Confirmar contraseña">
-                    <input type="date" id="signUpDateInput" class="signUpInputs signUpInputDate" placeholder="Fecha de nacimiento">
+
+                    <div class="mb-3">
+                        <label for="signUpPasswordInput" class="form-label labelInputs">Contraseña</label>
+                        <input type="password" class="form-control signUpInputs signUpInputPassword" id="signUpPasswordInput">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="signUpConfirmPasswordInput" class="form-label labelInputs">Confirmar contraseña</label>
+                        <input type="password" class="form-control signUpInputs signUpInputConfirmPassword" id="signUpConfirmPasswordInput">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="signUpDateInput" class="form-label labelInputs">Fecha de nacimiento</label>
+                        <input type="date" class="form-control signUpInputs signUpInputDate" id="signUpDateInput">
+                    </div>
+
                 </div>
+
                 <div class="containerInputsSignUp_3">
-                    <input type="text" id="signUpCityInput" class="signUpInputs signUpInputCity" placeholder="Ciudad de recidencia">
-                    <input type="url" id="signUpWebsiteInput" class="signUpInputs signUpInputWebsite" placeholder="Página web">
-                    <input type="file" id="signUpCvInput" class="signUpInputs signUpInputCv">
+
+                    <div class="mb-3">
+                        <label for="signUpCityInput" class="form-label labelInputs">Ciudad de recidencia</label>
+                        <input type="text" class="form-control signUpInputs signUpInputCity" id="signUpCityInput">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="signUpWebsiteInput" class="form-label labelInputs">Página web</label>
+                        <input type="url" class="form-control signUpInputs signUpInputWebsite" id="signUpWebsiteInput">
+                    </div>
+
+                    
+                    <div class="mb-3">
+                        <label for="signUpCvInput" class="form-label labelInputs">Curriculum</label>
+                        <input type="file" class="form-control signUpInputs signUpInputCv" id="signUpCvInput">
+                    </div>
+
                 </div>
             </div>
             <div class="containerButtonSignUp">
