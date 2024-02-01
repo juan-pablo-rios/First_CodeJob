@@ -52,7 +52,14 @@ function pressSignIn() {
   console.log("entrooooo");
   let email = document.getElementById("signInEmailInput").value;
   let password = document.getElementById("signInPasswordInput").value;
+  
+  /*INPUTS DE DEL PROFILE LOS CUALES VAN A HACER CAMBIADOS*/
+  let webSite = document.getElementById("profilePageWeb")
   let emailProfile = document.getElementById("profileEmail");
+  let telNumberProfile = document.getElementById("profileTelNumber");
+  let country = document.getElementById("country");
+  let name = document.getElementById("nameUserProfile");
+  
 
   console.log(emailProfile);
 
@@ -60,13 +67,17 @@ function pressSignIn() {
     .then((response) => response.json())
     .then((element) => {
       let result = element.filter(function (element) {
-        return element.email == email && element.password == password;
+        return element.contact.mail == email && element.password == password;
       });
 
       console.log(result);
       if (result.length > 0) {
         console.log("success");
-        emailProfile.textContent = result[0].email;
+        webSite.textContent = result[0].contact.link;
+        emailProfile.textContent = result[0].contact.mail;
+        telNumberProfile.textContent = result[0].contact.call;
+        country.textContent = result[0].city;
+        name.textContent = result[0].name;
         console.log(emailProfile);
         /*location.href = "";  */
       } else {
@@ -192,7 +203,6 @@ function createUser() {
       signUpDateInput.value = "";
       signUpCityInput.value = "";
       signUpWebsiteInput.value = "";
-      console.log(signUpWebsiteInput);
     });
   }
 }
