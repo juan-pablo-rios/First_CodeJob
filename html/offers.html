@@ -16,7 +16,7 @@
 </head>
 <body>
     <!-------------------------------------------- NAVBAR SIGN IN ------------------------------------------->
-    <nav class="container_menu_signin">
+    <nav class="container_menu_signin" id="containeMenuSignin">
       <!-- TOP BOX -->
       <div class="container_top_box">
         <ul class="container_list_top_box_signin">
@@ -72,9 +72,9 @@
                 <div class="containerSignInInputs">
                     <div class="secundaryContainerSignInInputs">
                         <input type="text" name="" id="signInEmailInput" class="signInInputs signInInputEmail" placeholder="Email">
-                        <input type="text" name="" id="signInPasswordInput" class="signInInputs signInInputPassword" placeholder="Contraseña">
+                        <input type="password" name="" id="signInPasswordInput" class="signInInputs signInInputPassword" placeholder="Contraseña">
                         <a href="#" class="forgotPasswordOption">Olvidé la contraseña</a>
-                        <button type="submit" class="signInButton"><a href="#">Iniciar sesión</a></button>
+                        <button type="submit" class="signInButton" onclick="pressSignIn()"><a href="#">Iniciar sesión</a></button>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
         </nav>
     </div>
     <!-------------------------------------------- NAVBAR ------------------------------------------->
-    <nav class="container_menu">
+    <nav class="container_menu" id="containerMenu">
         <!-- TOP BOX -->
         <div class="container_top_box">
             <ul class="container_list_top_box">
