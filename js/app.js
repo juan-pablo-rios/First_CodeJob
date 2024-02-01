@@ -48,54 +48,20 @@ window.onclick = function (event) {
 };
 
 // ------------------------------------------------------------------ SIGN IN ------------------------------------------------------------------
-// FUNCION PARA VERIFICAR SI EL BOTON INICIAR SESION ES PRESIONADO
 
-// , {
-//       method: "---",
-//       headers: {
-//         "Content-Type": "application/json",
-//       }
-
-// function pressSignIn() {
-//   console.log("entrooooo");
-//   let email = document.getElementById("signInEmailInput").value;
-//   let password = document.getElementById("signInPasswordInput").value;
-  
-//   /*INPUTS DE DEL PROFILE LOS CUALES VAN A HACER CAMBIADOS*/
-//   let webSite = document.getElementById("profilePageWeb")
-//   let emailProfile = document.getElementById("profileEmail");
-//   let telNumberProfile = document.getElementById("profileTelNumber");
-//   let country = document.getElementById("country");
-//   let name = document.getElementById("nameUserProfile");
-  
-
-//   console.log(emailProfile);
-
-//   fetch("http://localhost:3000/users")
-//     .then((response) => response.json())
-//     .then((element) => {
-//       let result = element.filter(function (element) {
-//         return element.contact.mail == email && element.password == password;
-//       });
-
-//       console.log(result);
-//       if (result.length > 0) {
-//         console.log("success");
-//         webSite.textContent = result[0].contact.link;
-//         emailProfile.textContent = result[0].contact.mail;
-//         telNumberProfile.textContent = result[0].contact.call;
-//         country.textContent = result[0].city;
-//         name.textContent = result[0].name;
-//         console.log(emailProfile);
-//         /*location.href = "";  */
-//       } else {
-//         console.log("error");
-//       }
 // FUNCION PARA INICIAR SESIÓN:
 function pressSignIn() {
     // INICIALIZACIÓN DE VARIABLES CON LOS VALORES DE LOS INPUTS:
     let email = document.getElementById("signInEmailInput").value;
     let password = document.getElementById("signInPasswordInput").value;
+
+    /*INPUTS DE DEL PROFILE LOS CUALES VAN A HACER CAMBIADOS*/
+    let webSite = document.getElementById("profilePageWeb")
+    let emailProfile = document.getElementById("profileEmail");
+    let telNumberProfile = document.getElementById("profileTelNumber");
+    let country = document.getElementById("country");
+    let name = document.getElementById("nameUserProfile");
+    
     // INICIALIZACIÓN DE VARIABLES CON LOS id DE LOS NAVBAR:
     let navbarSignIn = document.getElementById("containeMenuSignin");
     let navbarNormal = document.getElementById("containerMenu");
@@ -130,6 +96,12 @@ function pressSignIn() {
             signUpOption.classList.add('displayNone');
             // PONER NOMBRE DEL USUARIO EN EL NAVBAR:
             putUserName.innerHTML = result[0].name;
+            
+            webSite.textContent = result[0].contact.link;
+            emailProfile.textContent = result[0].contact.mail;
+            telNumberProfile.textContent = result[0].contact.call;
+            country.textContent = result[0].city;
+            name.textContent = result[0].name;
         }
         else {
             alert('¡Los datos ingresados no son válidos!');
