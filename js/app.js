@@ -16,6 +16,12 @@ openButtonSignInResponsive.onclick = function () {
   signInModal.style.display = "block";
   toggleMenu();
 };
+let signInOptionResponsive = document.getElementById("signInOptionResponsive");
+// FUNCIÓN PARA ABRIR EL MODAL DESDE EL NAVBAR RESPONSIVE:
+signInOptionResponsive.onclick = function() {
+    signInModal.style.display = "block";
+    toggleMenu();
+}
 
 // --------------------------------------------- SIGN IN MODAL ---------------------------------------------
 // MODAL:
@@ -83,9 +89,85 @@ function pressSignIn() {
       } else {
         console.log("error");
       }
+// FUNCION PARA INICIAR SESIÓN:
+function pressSignIn() {
+    // INICIALIZACIÓN DE VARIABLES CON LOS VALORES DE LOS INPUTS:
+    let email = document.getElementById("signInEmailInput").value;
+    let password = document.getElementById("signInPasswordInput").value;
+    // INICIALIZACIÓN DE VARIABLES CON LOS id DE LOS NAVBAR:
+    let navbarSignIn = document.getElementById("containeMenuSignin");
+    let navbarNormal = document.getElementById("containerMenu");
+    // INICIALIZACIÓN DE VARIABLES CON LOS id DE LAS OPCIONES signIn DEL NAVBAR:
+    let profileOptionResponsive = document.getElementById('burger_menu_item_4');
+    let logOutOptionResponsive = document.getElementById('burger_menu_item_7');
+    let signUpOption = document.getElementById('burger_menu_item_6');
+    // INICIALIZACIÓN DE VARIABLE CON EL ID DEL CAMPO A LLENAR CON EL NOMBRE:
+    let putUserName = document.getElementById('userName');
+    // FUNCIÓN fetch() PARA CONECTARSE CON EL json-server Y VERIFICAR LOS DATOS:
+    fetch("http://localhost:3000/users")
+    .then(response => response.json())
+    .then(element => {
+        let result = element.filter(function (element) { 
+            return element.email == email && element.password == password
+        })
+        if (result.length > 0) {
+            console.log("ingreso");
+            // CERRAR MODAL:
+            signInModal.style.display = "none";
+            // DESAPARECER NAVBAR NORMAL:
+            navbarNormal.classList.add('displayNone');
+            // HACER APARECER NAVBAR SIGN IN:
+            navbarSignIn.classList.add('displayBlock');
+            // HACER APARECER logOut OPTION:
+            logOutOptionResponsive.classList.add('displayBlock');
+            // HACER APARECER profile OPTION:
+            profileOptionResponsive.classList.add('displayBlock');
+            // HACER DESAPARECER signIn OPTION:
+            signInOptionResponsive.classList.add('displayNone');
+            // HACER DESAPARECER signUp OPTION:
+            signUpOption.classList.add('displayNone');
+            // PONER NOMBRE DEL USUARIO EN EL NAVBAR:
+            putUserName.innerHTML = result[0].name;
+        }
+        else {
+            alert('¡Los datos ingresados no son válidos!');
+        }
+  console.log("entrooooo");
+  let email = document.getElementById("signInEmailInput").value;
+  let password = document.getElementById("signInPasswordInput").value;
+  
+  /*INPUTS DE DEL PROFILE LOS CUALES VAN A HACER CAMBIADOS*/
+  let webSite = document.getElementById("profilePageWeb")
+  let emailProfile = document.getElementById("profileEmail");
+  let telNumberProfile = document.getElementById("profileTelNumber");
+  let country = document.getElementById("country");
+  let name = document.getElementById("nameUserProfile");
+  
+
+  console.log(emailProfile);
+
+  fetch("http://localhost:3000/users")
+    .then((response) => response.json())
+    .then((element) => {
+      let result = element.filter(function (element) {
+        return element.contact.mail == email && element.password == password;
+      });
+
+      console.log(result);
+      if (result.length > 0) {
+        console.log("success");
+        webSite.textContent = result[0].contact.link;
+        emailProfile.textContent = result[0].contact.mail;
+        telNumberProfile.textContent = result[0].contact.call;
+        country.textContent = result[0].city;
+        name.textContent = result[0].name;
+        console.log(emailProfile);
+        /*location.href = "";  */
+      } else {
+        console.log("error");
+      }
     });
 }
-
 // ------------------------------------------------------------------ SIGN UP ------------------------------------------------------------------
 
 function createUser() {
