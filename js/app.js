@@ -12,10 +12,11 @@ let openButtonSignInResponsive = document.getElementById(
 // }
 
 // FUNCIÓN PARA ABRIR EL MODAL RESPONSIVE:
-openButtonSignInResponsive.onclick = function () {
+function modal() {
   signInModal.style.display = "block";
   toggleMenu();
 };
+
 let signInOptionResponsive = document.getElementById("signInOptionResponsive");
 // FUNCIÓN PARA ABRIR EL MODAL DESDE EL NAVBAR RESPONSIVE:
 signInOptionResponsive.onclick = function() {
@@ -32,6 +33,7 @@ let openButtonSignIn = document.getElementById("openButtonSignIn");
 let closeModal = document.getElementById("closeModalSignIn");
 // FUNCIÓN PARA ABRIR EL MODAL:
 openButtonSignIn.onclick = function () {
+  console.log("hjjjj");
   signInModal.style.display = "block";
 };
 // FUNCIÓN PARA CERRAR EL MODAL:
@@ -54,41 +56,41 @@ window.onclick = function (event) {
 //         "Content-Type": "application/json",
 //       }
 
-function pressSignIn() {
-  console.log("entrooooo");
-  let email = document.getElementById("signInEmailInput").value;
-  let password = document.getElementById("signInPasswordInput").value;
+// function pressSignIn() {
+//   console.log("entrooooo");
+//   let email = document.getElementById("signInEmailInput").value;
+//   let password = document.getElementById("signInPasswordInput").value;
   
-  /*INPUTS DE DEL PROFILE LOS CUALES VAN A HACER CAMBIADOS*/
-  let webSite = document.getElementById("profilePageWeb")
-  let emailProfile = document.getElementById("profileEmail");
-  let telNumberProfile = document.getElementById("profileTelNumber");
-  let country = document.getElementById("country");
-  let name = document.getElementById("nameUserProfile");
+//   /*INPUTS DE DEL PROFILE LOS CUALES VAN A HACER CAMBIADOS*/
+//   let webSite = document.getElementById("profilePageWeb")
+//   let emailProfile = document.getElementById("profileEmail");
+//   let telNumberProfile = document.getElementById("profileTelNumber");
+//   let country = document.getElementById("country");
+//   let name = document.getElementById("nameUserProfile");
   
 
-  console.log(emailProfile);
+//   console.log(emailProfile);
 
-  fetch("http://localhost:3000/users")
-    .then((response) => response.json())
-    .then((element) => {
-      let result = element.filter(function (element) {
-        return element.contact.mail == email && element.password == password;
-      });
+//   fetch("http://localhost:3000/users")
+//     .then((response) => response.json())
+//     .then((element) => {
+//       let result = element.filter(function (element) {
+//         return element.contact.mail == email && element.password == password;
+//       });
 
-      console.log(result);
-      if (result.length > 0) {
-        console.log("success");
-        webSite.textContent = result[0].contact.link;
-        emailProfile.textContent = result[0].contact.mail;
-        telNumberProfile.textContent = result[0].contact.call;
-        country.textContent = result[0].city;
-        name.textContent = result[0].name;
-        console.log(emailProfile);
-        /*location.href = "";  */
-      } else {
-        console.log("error");
-      }
+//       console.log(result);
+//       if (result.length > 0) {
+//         console.log("success");
+//         webSite.textContent = result[0].contact.link;
+//         emailProfile.textContent = result[0].contact.mail;
+//         telNumberProfile.textContent = result[0].contact.call;
+//         country.textContent = result[0].city;
+//         name.textContent = result[0].name;
+//         console.log(emailProfile);
+//         /*location.href = "";  */
+//       } else {
+//         console.log("error");
+//       }
 // FUNCION PARA INICIAR SESIÓN:
 function pressSignIn() {
     // INICIALIZACIÓN DE VARIABLES CON LOS VALORES DE LOS INPUTS:
@@ -132,41 +134,7 @@ function pressSignIn() {
         else {
             alert('¡Los datos ingresados no son válidos!');
         }
-  console.log("entrooooo");
-  let email = document.getElementById("signInEmailInput").value;
-  let password = document.getElementById("signInPasswordInput").value;
-  
-  /*INPUTS DE DEL PROFILE LOS CUALES VAN A HACER CAMBIADOS*/
-  let webSite = document.getElementById("profilePageWeb")
-  let emailProfile = document.getElementById("profileEmail");
-  let telNumberProfile = document.getElementById("profileTelNumber");
-  let country = document.getElementById("country");
-  let name = document.getElementById("nameUserProfile");
-  
-
-  console.log(emailProfile);
-
-  fetch("http://localhost:3000/users")
-    .then((response) => response.json())
-    .then((element) => {
-      let result = element.filter(function (element) {
-        return element.contact.mail == email && element.password == password;
-      });
-
-      console.log(result);
-      if (result.length > 0) {
-        console.log("success");
-        webSite.textContent = result[0].contact.link;
-        emailProfile.textContent = result[0].contact.mail;
-        telNumberProfile.textContent = result[0].contact.call;
-        country.textContent = result[0].city;
-        name.textContent = result[0].name;
-        console.log(emailProfile);
-        /*location.href = "";  */
-      } else {
-        console.log("error");
-      }
-    });
+    })
 }
 // ------------------------------------------------------------------ SIGN UP ------------------------------------------------------------------
 
