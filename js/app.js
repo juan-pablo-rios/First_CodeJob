@@ -2,7 +2,9 @@
 const toggleMenu = () => document.body.classList.toggle("open");
 
 // BOTÓN RESPONSIVE PARA ABRIR EL MODAL:
-let openButtonSignInResponsive = document.getElementById("openButtonSignInResponsive");
+let openButtonSignInResponsive = document.getElementById(
+  "openButtonSignInResponsive"
+);
 
 // let body = document.getElementById("body");
 // openButtonSignInResponsive.onclick = function () {
@@ -10,10 +12,10 @@ let openButtonSignInResponsive = document.getElementById("openButtonSignInRespon
 // }
 
 // FUNCIÓN PARA ABRIR EL MODAL RESPONSIVE:
-openButtonSignInResponsive.onclick = function() {
-    signInModal.style.display = "block";
-    toggleMenu();
-}
+openButtonSignInResponsive.onclick = function () {
+  signInModal.style.display = "block";
+  toggleMenu();
+};
 
 // --------------------------------------------- SIGN IN MODAL ---------------------------------------------
 // MODAL:
@@ -23,194 +25,174 @@ let openButtonSignIn = document.getElementById("openButtonSignIn");
 // BOTÓN PARA CERRAR EL MODAL:
 let closeModal = document.getElementById("closeModalSignIn");
 // FUNCIÓN PARA ABRIR EL MODAL:
-openButtonSignIn.onclick = function() {
-    signInModal.style.display = "block";
-}
+openButtonSignIn.onclick = function () {
+  signInModal.style.display = "block";
+};
 // FUNCIÓN PARA CERRAR EL MODAL:
-closeModal.onclick = function() {
-    signInModal.style.display = "none";
-}
+closeModal.onclick = function () {
+  signInModal.style.display = "none";
+};
 // CLICK AFUERA DEL MODAL, CIERRA EL MODAL:
-window.onclick = function(event) {
-    if (event.target == signInModal) {
-        signInModal.style.display = "none";
-    }
-}
+window.onclick = function (event) {
+  if (event.target == signInModal) {
+    signInModal.style.display = "none";
+  }
+};
 
 // ------------------------------------------------------------------ SIGN IN ------------------------------------------------------------------
 // FUNCION PARA VERIFICAR SI EL BOTON INICIAR SESION ES PRESIONADO
+
+// , {
+//       method: "---",
+//       headers: {
+//         "Content-Type": "application/json",
+//       }
+
 function pressSignIn() {
-    let email = document.getElementById("signInEmailInput").value;
-    let password = document.getElementById("signInPasswordInput").value;
-    fetch("http://localhost:3000/users")
-    .then(response => response.json())
-    .then(element => {
-        let result = element.filter(function (element) { 
-            return element.email == email && element.password == password
-        })
-        if (result.length > 0) {
-            console.log("success")
-        }
-        else {
-            console.log("error")
-        }
+  console.log("entrooooo");
+  let email = document.getElementById("signInEmailInput").value;
+  let password = document.getElementById("signInPasswordInput").value;
+  let emailProfile = document.getElementById("profileEmail");
+
+  console.log(emailProfile);
+
+  fetch("http://localhost:3000/users")
+    .then((response) => response.json())
+    .then((element) => {
+      let result = element.filter(function (element) {
+        return element.email == email && element.password == password;
+      });
+
+      console.log(result);
+      if (result.length > 0) {
+        console.log("success");
+        emailProfile.textContent = result[0].email;
+        console.log(emailProfile);
+        /*location.href = "";  */
+      } else {
+        console.log("error");
+      }
     });
 }
 
 // ------------------------------------------------------------------ SIGN UP ------------------------------------------------------------------
+
 function createUser() {
-    // CAPTURAR VALORES DE LOS INPUTS:
-    let signUpNameInput = document.getElementById('signUpNameInput').value;
-    let signUpEmailInput = document.getElementById('signUpEmailInput').value;
-    let signUpPhoneInput = document.getElementById('signUpPhoneInput').value;
-    let signUpPasswordInput = document.getElementById('signUpPasswordInput').value;
-    let signUpConfirmPasswordInput = document.getElementById('signUpConfirmPasswordInput');
-    let signUpDateInput = document.getElementById('signUpDateInput').value;
-    let signUpCityInput = document.getElementById('signUpCityInput').value;
-    let signUpWebsiteInput = document.getElementById('signUpWebsiteInput').value;
-    let signUpCvInput = document.getElementById('signUpCvInput').value;
+  // CAPTURAR VALORES DE LOS INPUTS:
+  let signUpNameInput = document.getElementById("signUpNameInput");
+  let signUpEmailInput = document.getElementById("signUpEmailInput");
+  let signUpPhoneInput = document.getElementById("signUpPhoneInput");
+  let signUpPasswordInput = document.getElementById("signUpPasswordInput");
+  let signUpConfirmPasswordInput = document.getElementById(
+    "signUpConfirmPasswordInput"
+  );
+  let signUpDateInput = document.getElementById("signUpDateInput");
+  let signUpCityInput = document.getElementById("signUpCityInput");
+  let signUpWebsiteInput = document.getElementById("signUpWebsiteInput");
+  // let signUpCvInput = document.getElementById('signUpCvInput').value;
+
+  // Validación de campos vacíos
+  let isValid = true;
+
+  // Validación del campo de teléfono
+  if (signUpPhoneInput.value === "") {
+    signUpPhoneInput.classList.add("is-invalid");
+    isValid = false;
+  } else {
+    signUpPhoneInput.classList.remove("is-invalid");
+    signUpPhoneInput.classList.add("is-valid");
+  }
+
+  // Validación del campo de contraseña
+  if (signUpPasswordInput.value === "") {
+    signUpPasswordInput.classList.add("is-invalid");
+    isValid = false;
+  } else {
+    signUpPasswordInput.classList.remove("is-invalid");
+    signUpPasswordInput.classList.add("is-valid");
+  }
+
+  // Validación del campo de confirmación de contraseña
+  if (
+    signUpConfirmPasswordInput.value === "" ||
+    signUpPasswordInput.value != signUpConfirmPasswordInput.value
+  ) {
+    signUpConfirmPasswordInput.classList.add("is-invalid");
+    isValid = false;
+  } else {
+    signUpConfirmPasswordInput.classList.remove("is-invalid");
+    signUpConfirmPasswordInput.classList.add("is-valid");
+  }
+
+  // Validación del campo de fecha
+  if (signUpDateInput.value === "") {
+    signUpDateInput.classList.add("is-invalid");
+    isValid = false;
+  } else {
+    signUpDateInput.classList.remove("is-invalid");
+    signUpDateInput.classList.add("is-valid");
+  }
+
+  // Validación del campo de ciudad
+  if (signUpCityInput.value === "") {
+    signUpCityInput.classList.add("is-invalid");
+    isValid = false;
+  } else {
+    signUpCityInput.classList.remove("is-invalid");
+    signUpCityInput.classList.add("is-valid");
+  }
+
+  // Validación del campo de sitio web
+  if (signUpWebsiteInput.value === "") {
+    signUpWebsiteInput.classList.add("is-invalid");
+    isValid = false;
+  } else {
+    signUpWebsiteInput.classList.remove("is-invalid");
+    signUpWebsiteInput.classList.add("is-valid");
+  }
+
+  // Validación del campo de CV
+  // if (signUpCvInput === '') {
+  //     document.getElementById('signUpCvInput').classList.add('is-invalid');
+  //     isValid = false;
+  // } else {
+  //     document.getElementById('signUpCvInput').classList.remove('is-invalid');
+  //     document.getElementById('signUpCvInput').classList.add('is-valid');
+  // }
+
+  // Si todos los campos son válidos, realiza la solicitud fetch
+  if (isValid) {
     // SE CREA UN OBJETO CON LOS NUEVOS VALORES DE LOS ELEMENTOS:
     infoUpdated = {
-        name: signUpNameInput,
-        email: signUpEmailInput,
-        password: signUpPhoneInput,
-        password_confirmation : signUpPasswordInput,
-        phone_number : signUpConfirmPasswordInput,
-        country: signUpDateInput,
-        city: signUpCityInput, 
-        birthday : signUpWebsiteInput,
-        CV : "",
+      name: signUpNameInput.value,
+      email: signUpEmailInput.value,
+      password: signUpConfirmPasswordInput.value,
+      password_confirmation: signUpPasswordInput.value,
+      phone_number: signUpPhoneInput.value,
+      website: signUpWebsiteInput.value,
+      city: signUpCityInput.value,
+      birthday: signUpDateInput.value,
+      CV: "",
     };
-    
-    // SE UTILIZA LA FUNCIÓN fetch() PARA COGER LA API Y ENVIARLE LOS DATOS ACTUALIZADOS DEL USER SELECCIONADO:
+
     fetch("http://localhost:3000/users", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(infoUpdated),
-        })
-        .then((response) => {
-            console.log(response.ok);
-            console.log('Success');
-            location.reload();
-        });
-        signUpNameInput.value = '';
-        signUpEmailInput.value = '';
-        signUpPhoneInput.value = '';
-        signUpPasswordInput.value = '';
-        signUpConfirmPasswordInput.value = '';
-        signUpDateInput.value = '';
-        signUpCityInput.value = '';
-        signUpWebsiteInput.value = '';
-        signUpCvInput.value = '';
-};
-
-function createUser() {
-    // CAPTURAR VALORES DE LOS INPUTS:
-    let signUpNameInput = document.getElementById('signUpNameInput').value;
-    let signUpEmailInput = document.getElementById('signUpEmailInput').value;
-    let signUpPhoneInput = document.getElementById('signUpPhoneInput').value;
-    let signUpPasswordInput = document.getElementById('signUpPasswordInput').value;
-    let signUpConfirmPasswordInput = document.getElementById('signUpConfirmPasswordInput').value;
-    let signUpDateInput = document.getElementById('signUpDateInput').value;
-    let signUpCityInput = document.getElementById('signUpCityInput').value;
-    let signUpWebsiteInput = document.getElementById('signUpWebsiteInput').value;
-    // let signUpCvInput = document.getElementById('signUpCvInput').value;
-
-    // Validación de campos vacíos
-    let isValid = true;
-
-    // Validación del campo de teléfono
-    if (signUpPhoneInput === '') {
-        document.getElementById('signUpPhoneInput').classList.add('is-invalid');
-        isValid = false;
-    } else {
-        document.getElementById('signUpPhoneInput').classList.remove('is-invalid');
-        document.getElementById('signUpPhoneInput').classList.add('is-valid');
-    }
-
-    // Validación del campo de contraseña
-    if (signUpPasswordInput === '') {
-        document.getElementById('signUpPasswordInput').classList.add('is-invalid');
-        isValid = false;
-    } else {
-        document.getElementById('signUpPasswordInput').classList.remove('is-invalid');
-        document.getElementById('signUpPasswordInput').classList.add('is-valid');
-    }
-
-    // Validación del campo de confirmación de contraseña
-    if (signUpConfirmPasswordInput === '') {
-        document.getElementById('signUpConfirmPasswordInput').classList.add('is-invalid');
-        isValid = false;
-    } else {
-        document.getElementById('signUpConfirmPasswordInput').classList.remove('is-invalid');
-        document.getElementById('signUpConfirmPasswordInput').classList.add('is-valid');
-    }
-
-    // Validación del campo de fecha
-    if (signUpDateInput === '') {
-        document.getElementById('signUpDateInput').classList.add('is-invalid');
-        isValid = false;
-    } else {
-        document.getElementById('signUpDateInput').classList.remove('is-invalid');
-        document.getElementById('signUpDateInput').classList.add('is-valid');
-    }
-
-    // Validación del campo de ciudad
-    if (signUpCityInput === '') {
-        document.getElementById('signUpCityInput').classList.add('is-invalid');
-        isValid = false;
-    } else {
-        document.getElementById('signUpCityInput').classList.remove('is-invalid');
-        document.getElementById('signUpCityInput').classList.add('is-valid');
-    }
-
-    // Validación del campo de sitio web
-    if (signUpWebsiteInput === '') {
-        document.getElementById('signUpWebsiteInput').classList.add('is-invalid');
-        isValid = false;
-    } else {
-        document.getElementById('signUpWebsiteInput').classList.remove('is-invalid');
-        document.getElementById('signUpWebsiteInput').classList.add('is-valid');
-    }
-
-    // Validación del campo de CV
-    // if (signUpCvInput === '') {
-    //     document.getElementById('signUpCvInput').classList.add('is-invalid');
-    //     isValid = false;
-    // } else {
-    //     document.getElementById('signUpCvInput').classList.remove('is-invalid');
-    //     document.getElementById('signUpCvInput').classList.add('is-valid');
-    // }
-
-    // Si todos los campos son válidos, realiza la solicitud fetch
-    if (isValid) {
-
-        // SE CREA UN OBJETO CON LOS NUEVOS VALORES DE LOS ELEMENTOS:
-        infoUpdated = {
-            name: signUpNameInput,
-            email: signUpEmailInput,
-            password: signUpPhoneInput,
-            password_confirmation : signUpPasswordInput,
-            phone_number : signUpConfirmPasswordInput,
-            country: signUpDateInput,
-            city: signUpCityInput, 
-            birthday : signUpWebsiteInput,
-            CV : "",
-        };
-
-        fetch("http://localhost:3000/users", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(infoUpdated),
-        })
-        .then((response) => {
-            console.log(response.ok);
-            console.log('Success');
-            location.reload();
-        });
-    }
-};
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(infoUpdated),
+    }).then((response) => {
+      console.log(response.ok);
+      console.log("Success");
+      signUpNameInput.value = "";
+      signUpEmailInput.value = "";
+      signUpPhoneInput.value = "";
+      signUpPasswordInput.value = "";
+      signUpConfirmPasswordInput.value = "";
+      signUpDateInput.value = "";
+      signUpCityInput.value = "";
+      signUpWebsiteInput.value = "";
+      console.log(signUpWebsiteInput);
+    });
+  }
+}
