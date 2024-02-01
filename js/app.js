@@ -2,15 +2,9 @@
 const toggleMenu = () => document.body.classList.toggle("open");
 
 // BOTÓN RESPONSIVE PARA ABRIR EL MODAL:
-let openButtonSignInResponsive = document.getElementById("openButtonSignInResponsive");
-
-// let body = document.getElementById("body");
-// openButtonSignInResponsive.onclick = function () {
-//     body.classList.remove('open');
-// }
-
-// FUNCIÓN PARA ABRIR EL MODAL RESPONSIVE:
-openButtonSignInResponsive.onclick = function() {
+let signInOptionResponsive = document.getElementById("signInOptionResponsive");
+// FUNCIÓN PARA ABRIR EL MODAL DESDE EL NAVBAR RESPONSIVE:
+signInOptionResponsive.onclick = function() {
     signInModal.style.display = "block";
     toggleMenu();
 }
@@ -38,10 +32,21 @@ window.onclick = function(event) {
 }
 
 // ------------------------------------------------------------------ SIGN IN ------------------------------------------------------------------
-// FUNCION PARA VERIFICAR SI EL BOTON INICIAR SESION ES PRESIONADO
+// FUNCION PARA INICIAR SESIÓN:
 function pressSignIn() {
+    // INICIALIZACIÓN DE VARIABLES CON LOS VALORES DE LOS INPUTS:
     let email = document.getElementById("signInEmailInput").value;
     let password = document.getElementById("signInPasswordInput").value;
+    // INICIALIZACIÓN DE VARIABLES CON LOS id DE LOS NAVBAR:
+    let navbarSignIn = document.getElementById("containeMenuSignin");
+    let navbarNormal = document.getElementById("containerMenu");
+    // INICIALIZACIÓN DE VARIABLES CON LOS id DE LAS OPCIONES signIn DEL NAVBAR:
+    let profileOptionResponsive = document.getElementById('burger_menu_item_4');
+    let logOutOptionResponsive = document.getElementById('burger_menu_item_7');
+    let signUpOption = document.getElementById('burger_menu_item_6');
+    // INICIALIZACIÓN DE VARIABLE CON EL ID DEL CAMPO A LLENAR CON EL NOMBRE:
+    let putUserName = document.getElementById('userName');
+    // FUNCIÓN fetch() PARA CONECTARSE CON EL json-server Y VERIFICAR LOS DATOS:
     fetch("http://localhost:3000/users")
     .then(response => response.json())
     .then(element => {
@@ -49,14 +54,29 @@ function pressSignIn() {
             return element.email == email && element.password == password
         })
         if (result.length > 0) {
-            console.log("success")
+            console.log("ingreso");
+            // CERRAR MODAL:
+            signInModal.style.display = "none";
+            // DESAPARECER NAVBAR NORMAL:
+            navbarNormal.classList.add('displayNone');
+            // HACER APARECER NAVBAR SIGN IN:
+            navbarSignIn.classList.add('displayBlock');
+            // HACER APARECER logOut OPTION:
+            logOutOptionResponsive.classList.add('displayBlock');
+            // HACER APARECER profile OPTION:
+            profileOptionResponsive.classList.add('displayBlock');
+            // HACER DESAPARECER signIn OPTION:
+            signInOptionResponsive.classList.add('displayNone');
+            // HACER DESAPARECER signUp OPTION:
+            signUpOption.classList.add('displayNone');
+            // PONER NOMBRE DEL USUARIO EN EL NAVBAR:
+            putUserName.innerHTML = result[0].name;
         }
         else {
-            console.log("error")
+            alert('¡Los datos ingresados no son válidos!');
         }
     });
 }
-
 // ------------------------------------------------------------------ SIGN UP ------------------------------------------------------------------
 function createUser() {
     // CAPTURAR VALORES DE LOS INPUTS:
