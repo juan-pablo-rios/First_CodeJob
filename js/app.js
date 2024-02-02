@@ -33,7 +33,6 @@ let openButtonSignIn = document.getElementById("openButtonSignIn");
 let closeModal = document.getElementById("closeModalSignIn");
 // FUNCIÓN PARA ABRIR EL MODAL:
 openButtonSignIn.onclick = function () {
-  console.log("hjjjj");
   signInModal.style.display = "block";
 };
 // FUNCIÓN PARA CERRAR EL MODAL:
@@ -67,8 +66,9 @@ function pressSignIn() {
     let name = document.getElementById("nameUserProfile");
     // INICIALIZACIÓN DE VARIABLES CON LOS id DE LAS OPCIONES QUE SE DEBEN REMOVER Y AGREGAR AL INICIAR SESIÓN:
     let profileOptionResponsive = document.getElementById("burger_menu_item_4");
-    let divLogOut = document.getElementById("logout");
-    let divLogged = document.getElementById("logged");
+    let signInOptionResponsive = document.getElementById("signInOptionResponsive");
+    let signUpOptionResponsive = document.getElementById("burger_menu_item_6");
+    let logOutOptionResponsive = document.getElementById("burger_menu_item_7");
     // INICIALIZACIÓN DE VARIABLE CON EL ID DEL CAMPO A LLENAR CON EL NOMBRE:
     let putUserName = document.getElementById("userName");
     // FUNCIÓN fetch() PARA CONECTARSE CON EL json-server Y VERIFICAR LOS DATOS:
@@ -80,21 +80,21 @@ function pressSignIn() {
     });
     // CONDICIONAL PARA COMPROBAR QUE SE ENCONTRÓ UN USUARIO VALIDO:
     if (result.length > 0) {
-        console.log("ingreso");
         // CERRAR MODAL:
         signInModal.style.display = "none";
         // DESAPARECER NAVBAR NORMAL:
         divNavNormal.classList.add("displayNone");
         // APARECER NAVBAR SIGN IN:
         divNavSignIn.classList.add("displayBlock");
-        // // DESAPARECER OPCIONES DEL NAVBAR RESPONSIVE:
-        // divLogOut.classList.add('displayNone'); /* NO FUNCIONA, NO ELIMINA LAS OPCIONES DEL MENÚ RESPONSIVE CUANDO HACE SIGN IN */
-        // // APARECER OPCIÓN logOut DEL NAVBAR RESPONSIVE:
-        // divLogged.classList.add('displayBlock');
-
+        divNavSignIn.style.display = "flex";
+        // DESAPARECER OPCIONES DEL NAVBAR RESPONSIVE:
+        signInOptionResponsive.classList.add('displayNone');
+        signUpOptionResponsive.classList.add('displayNone');
+        // MOSTRAR OPCIONES DEL NAVBAR RESPONSIVE:
+        logOutOptionResponsive.classList.add('displayBlock');
+        profileOptionResponsive.classList.add('displayBlock');
         // INSERTAR NOMBRE DE USUARIO:
         putUserName.innerHTML = result[0].name;
-
         // INSERTAR INFORMACIÓN DEL PERFIL:
         webSite.textContent = result[0].contact.link;
         emailProfile.textContent = result[0].contact.mail;
