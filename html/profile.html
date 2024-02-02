@@ -202,7 +202,7 @@
     <div class="container-md profile-container">
       <div class="row rowInfoProfile">
         <div class="col-md-5 d-flex align-items-center mb-4 mt-1">
-          <h2 class="job-profile m-0">Backend Developer</h2>
+          <h2 class="job-profile m-0" id="job-profile">Backend Developer</h2>
           <div class="lineVertical ms-3 me-3"></div>
           <h2 class="m-0 country" id="city">Colombia, MD</h2>
         </div>
@@ -231,7 +231,7 @@
       <div class="row rowAboutMy">
         <div class="col-md-12 titleAboutMy mt-5 mb-4 p-3">
           <h1 class="title">Sobre Mi</h1>
-          <p class="paragraph">
+          <p class="paragraph" id="paragraph">
             Desarrollador Full-Stack con mediana experiencia en tecnologías
             frontend y backend. Me encanta trabajar en proyectos pequeños y
             medianos que tengan un gran potencial. Como auto-didacta, estoy
@@ -275,22 +275,22 @@
           <h5 class="titleSkillsDesign mt-3 mb-2">Diseño</h5>
           <ul class="c-list">
             <li class="c-listItems mb-2">
-              <p class="m-0 paragraphProcess">Adobe Creative Suite</p>
+              <p class="m-0 paragraphProcess" id="designItem1">Adobe Creative Suite</p>
             </li>
 
             <li class="c-listItems mb-2">
-              <p class="m-0 paragraphProcess">Sketch</p>
+              <p class="m-0 paragraphProcess" id="designItem2">Sketch</p>
             </li>
 
             <li class="c-listItems mb-2">
-              <p class="m-0 paragraphProcess">Figma</p>
+              <p class="m-0 paragraphProcess" id="designItem3">Figma</p>
             </li>
           </ul>
 
           <h5 class="titleTechnical">Tecnicas</h5>
           <ul class="c-list">
             <li class="c-listItems">
-              <p class="m-0 paragraphProcess">
+              <p class="m-0 paragraphProcess" id="techniques">
                 HTML, CSS, Python, Javascript, SQL
               </p>
             </li>
@@ -299,7 +299,7 @@
           <h5 class="titleProcess">Procesos</h5>
           <ul class="c-list">
             <li class="c-listItems">
-              <p class="m-0 paragraphProcess">
+              <p class="m-0 paragraphProcess" id="paragraphProcess">
                 Investigación de usuarios, creación de prototipos, diseño de
                 interacción, pruebas de usabilidad, especificaciones, branding,
                 estrategia de contenidos, métricas, diseño inclusivo
@@ -311,10 +311,10 @@
           <ul class="c-list mb-2">
             <li class="c-listItems">
               <a href="#" class="itemsLink d-flex flex-column p-2">
-                <strong>University of Central Florida</strong>
-                <p class="m-0 paragraphProcess">BA Honors HCI</p>
-                <p class="m-0 paragraphProcess">Graduated 2014</p>
-                <p class="m-0 paragraphProcessEdit mt-2">Orlando, FL, USA</p>
+                <strong id="UName">University of Central Florida</strong>
+                <p class="m-0 paragraphProcess" id="UPostName">BA Honors HCI</p>
+                <p class="m-0 paragraphProcess" id="UDate">Graduated 2014</p>
+                <p class="m-0 paragraphProcessEdit mt-2" id="ULocation">Orlando, FL, USA</p>
               </a>
             </li>
           </ul>
@@ -326,21 +326,21 @@
               <h1 class="titleExperience mb-3">Experiencia</h1>
 
               <h3 class="companyName">
-                <strong>Company 1 </strong>
-                <span class="jobPosition">- Product Designer</span>
+                <strong id="jobCompany1">Company 1 </strong>
+                <span>- </span><span class="jobPosition" id="jobPosition1">Product Designer</span>
               </h3>
 
               <div class="row mb-3">
                 <h4 class="placeJobTime">
-                  <span class="placeJob">Venezuela</span>
+                  <span class="placeJob" id="placeJob1">Venezuela</span>
                   <span class="lineVertical ms-3 me-3"></span>
-                  <span class="fromTime time">2018</span>
+                  <span class="fromTime time" id="fromTime1">2018</span>
                   <span class="time">-</span>
-                  <span class="toTime time">Current</span>
+                  <span class="toTime time" id="toTime1">Current</span>
                 </h4>
               </div>
 
-              <p class="paragraphExperience">
+              <p class="paragraphExperience" id="exp1">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Delectus, eum mollitia. Ullam in sunt hic similique aspernatur
                 itaque autem molestias, debitis esse voluptates nobis doloremque
@@ -355,21 +355,21 @@
           <ul class="e-list">
             <li class="c-listItems mb-2">
               <h3 class="companyName">
-                <strong>Company 1 </strong>
-                <span class="jobPosition">- Product Designer</span>
+                <strong id="jobCompany2">Company 1 </strong>
+                <span>- </span><span class="jobPosition2" id="jobPosition2">Product Designer</span>
               </h3>
 
               <div class="row mb-3">
                 <h4 class="placeJobTime">
-                  <span class="placeJob">Venezuela</span>
+                  <span class="placeJob" id="placeJob2">Venezuela</span>
                   <span class="lineVertical ms-3 me-3"></span>
-                  <span class="fromTime time">2018</span>
+                  <span class="fromTime time" id="fromTime2">2018</span>
                   <span class="time">-</span>
-                  <span class="toTime time">Current</span>
+                  <span class="toTime time" id="toTime2">Current</span>
                 </h4>
               </div>
 
-              <p class="paragraphExperience">
+              <p class="paragraphExperience" id="exp2">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Delectus, eum mollitia. Ullam in sunt hic similique aspernatur
                 itaque autem molestias, debitis esse voluptates nobis doloremque
@@ -384,21 +384,21 @@
           <ul class="e-list">
             <li class="c-listItems mb-2">
               <h3 class="companyName">
-                <strong>Company 1 </strong>
-                <span class="jobPosition">- Product Designer</span>
+                <strong id="jobCompany3">Company 1 </strong>
+                <span>- </span><span class="jobPosition" id="jobPosition3">Product Designer</span>
               </h3>
 
               <div class="row mb-3">
                 <h4 class="placeJobTime">
-                  <span class="placeJob">Venezuela</span>
+                  <span class="placeJob" id="placeJob3">Venezuela</span>
                   <span class="lineVertical ms-3 me-3"></span>
-                  <span class="fromTime time">2018</span>
+                  <span class="fromTime time" id="fromTime3">2018</span>
                   <span class="time">-</span>
-                  <span class="toTime time">Current</span>
+                  <span class="toTime time" id="toTime3">Current</span>
                 </h4>
               </div>
 
-              <p class="paragraphExperience">
+              <p class="paragraphExperience" id="exp3">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Delectus, eum mollitia. Ullam in sunt hic similique aspernatur
                 itaque autem molestias, debitis esse voluptates nobis doloremque
@@ -413,21 +413,21 @@
           <ul class="e-list">
             <li class="c-listItems mb-2">
               <h3 class="companyName">
-                <strong>Company 1 </strong>
-                <span class="jobPosition">- Product Designer</span>
+                <strong id="jobCompany4">Company 1 </strong>
+                <span>- </span><span class="jobPosition" id="jobPosition4">Product Designer</span>
               </h3>
 
               <div class="row mb-3">
                 <h4 class="placeJobTime">
-                  <span class="placeJob">Venezuela</span>
+                  <span class="placeJob" id="placeJob4">Venezuela</span>
                   <span class="lineVertical ms-3 me-3"></span>
-                  <span class="fromTime time">2018</span>
+                  <span class="fromTime time" id="fromTime4">2018</span>
                   <span class="time">-</span>
-                  <span class="toTime time">Current</span>
+                  <span class="toTime time" id="toTime4">Current</span>
                 </h4>
               </div>
 
-              <p class="paragraphExperience">
+              <p class="paragraphExperience" id="exp4">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Delectus, eum mollitia. Ullam in sunt hic similique aspernatur
                 itaque autem molestias, debitis esse voluptates nobis doloremque
