@@ -9,26 +9,16 @@
       "birthday": "1988-03-25",
       "CV": "https://www.jenniferbrown.com/resume",
       "role": "Backend Developer",
-      "about_me": "Desarrollador Full-Stack con mediana experiencia en tecnologías frontend y backend. Me encanta trabajar en proyectos pequeños y medianos que tengan un gran potencial. Como auto-didacta, estoy siempre aprendiendo y mejorando mis habilidades para ofrecer soluciones innovadoras y creativas. Actualmente trabajo como desarrollador freelance, aunque mi disponibilidad es limitada. Estoy siempre buscando nuevas oportunidades para aprender y crecer, y me encantaría poder aportar mis habilidades y experiencia a proyectos desafiantes y emocionantes.",
+      "about_me": "Soy un desarrollador Full-Stack con experiencia en tecnologías frontend y backend. Me apasiona trabajar en proyectos pequeños y medianos con un gran potencial. Como autodidacta, estoy en constante aprendizaje para ofrecer soluciones innovadoras y creativas. Actualmente, soy un desarrollador freelance con disponibilidad limitada. Siempre estoy en busca de nuevas oportunidades para aprender, crecer y aportar mis habilidades y experiencia a proyectos emocionantes.",
       "contact": {
         "link": "www.jenniferbrown.com",
         "mail": "jennifer.brown@example.com",
         "call": "+1 (555) 876-5432"
       },
       "skills": {
-        "design": ["Adobe Creative Suite", "Sketch", "Figma"],
-        "techniques": ["HTML", "CSS", "Python", "Javascript", "SQL"],
-        "processes": [
-          "Investigación de usuarios",
-          "Creación de prototipos",
-          "Diseño de interacción",
-          "Pruebas de usabilidad",
-          "Especificaciones",
-          "Branding",
-          "Estrategia de contenidos",
-          "Métricas",
-          "Diseño inclusivo"
-        ]
+        "design": ["Adobe abc Suite", "Sketch", "Figma"],
+        "techniques": ["HTML", "CSS", "Python", "JavaScript", "SQL"],
+        "processes": ["En el desarrollo de productos digitales, el proceso comienza con una exhaustiva investigación de usuarios. Luego, se procede a la creación de prototipos que sirven como representaciones visuales tempranas, permitiendo validar conceptos y mejorar la experiencia del usuario."]
       },
       "education": {
         "university": "University of Central Florida",
@@ -38,28 +28,36 @@
       },
       "experience": [
         {
+          "position": "Backend Developer",
           "company": "Tech Innovations",
           "location": "Sunshineville",
-          "duration": "2015 - 2017",
-          "description": "Trabajé como desarrollador de software en el equipo de innovación tecnológica. Participé en el diseño y desarrollo de aplicaciones web y móviles utilizando tecnologías modernas como React.js y Node.js. Colaboré estrechamente con el equipo de diseño para garantizar una experiencia de usuario excepcional."
+          "durationStart": "2015",
+          "durationEnd": "2017",
+          "description": "Trabajé como desarrollador de software en el equipo de innovación tecnológica. Participé en el diseño y desarrollo de aplicaciones web y móviles utilizando tecnologías modernas como React.js y Node.js. Colaboré estrechamente con el equipo de diseño para garantizar una experiencia de usuario excepcional. Durante mi tiempo en Tech Innovations, tuve la oportunidad de trabajar en proyectos emocionantes que me permitieron aplicar mis habilidades en el desarrollo full-stack y contribuir a soluciones tecnológicas innovadoras."
         },
         {
+          "position": "Backend Developer",
           "company": "Data Solutions Corp",
           "location": "TechHub",
-          "duration": "2017 - 2019",
-          "description": "Fui parte del equipo de desarrollo de soluciones de datos, donde trabajé en la implementación de sistemas de gestión de bases de datos y análisis de datos. Desarrollé y optimicé consultas SQL complejas para mejorar el rendimiento del sistema y la eficiencia del procesamiento de datos."
+          "durationStart": "2017",
+          "durationEnd": "2019",
+          "description": "Formé parte del equipo de desarrollo de soluciones de datos, donde trabajé en la implementación de sistemas de gestión de bases de datos y análisis de datos. Mi papel implicó el desarrollo y la optimización de consultas SQL complejas para mejorar el rendimiento del sistema y la eficiencia del procesamiento de datos. Colaboré con colegas en la creación de soluciones innovadoras que abordaron desafíos específicos en el ámbito de la gestión de datos."
         },
         {
+          "position": "Backend Developer",
           "company": "InnovateNow",
           "location": "Dreamland",
-          "duration": "2019 - 2021",
-          "description": "Como líder técnico en InnovateNow, dirigí proyectos de desarrollo full-stack, desde la concepción hasta la implementación. Supervisé a un equipo de desarrolladores, asegurando la calidad del código y la entrega oportuna. Implementé prácticas de desarrollo ágil para mejorar la eficiencia del equipo."
+          "durationStart": "2015",
+          "durationEnd": "2021",
+          "description": "Como líder técnico en InnovateNow, dirigí proyectos de desarrollo full-stack, desde la concepción hasta la implementación. Supervisé a un equipo de desarrolladores, asegurando la calidad del código y la entrega oportuna. Implementé prácticas de desarrollo ágil para mejorar la eficiencia del equipo. Durante mi tiempo en InnovateNow, contribuí al éxito de proyectos importantes, desempeñando un papel clave en la entrega de soluciones tecnológicas avanzadas."
         },
         {
+          "position": "Backend Developer",
           "company": "Tech Solutions Ltd",
           "location": "Innovation City",
-          "duration": "2021 - Presente",
-          "description": "Actualmente, en Tech Solutions Ltd, trabajo en el diseño y desarrollo de soluciones tecnológicas avanzadas. Colaboro con clientes para comprender sus necesidades y proporcionar soluciones personalizadas. También me involucro en la investigación de nuevas tecnologías para mantenernos a la vanguardia en la industria."
+          "durationStart": "2021",
+          "durationEnd": "Presente",
+          "description": "En mi rol actual en Tech Solutions Ltd, trabajo en el diseño y desarrollo de soluciones tecnológicas avanzadas. Colaboro con clientes para comprender sus necesidades y proporcionar soluciones personalizadas. También me involucro en la investigación de nuevas tecnologías para mantenernos a la vanguardia en la industria. Mi enfoque incluye la aplicación de mis habilidades de desarrollo full-stack para crear soluciones que impulsen la innovación y satisfagan las demandas del mercado actual."
         }
       ]
     },
@@ -72,7 +70,7 @@
       "birthday": "1990-05-12",
       "CV": "https://www.johnsmith.com/resume",
       "role": "Frontend Developer",
-      "about_me": "Desarrollador Frontend apasionado por la creación de experiencias de usuario intuitivas y atractivas. Especializado en tecnologías web como React y Vue. Me encanta trabajar en colaboración con diseñadores para llevar a cabo proyectos visualmente impactantes.",
+      "about_me": "Soy un desarrollador Frontend apasionado por la creación de experiencias de usuario intuitivas y atractivas. Me especializo en tecnologías web como React y Vue. Disfruto trabajando en colaboración con diseñadores para llevar a cabo proyectos visualmente impactantes.",
       "contact": {
         "link": "www.johnsmith.com",
         "mail": "john.smith@example.com",
@@ -80,7 +78,8 @@
       },
       "skills": {
         "design": ["Sketch", "Adobe XD"],
-        "techniques": ["HTML", "CSS", "JavaScript", "React", "Vue"]
+        "techniques": ["HTML", "CSS", "JavaScript", "React", "Vue"],
+        "processes": ["La inclusividad es fundamental en el diseño moderno. Integrar el diseño inclusivo en el proceso implica considerar las diversas necesidades de los usuarios. Paralelamente, la estrategia de contenidos se enfoca en proporcionar información relevante y atractiva, asegurando una experiencia integral para el usuario final."]
       },
       "education": {
         "university": "University of Tech",
@@ -88,34 +87,42 @@
         "graduation_year": 2012,
         "location": "TechTown, USA"
       },
-
       "experience": [
         {
+          "position": "Frontend Developer",
           "company": "WebCrafters",
           "location": "TechCity",
-          "duration": "2013 - 2016",
-          "description": "Trabajé como desarrollador frontend en proyectos de comercio electrónico. Implementé interfaces de usuario responsivas y mejoré la usabilidad de las plataformas web."
+          "durationStart": "2013",
+          "durationEnd": "2016",
+          "description": "Trabajé como desarrollador frontend en proyectos de comercio electrónico. Implementé interfaces de usuario responsivas y mejoré la usabilidad de las plataformas web. Durante mi tiempo en WebCrafters, contribuí al desarrollo de plataformas de comercio electrónico exitosas, mejorando la experiencia del usuario y la funcionalidad de las aplicaciones web."
         },
         {
+          "position": "Lead Frontend Developer",
           "company": "InnovateDesign",
           "location": "DigitalHub",
-          "duration": "2016 - 2018",
-          "description": "Lideré el equipo de desarrollo frontend en proyectos de diseño interactivo. Colaboré con diseñadores para crear experiencias visuales impactantes utilizando tecnologías emergentes."
+          "durationStart": "2016",
+          "durationEnd": "2018",
+          "description": "Lideré el equipo de desarrollo frontend en proyectos de diseño interactivo. Colaboré con diseñadores para crear experiencias visuales impactantes utilizando tecnologías emergentes. Durante mi tiempo en InnovateDesign, desempeñé un papel clave en la conceptualización y ejecución de proyectos de diseño interactivo, liderando el equipo hacia el éxito en la creación de experiencias innovadoras y atractivas."
         },
         {
+          "position": "Senior Frontend Developer",
           "company": "TechSprint",
           "location": "InnovationVille",
-          "duration": "2018 - 2020",
-          "description": "Desarrollé aplicaciones web y móviles eficientes y escalables. Implementé soluciones técnicas para desafíos específicos, mejorando la velocidad y rendimiento del software."
+          "durationStart": "2018",
+          "durationEnd": "2020",
+          "description": "Desarrollé aplicaciones web y móviles eficientes y escalables. Implementé soluciones técnicas para desafíos específicos, mejorando la velocidad y rendimiento del software. Durante mi tiempo en TechSprint, contribuí al desarrollo de soluciones tecnológicas avanzadas, destacando por la implementación eficiente de aplicaciones web y móviles que cumplieron con los más altos estándares de rendimiento y usabilidad."
         },
         {
+          "position": "Frontend Researcher and Developer",
           "company": "DigitalCrafters",
           "location": "TechTopia",
-          "duration": "2020 - Presente",
-          "description": "Actualmente, en DigitalCrafters, trabajo en la investigación y desarrollo de nuevas tecnologías frontend. Participé en proyectos de realidad aumentada y estoy explorando las posibilidades de la inteligencia artificial en el diseño de interfaces."
+          "durationStart": "2020",
+          "durationEnd": "Presente",
+          "description": "Actualmente, en DigitalCrafters, trabajo en la investigación y desarrollo de nuevas tecnologías frontend. Participé en proyectos de realidad aumentada y estoy explorando las posibilidades de la inteligencia artificial en el diseño de interfaces. Mi enfoque incluye la aplicación de mis habilidades para investigar y adoptar tecnologías emergentes, contribuyendo al avance continuo de las capacidades tecnológicas en el campo del desarrollo frontend."
         }
       ]
     },
+
     {
       "id": "3",
       "name": "Alexandra Davis",
@@ -125,7 +132,7 @@
       "birthday": "1992-08-18",
       "CV": "https://www.alexandradavis.com/resume",
       "role": "UX/UI Designer",
-      "about_me": "Diseñadora apasionada por la creación de experiencias de usuario atractivas y centradas en el usuario. Con sólidos conocimientos en diseño de interfaz, prototipado y pruebas de usabilidad. Mi objetivo es combinar la estética visual con la funcionalidad para crear productos que cautiven a los usuarios.",
+      "about_me": "Soy una diseñadora apasionada por la creación de experiencias de usuario atractivas y centradas en el usuario. Tengo sólidos conocimientos en diseño de interfaz, prototipado y pruebas de usabilidad. Mi objetivo es combinar la estética visual con la funcionalidad para crear productos que cautiven a los usuarios.",
       "contact": {
         "link": "www.alexandradavis.com",
         "mail": "alexandra.davis@example.com",
@@ -133,16 +140,8 @@
       },
       "skills": {
         "design": ["Adobe XD", "Sketch", "Figma"],
-        "techniques": [
-          "Prototipado",
-          "Diseño de interfaz",
-          "Pruebas de usabilidad"
-        ],
-        "processes": [
-          "Investigación de usuarios",
-          "Diseño colaborativo",
-          "Iteración rápida"
-        ]
+        "techniques": ["Prototipado", "Diseño de interfaz", "Pruebas de usabilidad"],
+        "processes": ["Las pruebas de usabilidad son un paso crítico para evaluar la efectividad y eficiencia de un diseño. Las métricas se utilizan para cuantificar el rendimiento y la aceptación del usuario. Ambas prácticas se interrelacionan para iterar y mejorar continuamente la experiencia del usuario."]
       },
       "education": {
         "university": "Design Institute",
@@ -154,19 +153,22 @@
         {
           "company": "Innovative Designs",
           "location": "InnovationVille",
-          "duration": "2014 - 2017",
+          "durationStart": "2014",
+          "durationEnd": "2017",
           "description": "Comencé mi carrera como diseñadora junior, participando en proyectos de diseño gráfico y de interfaz. Aprendí a traducir ideas creativas en soluciones visuales efectivas."
         },
         {
           "company": "PixelCrafters",
           "location": "DesignHub",
-          "duration": "2017 - 2019",
+          "durationStart": "2017",
+          "durationEnd": "2019",
           "description": "Fui parte del equipo de diseño de interfaz, donde contribuí al diseño y prototipado de aplicaciones móviles. Colaboré con desarrolladores para garantizar la coherencia entre diseño y funcionalidad."
         },
         {
           "company": "UserExperience Co.",
           "location": "DigitalCenter",
-          "duration": "2019 - 2021",
+          "durationStart": "2019",
+          "durationEnd": "2021",
           "description": "Dirigí proyectos de diseño de interfaz centrados en el usuario. Lideré sesiones de investigación de usuarios y diseñé soluciones que mejoraron significativamente la experiencia del usuario."
         },
         {
@@ -186,7 +188,7 @@
       "birthday": "1991-11-02",
       "CV": "https://www.samueljohnson.com/resume",
       "role": "Data Scientist",
-      "about_me": "Científico de datos apasionado por descubrir patrones en grandes conjuntos de datos. Con experiencia en análisis estadístico, aprendizaje automático y visualización de datos. Mi objetivo es transformar datos en conocimientos valiosos para la toma de decisiones informadas.",
+      "about_me": "Soy un científico de datos apasionado por descubrir patrones en grandes conjuntos de datos. Tengo experiencia en análisis estadístico, aprendizaje automático y visualización de datos. Mi objetivo es transformar datos en conocimientos valiosos para la toma de decisiones informadas.",
       "contact": {
         "link": "www.samueljohnson.com",
         "mail": "samuel.johnson@example.com",
@@ -207,7 +209,8 @@
         {
           "company": "Data Insights Corp",
           "location": "TechTopia",
-          "duration": "2015 - 2018",
+          "durationStart": "2015",
+          "durationEnd": "2018",
           "description": "Comencé mi carrera como analista de datos, realizando análisis exploratorio y generando informes para clientes. Aprendí a trabajar con grandes conjuntos de datos y a aplicar técnicas estadísticas."
         },
         {
@@ -219,13 +222,15 @@
         {
           "company": "Data Innovators Ltd",
           "location": "InnovationVille",
-          "duration": "2020 - 2022",
+          "durationStart": "2020",
+          "durationEnd": "2022",
           "description": "Lideré proyectos de análisis de datos complejos, colaborando con equipos multidisciplinarios. Implementé soluciones de visualización de datos para facilitar la comprensión de los resultados por parte de los stakeholders."
         },
         {
           "company": "Insightful Solutions",
           "location": "TechCenter",
-          "duration": "2022 - Presente",
+          "durationStart": "2022",
+          "durationEnd": "Presente",
           "description": "En Insightful Solutions, trabajo en la aplicación de técnicas avanzadas de aprendizaje automático para resolver desafíos empresariales. Colaboro con equipos de desarrollo para implementar soluciones prácticas basadas en datos."
         }
       ]
