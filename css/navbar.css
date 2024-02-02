@@ -38,7 +38,6 @@ colores:
     height: 35%;
     display: flex;
     justify-content: flex-end;
-    background-color: aqua;
 }
 /* TOP BOX LIST CONTAINER */
 .container_list_top_box {
@@ -202,12 +201,17 @@ colores:
 /* DISPLAY BLOCK CLASS */
 .displayBlock {
     display: block !important;
+    display: flex !important;
 }
 /* MEDIA QUERY */
 @media screen and (max-width: 700px) {
     /* DISPLAY NONE & BOX MODIFICATIONS */
     .container_menu {
         height: 6rem;
+    }
+    .logout{
+        display: flex;
+        flex-direction: column;
     }
     .item {
         display: none;
