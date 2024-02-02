@@ -15,46 +15,56 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body class="body" id="body">
-    <!-------------------------------------------- NAVBAR SIGN IN ------------------------------------------->
-    <nav class="container_menu_signin" id="containeMenuSignin">
-        <!-- TOP BOX -->
-        <div class="container_top_box">
-            <ul class="container_list_top_box_signin">
-                <a href="#" class="container_profile_image">
-                    <img src="./assets/img/profile_image.jpg" alt="profile" title="Profile" class="profile_image"
-                        id="profileImage">
-                </a>
-                <div class="container_name_top_box">
-                    <span id="userName"></span>
-                </div>
-                <a href="#" id="logOutOption" class="log_out_option">Cerrar sesión</a>
-                <select name="" id="languageOption" class="select_navbar">
-                    <option value="">Español</option>
-                    <option value="">Inglés</option>
-                </select>
-            </ul>
-        </div>
-        <!-- BOTTOM BOX -->
-        <div class="container_bottom_box">
-            <!-- LINKS -->
-            <ul class="container_list_bottom_box_1">
-                <li class="item item_3"><a href="../index.html">Inicio</a></li>
-                <li class="item item_4"><a href="./offers.html">Ofertas</a></li>
-            </ul>
-            <!-- TITLE -->
-            <header class="header_container">
-                <span class="brackets bracket_1">{</span>
-                <a href="../index.html" class="title_navbar" title="{First_CodeJob}">First<span
-                        class="title_underscore">_</span>CodeJob</a>
-                <span class="brackets bracket_2">}</span>
-            </header>
-            <!-- LINKS -->
-            <ul class="container_list_bottom_box_2">
-                <li class="item item_5"><a href="./nosotros.html">Nosotros</a></li>
-                <li class="item item_6"><a href="./profile.html">Perfil</a></li>
-            </ul>
-        </div>
-    </nav>
+        <!-------------------------------------------- NAVBAR ------------------------------------------->
+        <nav class="container_menu" id="containerMenu">
+            <!-- TOP BOX -->
+            <div class="container_top_box" id="topBoxNormal">
+                <ul class="container_list_top_box">
+                    <li class="item item_1"><a href="#" id="openButtonSignIn" onclick="modal()">Iniciar Sesión</a></li>
+                    <li class="item item_2"><a href="./html/signup.html">Registrarse</a></li>
+                    <select name="" id="" class="select_navbar"> 
+                        <option value="">Español</option>
+                        <option value="">Inglés</option>
+                    </select>
+                </ul>
+            </div>
+            <!-- TOP BOX SIGN IN -->
+            <div class="container_top_box" id="topBoxSignIn">
+                <ul class="container_list_top_box_signin">
+                    <a href="#" class="container_profile_image">
+                        <img src="./assets/img/profile_image.jpg" alt="profile" title="Profile" class="profile_image"
+                            id="profileImage">
+                    </a>
+                    <div class="container_name_top_box">
+                        <span id="userName"></span>
+                    </div>
+                    <a href="#" id="logOutOption" class="log_out_option">Cerrar sesión</a>
+                    <select name="" id="languageOption" class="select_navbar">
+                        <option value="">Español</option>
+                        <option value="">Inglés</option>
+                    </select>
+                </ul>
+            </div>
+            <!-- BOTTOM BOX -->
+            <div class="container_bottom_box">
+                <!-- LINKS -->
+                <ul class="container_list_bottom_box_1">
+                    <li class="item item_3"><a href="./index.html">Inicio</a></li>
+                    <li class="item item_4"><a href="./html/offers.html">Ofertas</a></li>
+                </ul>
+                <!-- TITLE -->
+                <header class="header_container">
+                    <span class="brackets bracket_1">{</span>
+                    <a href="#" class="title_navbar" title="{First_CodeJob}">First<span class="title_underscore">_</span>CodeJob</a>
+                    <span class="brackets bracket_2">}</span>
+                </header>
+                <!-- LINKS -->
+                <ul class="container_list_bottom_box_2">
+                    <li class="item item_5"><a href="./html/nosotros.html">Nosotros</a></li>
+                    <li class="item item_6"><a href="./html/profile.html">Perfil</a></li>
+                </ul>
+            </div>
+        </nav>
     <!-- ------------------------------------------- SIGN IN MODAL ------------------------------------------- -->
     <!-- MODAL SIGN IN CONTAINER -->
     <div id="signInModal" class="signInModal">
@@ -89,44 +99,16 @@
             <a href="./html/offers.html" class="burger_menu_item_2" style="animation-delay: 0.3s">Ofertas</a>
             <a href="./html/nosotros.html" class="burger_menu_item_3" style="animation-delay: 0.4s">Nosotros</a>
             <a href="./html/profile.html" class="burger_menu_item_4" id="burger_menu_item_4" style="animation-delay: 0.5s">Perfil</a>
-            <a href="#" id="signInOptionResponsive" class="burger_menu_item_5" style="animation-delay: 0.6s">Iniciar Sesión</a>
-            <a href="./html/signup.html" class="burger_menu_item_6" id="burger_menu_item_6" style="animation-delay: 0.6s">Registrarse</a>
-            <a href="#" class="burger_menu_item_7" id="burger_menu_item_7" style="animation-delay: 0.5s">Cerrar sesión</a>
+            <div class="logout" id="logout">
+                <a href="#" id="signInOptionResponsive" class="burger_menu_item_5" style="animation-delay: 0.6s">Iniciar Sesión</a>
+                <a href="./html/signup.html" class="burger_menu_item_6" id="burger_menu_item_6" style="animation-delay: 0.6s">Registrarse</a>
+            </div>
+            <div class="logged" id="logged">
+                <a href="#" class="burger_menu_item_7" id="burger_menu_item_7" style="animation-delay: 0.5s">Cerrar sesión</a>
+            </div>
         </nav>
     </div>
-    <!-------------------------------------------- NAVBAR ------------------------------------------->
-    <nav class="container_menu" id="containerMenu">
-        <!-- TOP BOX -->
-        <div class="container_top_box">
-            <ul class="container_list_top_box">
-                <li class="item item_1"><a href="#" id="openButtonSignIn" onclick="modal()">Iniciar Sesión</a></li>
-                <li class="item item_2"><a href="./html/signup.html">Registrarse</a></li>
-                <select name="" id="" class="select_navbar"> 
-                    <option value="">Español</option>
-                    <option value="">Inglés</option>
-                </select>
-            </ul>
-        </div>
-        <!-- BOTTOM BOX -->
-        <div class="container_bottom_box">
-            <!-- LINKS -->
-            <ul class="container_list_bottom_box_1">
-                <li class="item item_3"><a href="./index.html">Inicio</a></li>
-                <li class="item item_4"><a href="./html/offers.html">Ofertas</a></li>
-            </ul>
-            <!-- TITLE -->
-            <header class="header_container">
-                <span class="brackets bracket_1">{</span>
-                <a href="#" class="title_navbar" title="{First_CodeJob}">First<span class="title_underscore">_</span>CodeJob</a>
-                <span class="brackets bracket_2">}</span>
-            </header>
-            <!-- LINKS -->
-            <ul class="container_list_bottom_box_2">
-                <li class="item item_5"><a href="./html/nosotros.html">Nosotros</a></li>
-                <li class="item item_6"><a href="./html/profile.html">Perfil</a></li>
-            </ul>
-        </div>
-    </nav>
+
     <!-- --------------------------------------------------- MAIN  --------------------------------------------------- -->
     <section class="container-fluid indexIntro p-0">
         <div class="row index d-flex justify-content-center">

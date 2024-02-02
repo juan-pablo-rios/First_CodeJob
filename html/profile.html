@@ -30,10 +30,27 @@
     <title>Perfil</title>
   </head>
   <body>
-    <!-------------------------------------------- NAVBAR SIGN IN ------------------------------------------->
-    <nav class="container_menu_signin" id="containeMenuSignin">
+    <!-------------------------------------------- NAVBAR ------------------------------------------->
+    <nav class="container_menu" id="containerMenu">
       <!-- TOP BOX -->
-      <div class="container_top_box">
+      <div class="container_top_box" id="topBoxNormal">
+        <ul class="container_list_top_box">
+          <li class="item item_1">
+            <a href="#" id="openButtonSignIn" onclick="modal()"
+              >Iniciar Sesión</a
+            >
+          </li>
+          <li class="item item_2">
+            <a href="./html/signup.html">Registrarse</a>
+          </li>
+          <select name="" id="" class="select_navbar">
+            <option value="">Español</option>
+            <option value="">Inglés</option>
+          </select>
+        </ul>
+      </div>
+      <!-- TOP BOX SIGN IN -->
+      <div class="container_top_box" id="topBoxSignIn">
         <ul class="container_list_top_box_signin">
           <a href="#" class="container_profile_image">
             <img
@@ -59,20 +76,22 @@
         <!-- LINKS -->
         <ul class="container_list_bottom_box_1">
           <li class="item item_3"><a href="../index.html">Inicio</a></li>
-          <li class="item item_4"><a href="./offers.html">Ofertas</a></li>
+          <li class="item item_4"><a href="./html/offers.html">Ofertas</a></li>
         </ul>
         <!-- TITLE -->
         <header class="header_container">
           <span class="brackets bracket_1">{</span>
-          <a href="../index.html" class="title_navbar" title="{First_CodeJob}"
+          <a href="#" class="title_navbar" title="{First_CodeJob}"
             >First<span class="title_underscore">_</span>CodeJob</a
           >
           <span class="brackets bracket_2">}</span>
         </header>
         <!-- LINKS -->
         <ul class="container_list_bottom_box_2">
-          <li class="item item_5"><a href="./nosotros.html">Nosotros</a></li>
-          <li class="item item_6"><a href="./profile.html">Perfil</a></li>
+          <li class="item item_5">
+            <a href="./html/nosotros.html">Nosotros</a>
+          </li>
+          <li class="item item_6"><a href="./html/profile.html">Perfil</a></li>
         </ul>
       </div>
     </nav>
@@ -109,7 +128,7 @@
               <a href="#" class="forgotPasswordOption">Olvidé la contraseña</a>
               <button
                 type="submit"
-                class="signInButton" onclick="pressSignIn()"
+                class="signInButton"
                 onclick="pressSignIn()"
               >
                 <a href="#">Iniciar sesión</a>
@@ -171,48 +190,13 @@
         >
       </nav>
     </div>
-    <!-------------------------------------------- NAVBAR ------------------------------------------->
-    <nav class="container_menu" id="containerMenu">
-      <!-- TOP BOX -->
-      <div class="container_top_box">
-        <ul class="container_list_top_box">
-          <li class="item item_1">
-            <a href="#" id="openButtonSignIn" onclick="pressSignIn()">Iniciar Sesión</a>
-          </li>
-          <li class="item item_2"><a href="./signup.html">Registrarse</a></li>
-          <select name="" id="" class="select_navbar">
-            <option value="">Español</option>
-            <option value="">Inglés</option>
-          </select>
-        </ul>
-      </div>
-      <!-- BOTTOM BOX -->
-      <div class="container_bottom_box">
-        <!-- LINKS -->
-        <ul class="container_list_bottom_box_1">
-          <li class="item item_3"><a href="../index.html">Inicio</a></li>
-          <li class="item item_4"><a href="./offers.html">Ofertas</a></li>
-        </ul>
-        <!-- TITLE -->
-        <header class="header_container">
-          <span class="brackets bracket_1">{</span>
-          <a href="../index.html" class="title_navbar" title="{First_CodeJob}"
-            >First<span class="title_underscore">_</span>CodeJob</a
-          >
-          <span class="brackets bracket_2">}</span>
-        </header>
-        <!-- LINKS -->
-        <ul class="container_list_bottom_box_2">
-          <li class="item item_5"><a href="./nosotros.html">Nosotros</a></li>
-          <li class="item item_6"><a href="./profile.html">Perfil</a></li>
-        </ul>
-      </div>
-    </nav>
     <!-- --------------------------------------------------------------- MAIN --------------------------------------------------------------- -->
     <div
       class="container-fluid contenerName mt-5 p-4 d-flex justify-content-center"
     >
-      <div class="rowName d-flex align-items-end" id="nameUserProfile">Socrates</div>
+      <div class="rowName d-flex align-items-end" id="nameUserProfile">
+        Socrates
+      </div>
     </div>
 
     <div class="container-md profile-container">
@@ -220,7 +204,7 @@
         <div class="col-md-5 d-flex align-items-center mb-4 mt-1">
           <h2 class="job-profile m-0">Backend Developer</h2>
           <div class="lineVertical ms-3 me-3"></div>
-          <h2 class="m-0 country" id="country">Colombia, MD</h2>
+          <h2 class="m-0 country" id="city">Colombia, MD</h2>
         </div>
       </div>
 

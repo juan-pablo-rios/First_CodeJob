@@ -18,7 +18,17 @@
       "skills": {
         "design": ["Adobe Creative Suite", "Sketch", "Figma"],
         "techniques": ["HTML", "CSS", "Python", "Javascript", "SQL"],
-        "processes": ["Investigación de usuarios", "Creación de prototipos", "Diseño de interacción", "Pruebas de usabilidad", "Especificaciones", "Branding", "Estrategia de contenidos", "Métricas", "Diseño inclusivo"]
+        "processes": [
+          "Investigación de usuarios",
+          "Creación de prototipos",
+          "Diseño de interacción",
+          "Pruebas de usabilidad",
+          "Especificaciones",
+          "Branding",
+          "Estrategia de contenidos",
+          "Métricas",
+          "Diseño inclusivo"
+        ]
       },
       "education": {
         "university": "University of Central Florida",
@@ -78,7 +88,7 @@
         "graduation_year": 2012,
         "location": "TechTown, USA"
       },
-      
+
       "experience": [
         {
           "company": "WebCrafters",
@@ -123,8 +133,16 @@
       },
       "skills": {
         "design": ["Adobe XD", "Sketch", "Figma"],
-        "techniques": ["Prototipado", "Diseño de interfaz", "Pruebas de usabilidad"],
-        "processes": ["Investigación de usuarios", "Diseño colaborativo", "Iteración rápida"]
+        "techniques": [
+          "Prototipado",
+          "Diseño de interfaz",
+          "Pruebas de usabilidad"
+        ],
+        "processes": [
+          "Investigación de usuarios",
+          "Diseño colaborativo",
+          "Iteración rápida"
+        ]
       },
       "education": {
         "university": "Design Institute",
@@ -212,7 +230,5 @@
         }
       ]
     }
-    
   ]
 }
-    
