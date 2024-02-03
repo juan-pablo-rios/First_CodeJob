@@ -113,10 +113,13 @@ function pressSignIn() {
     .then((response) => response.json())
     .then((element) => {
     let result = element.filter(function (element) {
-        return element.contact.mail == email && element.password == password;
+        var userOnline = element.contact.mail == email && element.password == password;
+        console.log(userOnline)
+        return userOnline
     });
     // CONDICIONAL PARA COMPROBAR QUE SE ENCONTRÓ UN USUARIO VALIDO:
     if (result.length > 0) {
+        
         // CERRAR MODAL:
         signInModal.style.display = "none";
         // DESAPARECER NAVBAR NORMAL:
@@ -131,8 +134,18 @@ function pressSignIn() {
         logOutOptionResponsive.classList.add('displayBlock');
         profileOptionResponsive.classList.add('displayBlock');
         // INSERTAR NOMBRE DE USUARIO:
-        sessionStorage.setItem('name' ,result[0].name)
-        putUserName.innerHTML = localStorage.getItem("name")
+        putUserName.innerHTML = result[0].name;
+
+        // ENVIAR USER NAME AL localstorage:
+        sessionStorage.setItem('name', result[0].name);// ----------------asdsasdasdad
+        let effectTitleIntro = document.getElementById('effectTitleIntro');
+        effectTitleIntro.innerHTML = sessionStorage.getItem('name');
+        // SE ENVIA EL EMAIL Y LA PASSWORD DE LOS INPUTS AL SESSIONSTORAGE:
+        sessionStorage.setItem('email', email);
+        sessionStorage.setItem('password', password);
+
+        // ENVIAR AUTORIZACIÓN DE INICIO DE SESIÓN AL sessionStorage:
+        sessionStorage.setItem('auth', 1);
         // INSERTAR INFORMACIÓN DEL PERFIL:
         name.textContent = result[0].name;
         job.textContent = result[0].role;
@@ -184,22 +197,63 @@ function pressSignIn() {
         fromTime4.textContent = result[0].experience[3].durationStart
         toTime4.textContent = result[0].experience[3].durationEnd
         exp4.textContent = result[0].experience[3].description
-        
-
       } else {
         alert("¡Los datos ingresados no son válidos!");
         }
     });
 }
+
+// FUNCIÓN PARA COMPROBAR SI AL CAMBIAR DE PÁGINA EL USUARIO SIGUE 'ONLINE' PARA MANTENER EL NAVBAR SIGNIN:
+function pageChange(){
+  // INICIALIZACIÓN DE VARIABLES CON LOS VALORES DE LOS INPUTS:
+  let email = sessionStorage.getItem('email');
+  let password = sessionStorage.getItem('password');
+  fetch("http://localhost:3000/users")
+    .then((response) => response.json())
+    .then((element) => {
+    let result = element.filter(function (element) {
+        var userOnline = element.contact.mail == email && element.password == password;
+        console.log(userOnline)
+        console.log(email);
+        return userOnline
+    });
+    if (result.length > 0){
+      // ENVIAR USER NAME AL localstorage:
+      sessionStorage.setItem('name', result[0].name);// ---------------- REVISAR CÓDIGO PARA PODER PONER EL NAVBAR Y EL PERFIL AL RECARGAR PÁGINA
+      let effectTitleIntro = document.getElementById('effectTitleIntro');
+      effectTitleIntro.innerHTML = sessionStorage.getItem('name');
+    }
+  });
+}
+pageChange();
+// ------------------------------------------------------------------ LOG OUT ------------------------------------------------------------------
+// FUNCIÓN PARA CERRAR SESIÓN:
+function logOut(){
+  // MODIFICACIÓN DE LA AUTORIZACIÓN EN EL sessionStorage:
+  sessionStorage.setItem('auth', 0);
+  let auth = sessionStorage.getItem('auth');
+  if(auth != 1){
+    location.href = '../index.html';
+  }
+}
+// FUNCIÓN PARA CERRAR SESIÓN DESDE EL INDEX:
+function logOutIndex(){
+  // MODIFICACIÓN DE LA AUTORIZACIÓN EN EL sessionStorage:
+  sessionStorage.setItem('auth', 0);
+  let auth = sessionStorage.getItem('auth');
+  if(auth != 1){
+    location.href = './index.html';
+  }
+}
 // ------------------------------------------------------------------ SIGN UP ------------------------------------------------------------------
 
 function createUser() {
   // CAPTURAR VALORES DE LOS INPUTS:
-    let signUpNameInput = document.getElementById("signUpNameInput");
-    let signUpEmailInput = document.getElementById("signUpEmailInput");
-    let signUpPhoneInput = document.getElementById("signUpPhoneInput");
-    let signUpPasswordInput = document.getElementById("signUpPasswordInput");
-    let signUpConfirmPasswordInput = document.getElementById("signUpConfirmPasswordInput");
+  let signUpNameInput = document.getElementById("signUpNameInput");
+  let signUpEmailInput = document.getElementById("signUpEmailInput");
+  let signUpPhoneInput = document.getElementById("signUpPhoneInput");
+  let signUpPasswordInput = document.getElementById("signUpPasswordInput");
+  let signUpConfirmPasswordInput = document.getElementById("signUpConfirmPasswordInput");
   let signUpDateInput = document.getElementById("signUpDateInput");
   let signUpCityInput = document.getElementById("signUpCityInput");
   let signUpWebsiteInput = document.getElementById("signUpWebsiteInput");
