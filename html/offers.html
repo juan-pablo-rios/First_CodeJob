@@ -113,19 +113,24 @@
     </div>
     <!-- --------------------------------------------------------------- MAIN --------------------------------------------------------------- -->
     <!-- Row Search Bar -->
-    <div class="row rowBarraBusquedaInfo d-flex justify-content-center align-items-center">
-      <!-- Search Bar -->
-      <form class="d-flex containBarraBusqueda justify-content-center " role="search">
+    <div class="row rowBarraBusquedaInfo d-flex justify-content-center align-content-center mt-5 mb-5">
+        <!-- Search Bar -->
+        <form class="d-flex containBarraBusquedaOffer justify-content-center " role="search">
           <input
               class="form-control inputBarraBusqueda"
               type="search"
-              placeholder="FrontEnd/BackEnd"
+              placeholder="Frontend/Backend"
               aria-label="Search"
+              id="inputBarraBusquedaOffer"
+              onclick="barraBusquedaOffer()"
           />
+
           <button class="btn btn-outline-success btnBarraBusqueda" type="submit">
               Buscar
           </button>
       </form>
+      <div id="resultOffer" class="list-group"></div>
+
     </div>
 
     <section class="container-fluid info">
@@ -156,7 +161,6 @@
             <span class="bordeR d-flex justify-content-center align-content-center">|</span>
           </div>
 
-          
           <div class="col-md-4 filterModality d-flex justify-content-center">
             <h2 class="titleModalidadFilter">
               Modalidad
@@ -183,8 +187,7 @@
 
         <div class="col-md-4">
         
-          <div class="overflow-auto caja">
-
+          <div class="overflow-auto caja" role="tablist" id="list-tab">
             <div class="containerCardsOffer p-4 rounded-4 mb-4">
               <div class="infoCardOffer">
                 <h3 class="cardOfferTitle">
@@ -199,7 +202,7 @@
                 <div class="offertTime">
                   Hace <span class="timeOffer">5</span> horas
                 </div>
-                <button type="button" class="btn btn-light buttonOffer">Detalles</button>
+                <a class="btn btn-light buttonOffer" data-bs-toggle="tab" href="#card1" role="tab" aria-controls="card1">Detalles</a>
               </div>
             </div>
 
@@ -217,7 +220,7 @@
                 <div class="offertTime">
                   Hace <span class="timeOffer">5</span> horas
                 </div>
-                <button type="button" class="btn btn-light buttonOffer">Detalles</button>
+                <a class="btn btn-light buttonOffer" data-bs-toggle="tab" href="#card2" role="tab" aria-controls="card2">Detalles</a>
               </div>
             </div>
 
@@ -261,62 +264,116 @@
 
         </div>
 
-        <div class="col-md-8 containerOffer d-flex justify-content-center p-0">
 
-          <div class="infoOffer rounded-4">
+        <div class="col-md-8 containerOffer p-0 tab-pane">
+          <div class="tab-content">
+            <div class="infoOffer rounded-4 tab-pane fade show" id="card1" role="tabpanel" aria-labelledby="card1-tab">
+              <!-- Contenido de la oferta 1 -->
               <h3 class="offertTitle mb-3">Desarrolador/a Backend</h3>
               <h4 class="companyName mb-3">
                 COSMETIC S.A.S
               </h4>
               <h4 class="modalityAndLenguage mb-5"><span class="offerModality">Remoto</span>/<span class="offerLenguage">Ingles</span></h4>
-
-            <div class="row rowButtonOffer">
-              <div class="col-md-4 buttonapplyOffer d-flex justify-content-center"><button type="button" class="btn buttonVacancy btnStyleOffer">Aplicar a la Vacante</button></div>
+  
+              <div class="row rowButtonOffer">
+                <div class="col-md-4 buttonapplyOffer d-flex justify-content-center"><button type="button" class="btn buttonVacancy btnStyleOffer">Aplicar a la Vacante</button></div>
+              </div>
+  
+              <hr class="border lineOffer border-1 opacity-100">
+  
+              <div class="row rowButtonOffer d-flex justify-content-center mb-2">
+                <div class="col-md-3 buttonSalaryOffer d-flex justify-content-center ">
+                  <button type="button" class="btn btnStyleOffer">$ 3.000.000</button>
+                </div>
+                <div class="col-md-6 buttonContractOffer d-flex justify-content-center">
+                  <button type="button" class="btn btn btnStyleOffer">Contrato a termino Indefinido</button>
+                </div>
+                <div class="col-md-3 buttonWorkDayOffer d-flex justify-content-center">
+                  <button type="button" class="btn btn-light btnStyleOffer">Tiempo Completo</button>
+                </div>
+              </div>
+  
+              <p class="offerDescriptionParagraph">
+                Importante empresa de consumo masivo requiere para su equipo de trabajo profesional y/o estudiante de Ingeniería de Sistemas con experiencia en programación. Objetivo del cargo: Diseñar, analizar, desarrollar e implementar soluciones informáticas que permitan mejorar el desarrollo normal de los procesos en cada una de las dependencias de la organización, brindando soporte técnico a los usuarios de tal manera que se instale, opere y mantenga los equipos, los programas de computación y la red.
+                <br><br>
+  
+                SALARIO: Salario: $3.000.000 + Prestaciones Sociales. HORARIO: Lunes a viernes de 8:00 am a 12:00 m y de 1:00 pm a 5:30 pm, Sábados de 8:00 a 12:30 pm.
+                <br><br>
+  
+                Requerimos profesionales con experiencia y conocimieto en: lenguajes de programación , interfaces de usuarios, HTML y Frameworks Web, desarrollo de sitios web y aplicaciones, creación y mantenimiento de bases de datos, formulación en MS-Excel, sistemas operativos, metodologías de pruebas y control de calidad de software. Tambien debe contar con capacidad técnica de realizar tareas con menos nivel de supervisión, trabajar en un entorno de equipo, habilidades de comunicación tanto oral como escrita, capacidad de análisis y de resolución de problemas, Creatividad, Pensamiento lógico,. Capacidad de análisis, Orientación al detalle, Capacidad investigativa y hábitos de autoaprendizaje, Capacidad de entender y aprender el manejo de nuevas tecnologías de forma ágil. Sus principales funciones: Asistir al Gerente de Desarrollo con las etapas del desarrollo de software: análisis, desarrollo, prueba, implementación y documentación Conocimiento con suficiencia del código principal en cada una de las soluciones de software desarrollado Responder a las solicitudes del equipo de desarrollo Escribir y mantener código especializado Adoptar los principales estándares y metodologías de desarrollo de software Recopilar información de los usuarios sobre la funcionalidad del programa Redactar informes inherentes a las actividades desarrolladas por el equipo de desarrollo Crear, escribir y ejecutar pruebas unitarias complejas Asistir y contribuir a reuniones de desarrollo de la empresa Configura un ambiente de desarrollo por sí mismo Detecta y corrige errores de código de alta complejidad y lo hace más eficiente Ofercemos: Modalidad de trabajo hibrido, contrato término fijo (con opción a indefinido según rendimiento), bonificaciones cuatrimestrales, horarios flexibles, oportunidad de crecimiento en la organización, Fondo de empleados, entre otros. Salario 3.007.950 + 2.005.300 bonificación fija.
+              </p>
+  
+              <ol>
+                <h5>Requerimientos</h4>
+                <li>Educacion minimo</li>
+                <li>Ingles COnversacional</li>
+                <li>JAVA, Spring Boot, MySQL, Postman, Docker, Kubernetes.</li>
+              </ol>
+  
+              <div class="row rowButtonOffer d-flex justify-content-center align-content-end mt-5">
+                <div class="col-md-4 buttonapplyOffer">
+                  <button type="button" class="btn btnStyleOffer">Aplicar a la Vacante</button>
+                </div>
+              </div>
             </div>
-
-            <hr class="border lineOffer border-1 opacity-100">
-
-            <div class="row rowButtonOffer d-flex justify-content-center mb-2">
-              <div class="col-md-3 buttonSalaryOffer d-flex justify-content-center ">
-                <button type="button" class="btn btnStyleOffer">$ 3.000.000</button>
+  
+            <div class="infoOffer rounded-4 tab-pane fade" id="card2" role="tabpanel" aria-labelledby="card2-tab">
+              <!-- Contenido de la oferta 2 -->
+              <h3 class="offertTitle mb-3">Desarrolador/a FROMTED</h3>
+              <h4 class="companyName mb-3">
+                COSMETIC S.A.S
+              </h4>
+              <h4 class="modalityAndLenguage mb-5"><span class="offerModality">Remoto</span>/<span class="offerLenguage">Ingles</span></h4>
+  
+              <div class="row rowButtonOffer">
+                <div class="col-md-4 buttonapplyOffer d-flex justify-content-center"><button type="button" class="btn buttonVacancy btnStyleOffer">Aplicar a la Vacante</button></div>
               </div>
-              <div class="col-md-6 buttonContractOffer d-flex justify-content-center">
-                <button type="button" class="btn btn btnStyleOffer">Contrato a termino Indefinido</button>
+  
+              <hr class="border lineOffer border-1 opacity-100">
+  
+              <div class="row rowButtonOffer d-flex justify-content-center mb-2">
+                <div class="col-md-3 buttonSalaryOffer d-flex justify-content-center ">
+                  <button type="button" class="btn btnStyleOffer">$ 3.000.000</button>
+                </div>
+                <div class="col-md-6 buttonContractOffer d-flex justify-content-center">
+                  <button type="button" class="btn btn btnStyleOffer">Contrato a termino Indefinido</button>
+                </div>
+                <div class="col-md-3 buttonWorkDayOffer d-flex justify-content-center">
+                  <button type="button" class="btn btn-light btnStyleOffer">Tiempo Completo</button>
+                </div>
               </div>
-              <div class="col-md-3 buttonWorkDayOffer d-flex justify-content-center">
-                <button type="button" class="btn btn-light btnStyleOffer">Tiempo Completo</button>
-              </div>
-            </div>
-
-            <p class="offerDescriptionParagraph">
-              Importante empresa de consumo masivo requiere para su equipo de trabajo profesional y/o estudiante de Ingeniería de Sistemas con experiencia en programación. Objetivo del cargo: Diseñar, analizar, desarrollar e implementar soluciones informáticas que permitan mejorar el desarrollo normal de los procesos en cada una de las dependencias de la organización, brindando soporte técnico a los usuarios de tal manera que se instale, opere y mantenga los equipos, los programas de computación y la red.
-              <br><br>
-
-              SALARIO: Salario: $3.000.000 + Prestaciones Sociales. HORARIO: Lunes a viernes de 8:00 am a 12:00 m y de 1:00 pm a 5:30 pm, Sábados de 8:00 a 12:30 pm.
-              <br><br>
-
-              Requerimos profesionales con experiencia y conocimieto en: lenguajes de programación , interfaces de usuarios, HTML y Frameworks Web, desarrollo de sitios web y aplicaciones, creación y mantenimiento de bases de datos, formulación en MS-Excel, sistemas operativos, metodologías de pruebas y control de calidad de software. Tambien debe contar con capacidad técnica de realizar tareas con menos nivel de supervisión, trabajar en un entorno de equipo, habilidades de comunicación tanto oral como escrita, capacidad de análisis y de resolución de problemas, Creatividad, Pensamiento lógico,. Capacidad de análisis, Orientación al detalle, Capacidad investigativa y hábitos de autoaprendizaje, Capacidad de entender y aprender el manejo de nuevas tecnologías de forma ágil. Sus principales funciones: Asistir al Gerente de Desarrollo con las etapas del desarrollo de software: análisis, desarrollo, prueba, implementación y documentación Conocimiento con suficiencia del código principal en cada una de las soluciones de software desarrollado Responder a las solicitudes del equipo de desarrollo Escribir y mantener código especializado Adoptar los principales estándares y metodologías de desarrollo de software Recopilar información de los usuarios sobre la funcionalidad del programa Redactar informes inherentes a las actividades desarrolladas por el equipo de desarrollo Crear, escribir y ejecutar pruebas unitarias complejas Asistir y contribuir a reuniones de desarrollo de la empresa Configura un ambiente de desarrollo por sí mismo Detecta y corrige errores de código de alta complejidad y lo hace más eficiente Ofercemos: Modalidad de trabajo hibrido, contrato término fijo (con opción a indefinido según rendimiento), bonificaciones cuatrimestrales, horarios flexibles, oportunidad de crecimiento en la organización, Fondo de empleados, entre otros. Salario 3.007.950 + 2.005.300 bonificación fija.
-            </p>
-
-            <ol>
-              <h5>Requerimientos</h4>
-              <li>Educacion minimo</li>
-              <li>Ingles COnversacional</li>
-              <li>JAVA, Spring Boot, MySQL, Postman, Docker, Kubernetes.</li>
-            </ol>
-
-            <div class="row rowButtonOffer d-flex justify-content-center align-content-end mt-5">
-              <div class="col-md-4 buttonapplyOffer">
-                <button type="button" class="btn btnStyleOffer">Aplicar a la Vacante</button>
+  
+              <p class="offerDescriptionParagraph">
+                Importante empresa de consumo masivo requiere para su equipo de trabajo profesional y/o estudiante de Ingeniería de Sistemas con experiencia en programación. Objetivo del cargo: Diseñar, analizar, desarrollar e implementar soluciones informáticas que permitan mejorar el desarrollo normal de los procesos en cada una de las dependencias de la organización, brindando soporte técnico a los usuarios de tal manera que se instale, opere y mantenga los equipos, los programas de computación y la red.
+                <br><br>
+  
+                SALARIO: Salario: $3.000.000 + Prestaciones Sociales. HORARIO: Lunes a viernes de 8:00 am a 12:00 m y de 1:00 pm a 5:30 pm, Sábados de 8:00 a 12:30 pm.
+                <br><br>
+  
+                Requerimos profesionales con experiencia y conocimieto en: lenguajes de programación , interfaces de usuarios, HTML y Frameworks Web, desarrollo de sitios web y aplicaciones, creación y mantenimiento de bases de datos, formulación en MS-Excel, sistemas operativos, metodologías de pruebas y control de calidad de software. Tambien debe contar con capacidad técnica de realizar tareas con menos nivel de supervisión, trabajar en un entorno de equipo, habilidades de comunicación tanto oral como escrita, capacidad de análisis y de resolución de problemas, Creatividad, Pensamiento lógico,. Capacidad de análisis, Orientación al detalle, Capacidad investigativa y hábitos de autoaprendizaje, Capacidad de entender y aprender el manejo de nuevas tecnologías de forma ágil. Sus principales funciones: Asistir al Gerente de Desarrollo con las etapas del desarrollo de software: análisis, desarrollo, prueba, implementación y documentación Conocimiento con suficiencia del código principal en cada una de las soluciones de software desarrollado Responder a las solicitudes del equipo de desarrollo Escribir y mantener código especializado Adoptar los principales estándares y metodologías de desarrollo de software Recopilar información de los usuarios sobre la funcionalidad del programa Redactar informes inherentes a las actividades desarrolladas por el equipo de desarrollo Crear, escribir y ejecutar pruebas unitarias complejas Asistir y contribuir a reuniones de desarrollo de la empresa Configura un ambiente de desarrollo por sí mismo Detecta y corrige errores de código de alta complejidad y lo hace más eficiente Ofercemos: Modalidad de trabajo hibrido, contrato término fijo (con opción a indefinido según rendimiento), bonificaciones cuatrimestrales, horarios flexibles, oportunidad de crecimiento en la organización, Fondo de empleados, entre otros. Salario 3.007.950 + 2.005.300 bonificación fija.
+              </p>
+  
+              <ol>
+                <h5>Requerimientos</h4>
+                <li>Educacion minimo</li>
+                <li>Ingles COnversacional</li>
+                <li>JAVA, Spring Boot, MySQL, Postman, Docker, Kubernetes.</li>
+              </ol>
+  
+              <div class="row rowButtonOffer d-flex justify-content-center align-content-end mt-5">
+                <div class="col-md-4 buttonapplyOffer">
+                  <button type="button" class="btn btnStyleOffer">Aplicar a la Vacante</button>
+                </div>
               </div>
             </div>
           </div>
 
-
-
+        
         </div>
+        
       </div>
-    </section>
 
+    </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -26,7 +26,7 @@ body {
 }
 
 .rowBarraBusquedaInfo {
-  height: 30%;
+  height: 10%;
 }
 
 .containBarraBusqueda {
@@ -54,6 +54,7 @@ body {
 }
 
 .btnBarraBusqueda {
+  height: 3rem;
   width: 150px;
   border-radius: 20px;
   font-size: 1.5rem;
@@ -232,6 +233,35 @@ body {
   color: #ffffff;
   margin-bottom: 35px;
   font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Agrega estilos para el contenedor de resultados */
+#resultOffer {
+  width: 69%;
+  position: absolute;
+  left: 10%;
+  right: 0;
+  top: 29%;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ccc;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Estilos para los elementos de la lista de resultados */
+#resultOffer button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#resultOffer button:hover {
+  background-color: #f0f0f0; /* Cambia el color de fondo al pasar el mouse */
 }
 
 @media screen and (max-width: 922px) {

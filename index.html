@@ -126,17 +126,22 @@
                     <span class="effectParradoIntro">tecnología</span> comienza aquí.
                 </p>
                 <!-- Search Bar -->
-                <form class="d-flex containBarraBusqueda" role="search">
+                <form class="d-flex inputBarraBusquedaIndex mb-2" role="search">
                     <input
                         class="form-control inputBarraBusqueda"
                         type="search"
                         placeholder="Frontend/Backend"
                         aria-label="Search"
+                        id="inputBarraBusquedaIndex"
+                        onclick="barraBusquedaIndex()"
                     />
                     <button class="btn btn-outline-success btnBarraBusqueda" type="submit">
                         Buscar
                     </button>
                 </form>
+                <div id="resultIndex" class="list-group">
+
+                </div>
             </div>
             <!-- Column for Image -->
             <div class="col-md-6 columnImgIntro d-flex justify-content-center">

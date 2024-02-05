@@ -1,0 +1,95 @@
+{
+    "ofertasLaborales": [
+      {
+        "puesto": "Desarrollador/a Backend",
+        "empresa": "COSMETIC S.A.S",
+        "ubicacion": "Remoto/Ingles",
+        "fechaPublicacion": "Hace 5 horas",
+        "descripcion": "Importante empresa de consumo masivo requiere para su equipo de trabajo profesional y/o estudiante de Ingeniería de Sistemas con experiencia en programación. Objetivo del cargo: Diseñar, analizar, desarrollar e implementar soluciones informáticas que permitan mejorar el desarrollo normal de los procesos en cada una de las dependencias de la organización, brindando soporte técnico a los usuarios de tal manera que se instale, opere y mantenga los equipos, los programas de computación y la red.",
+        "salario": "$3.000.000 + Prestaciones Sociales",
+        "horario": "Lunes a viernes de 8:00 am a 12:00 m y de 1:00 pm a 5:30 pm, Sábados de 8:00 a 12:30 pm.",
+        "requisitos": {
+          "educacionMinima": "Ingles Conversacional",
+          "conocimientos": ["JAVA", "Spring Boot", "MySQL", "Postman", "Docker", "Kubernetes"]
+        },
+        "beneficios": "Modalidad de trabajo hibrido, contrato término fijo (con opción a indefinido según rendimiento), bonificaciones cuatrimestrales, horarios flexibles, oportunidad de crecimiento en la organización, Fondo de empleados, entre otros.",
+        "salarioTotal": "$3.007.950 + $2.005.300 bonificación fija."
+      },
+      {
+        "puesto": "Ingeniero de Software",
+        "empresa": "Tech Innovators",
+        "ubicacion": "Presencial/Remoto",
+        "fechaPublicacion": "Hace 3 horas",
+        "descripcion": "Empresa líder en tecnología busca un Ingeniero de Software para colaborar en el desarrollo de soluciones innovadoras. Responsable de diseñar, implementar y mantener sistemas de software eficientes.",
+        "salario": "$4.500.000 + Beneficios",
+        "horario": "Lunes a viernes de 9:00 am a 6:00 pm",
+        "requisitos": {
+          "educacionMinima": "Licenciatura en Ingeniería de Software",
+          "conocimientos": ["Python", "Django", "React", "SQL", "Git"]
+        },
+        "beneficios": "Ambiente de trabajo colaborativo, oportunidades de capacitación, seguro de salud, bonos por desempeño.",
+        "salarioTotal": "$4.800.000"
+      },
+      {
+        "puesto": "Analista de Datos",
+        "empresa": "Data Insights Corp.",
+        "ubicacion": "Remoto",
+        "fechaPublicacion": "Hace 1 día",
+        "descripcion": "Compañía especializada en análisis de datos busca un Analista de Datos para interpretar y visualizar información clave. Será responsable de realizar análisis estadísticos y generar informes detallados.",
+        "salario": "$3.800.000 + Beneficios",
+        "horario": "Flexible",
+        "requisitos": {
+          "educacionMinima": "Licenciatura en Estadísticas o campos relacionados",
+          "conocimientos": ["Python", "R", "SQL", "Tableau"]
+        },
+        "beneficios": "Trabajo remoto, seguro de vida, desarrollo profesional continuo.",
+        "salarioTotal": "$4.000.000"
+      },
+      {
+        "puesto": "Desarrollador/a Frontend",
+        "empresa": "WebTech Solutions",
+        "ubicacion": "Presencial",
+        "fechaPublicacion": "Hace 6 horas",
+        "descripcion": "Empresa en crecimiento busca un Desarrollador/a Frontend para crear interfaces atractivas y funcionales. Colaborará en el diseño y desarrollo de aplicaciones web.",
+        "salario": "$3.200.000 + Beneficios",
+        "horario": "Lunes a viernes de 9:00 am a 5:00 pm",
+        "requisitos": {
+          "educacionMinima": "Licenciatura en Informática o carreras afines",
+          "conocimientos": ["HTML", "CSS", "JavaScript", "React", "Angular"]
+        },
+        "beneficios": "Ambiente de trabajo dinámico, bonificaciones trimestrales, oportunidades de crecimiento.",
+        "salarioTotal": "$3.500.000"
+      },
+      {
+        "puesto": "Especialista en Ciberseguridad",
+        "empresa": "SecureNet Solutions",
+        "ubicacion": "Presencial/Remoto",
+        "fechaPublicacion": "Hace 2 días",
+        "descripcion": "Empresa de seguridad informática busca un Especialista en Ciberseguridad para proteger la infraestructura y datos sensibles. Será responsable de implementar y mantener medidas de seguridad efectivas.",
+        "salario": "$5.000.000 + Beneficios",
+        "horario": "Flexible",
+        "requisitos": {
+          "educacionMinima": "Licenciatura en Seguridad Informática",
+          "conocimientos": ["Firewalls", "Antivirus", "Ethical Hacking", "SIEM"]
+        },
+        "beneficios": "Trabajo remoto, seguro de salud, formación continua en ciberseguridad.",
+        "salarioTotal": "$5.200.000"
+      },
+      {
+        "puesto": "Analista de Soporte Técnico",
+        "empresa": "Tech Support Solutions",
+        "ubicacion": "Presencial",
+        "fechaPublicacion": "Hace 4 horas",
+        "descripcion": "Empresa de servicios de soporte técnico busca un Analista para brindar asistencia a usuarios. Responsable de diagnosticar y resolver problemas técnicos.",
+        "salario": "$2.800.000 + Beneficios",
+        "horario": "Lunes a viernes de 8:00 am a 6:00 pm",
+        "requisitos": {
+          "educacionMinima": "Técnico en Informática o carreras similares",
+          "conocimientos": ["Sistemas Operativos", "Redes", "Soporte Remoto"]
+        },
+        "beneficios": "Ambiente colaborativo, bonos por desempeño, oportunidades de formación.",
+        "salarioTotal": "$3.000.000"
+      }
+    ]
+  }
+  

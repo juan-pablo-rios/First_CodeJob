@@ -309,3 +309,200 @@ function createUser() {
     });
   }
 }
+
+
+function barraBusquedaIndex() {
+
+  let inputSearchIndex = document.getElementById("inputBarraBusquedaIndex");
+  let formSearchIndex = document.getElementById("resultIndex");
+  
+  inputSearchIndex.onkeyup = (e) => {
+    let userDataIndex = e.target.value.toLowerCase();
+    formSearchIndex.textContent = '';
+  
+    if (userDataIndex.length > 1) {
+      fetch("http://localhost:4000/ofertasLaborales")
+        .then(response => response.json())
+        .then(data => {
+          const matchingOffersIndex = data.filter(element => element.puesto.toLowerCase().includes(userDataIndex));
+  
+          matchingOffersIndex.forEach((element) => {
+            let ilContentListIndex = document.createElement('button');
+            ilContentListIndex.setAttribute("type", "button");
+            ilContentListIndex.classList.add('list-group-item', 'list-group-item-action');
+            ilContentListIndex.textContent = element.puesto;
+  
+            // Agrega el botón al formulario
+            formSearchIndex.appendChild(ilContentListIndex);
+            
+  
+            ilContentListIndex.addEventListener('click', function () {
+              verquepresiono(element.puesto, element.id);
+            });
+          });
+        })
+        .catch(error => {
+          console.error('ERROR', error);
+        });
+  
+      // Muestra el contenedor de resultados
+      formSearchIndex.style.display = 'block';
+    } else {
+      // Oculta el contenedor de resultados si la entrada del usuario es corta
+      formSearchIndex.style.display = 'none';
+    }
+  };
+}
+
+function barraBusquedaOffer() {
+
+  let inputSearchOffer = document.getElementById("inputBarraBusquedaOffer");
+  let formSearchOffer = document.getElementById("resultOffer");
+  
+  inputSearchOffer.onkeyup = (e) => {
+    let userDataOffer = e.target.value.toLowerCase();
+    formSearchOffer.textContent = '';
+  
+    if (userDataOffer.length > 1) {
+      fetch("http://localhost:4000/ofertasLaborales")
+        .then(response => response.json())
+        .then(data => {
+          const matchingOffersOffer = data.filter(element => element.puesto.toLowerCase().includes(userDataOffer));
+  
+          matchingOffersOffer.forEach((element) => {
+            let ilContentListOffer = document.createElement('button');
+            ilContentListOffer.setAttribute("type", "button");
+            ilContentListOffer.classList.add('list-group-item', 'list-group-item-action');
+            ilContentListOffer.textContent = element.puesto;
+  
+            // Agrega el botón al formulario
+            formSearchOffer.appendChild(ilContentListOffer);
+            
+  
+            ilContentListOffer.addEventListener('click', function () {
+              verquepresiono(element.puesto, element.id);
+            });
+          });
+        })
+        .catch(error => {
+          console.error('ERROR', error);
+        });
+  
+      // Muestra el contenedor de resultados
+      formSearchOffer.style.display = 'block';
+    } else {
+      // Oculta el contenedor de resultados si la entrada del usuario es corta
+      formSearchOffer.style.display = 'none';
+    }
+  };
+}
+
+
+
+
+// // Crear y agregar elementos HTML utilizando JavaScript
+// const containerOffer = document.querySelector('.containerOffer');
+// const url = 'http://localhost:4000/ofertasLaborales';
+
+// // Realizar la petición al servidor
+// fetch(url)
+//   .then(response => response.json())
+//   .then(ofertasLaborales => {
+//     // Supongamos que seleccionamos la primera oferta en la respuesta
+//     const oferta = ofertasLaborales[0];
+
+//     const infoOfferDiv = document.createElement('div');
+//     infoOfferDiv.classList.add('infoOffer', 'rounded-4');
+
+//     const titleH3 = document.createElement('h3');
+//     titleH3.classList.add('offertTitle', 'mb-3');
+//     titleH3.textContent = oferta.puesto;
+
+//     const companyNameH4 = document.createElement('h4');
+//     companyNameH4.classList.add('companyName', 'mb-3');
+//     companyNameH4.textContent = oferta.empresa;
+
+//     const modalityAndLanguageH4 = document.createElement('h4');
+//     modalityAndLanguageH4.classList.add('modalityAndLenguage', 'mb-5');
+//     const offerModalitySpan = document.createElement('span');
+//     offerModalitySpan.classList.add('offerModality');
+//     offerModalitySpan.textContent = oferta.ubicacion.split('/')[0]; // Supongamos que 'Remoto/Ingles' está en ubicacion
+//     const offerLanguageSpan = document.createElement('span');
+//     offerLanguageSpan.classList.add('offerLenguage');
+//     offerLanguageSpan.textContent = oferta.ubicacion.split('/')[1];
+//     modalityAndLanguageH4.appendChild(offerModalitySpan);
+//     modalityAndLanguageH4.appendChild(document.createTextNode('/'));
+//     modalityAndLanguageH4.appendChild(offerLanguageSpan);
+
+//     const rowButtonOfferDiv = document.createElement('div');
+//     rowButtonOfferDiv.classList.add('row', 'rowButtonOffer', 'd-flex', 'justify-content-center', 'mb-2');
+
+//     const buttonSalaryOfferDiv = document.createElement('div');
+//     buttonSalaryOfferDiv.classList.add('col-md-3', 'buttonSalaryOffer', 'd-flex', 'justify-content-center');
+//     const salaryButton = document.createElement('button');
+//     salaryButton.setAttribute('type', 'button');
+//     salaryButton.classList.add('btn', 'btnStyleOffer');
+//     salaryButton.textContent = oferta.salario;
+//     buttonSalaryOfferDiv.appendChild(salaryButton);
+//     rowButtonOfferDiv.appendChild(buttonSalaryOfferDiv);
+
+//     const buttonContractOfferDiv = document.createElement('div');
+//     buttonContractOfferDiv.classList.add('col-md-6', 'buttonContractOffer', 'd-flex', 'justify-content-center');
+//     const contractButton = document.createElement('button');
+//     contractButton.setAttribute('type', 'button');
+//     contractButton.classList.add('btn', 'btnStyleOffer');
+//     contractButton.textContent = oferta.tipoContrato;
+//     buttonContractOfferDiv.appendChild(contractButton);
+//     rowButtonOfferDiv.appendChild(buttonContractOfferDiv);
+
+//     const buttonWorkDayOfferDiv = document.createElement('div');
+//     buttonWorkDayOfferDiv.classList.add('col-md-3', 'buttonWorkDayOffer', 'd-flex', 'justify-content-center');
+//     const workDayButton = document.createElement('button');
+//     workDayButton.setAttribute('type', 'button');
+//     workDayButton.classList.add('btn', 'btn-light', 'btnStyleOffer');
+//     workDayButton.textContent = oferta.jornadaLaboral;
+//     buttonWorkDayOfferDiv.appendChild(workDayButton);
+//     rowButtonOfferDiv.appendChild(buttonWorkDayOfferDiv);
+
+//     const lineOfferHr = document.createElement('hr');
+//     lineOfferHr.classList.add('border', 'lineOffer', 'border-1', 'opacity-100');
+
+//     const descriptionParagraphP = document.createElement('p');
+//     descriptionParagraphP.classList.add('offerDescriptionParagraph');
+//     descriptionParagraphP.innerHTML = oferta.descripcion;
+
+//     const requisitosList = document.createElement('ol');
+//     oferta.requisitos.forEach(requisito => {
+//       const requisitoLi = document.createElement('li');
+//       requisitoLi.textContent = requisito;
+//       requisitosList.appendChild(requisitoLi);
+//     });
+
+//     const requisitosH5 = document.createElement('h5');
+//     requisitosH5.textContent = 'Requerimientos';
+
+//     const applyButtonDiv = document.createElement('div');
+//     applyButtonDiv.classList.add('row', 'rowButtonOffer', 'd-flex', 'justify-content-center', 'align-content-end', 'mt-5');
+//     const applyButtonContainerDiv = document.createElement('div');
+//     applyButtonContainerDiv.classList.add('col-md-4', 'buttonapplyOffer');
+//     const applyButton = document.createElement('button');
+//     applyButton.setAttribute('type', 'button');
+//     applyButton.classList.add('btn', 'btnStyleOffer');
+//     applyButton.textContent = 'Aplicar a la Vacante';
+//     applyButtonContainerDiv.appendChild(applyButton);
+//     applyButtonDiv.appendChild(applyButtonContainerDiv);
+
+//     // Agregar los elementos al contenedor principal
+//     infoOfferDiv.appendChild(titleH3);
+//     infoOfferDiv.appendChild(companyNameH4);
+//     infoOfferDiv.appendChild(modalityAndLanguageH4);
+//     infoOfferDiv.appendChild(rowButtonOfferDiv);
+//     infoOfferDiv.appendChild(lineOfferHr);
+//     infoOfferDiv.appendChild(descriptionParagraphP);
+//     infoOfferDiv.appendChild(requisitosH5);
+//     infoOfferDiv.appendChild(requisitosList);
+//     infoOfferDiv.appendChild(applyButtonDiv);
+
+//     containerOffer.appendChild(infoOfferDiv);
+//   })
+//   .catch(error => console.error('Error al obtener datos:', error));
