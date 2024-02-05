@@ -38,7 +38,7 @@
                     <div class="container_name_top_box">
                         <span id="userName"></span>
                     </div>
-                    <a href="#" id="logOutOption" class="log_out_option">Cerrar sesión</a>
+                    <a href="#" id="logOutOption" class="log_out_option" onclick="logOutIndex()">Cerrar sesión</a>
                     <select name="" id="languageOption" class="select_navbar">
                         <option value="">Español</option>
                         <option value="">Inglés</option>
@@ -82,7 +82,7 @@
                 <div class="containerSignInInputs">
                     <div class="secundaryContainerSignInInputs">
                         <input type="text" name="" id="signInEmailInput" class="signInInputs signInInputEmail" placeholder="Email">
-                        <input type="text" name="" id="signInPasswordInput" class="signInInputs signInInputPassword" placeholder="Contraseña">
+                        <input type="password" name="" id="signInPasswordInput" class="signInInputs signInInputPassword" placeholder="Contraseña">
                         <a href="#" class="forgotPasswordOption">Olvidé la contraseña</a>
                         <button type="submit" class="signInButton" onclick="pressSignIn()"><a href="#">Iniciar sesión</a></button>
                     </div>
@@ -113,7 +113,7 @@
                 <!-- Title -->
                 <h1 class="titleIntro overflow-hidden">
                     ¡Consigue tu primer EMPLEO COMO 
-                    <span class="effectTitleIntro">DESARROLLADOR</span>!
+                    <span class="effectTitleIntro" id="effectTitleIntro">DESARROLLADOR</span>!
                 </h1>
                 <!-- Paragraph -->
                 <p class="parrafoIntro">
