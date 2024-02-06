@@ -196,13 +196,13 @@
                 <h4 class="cardCompanyName">
                   COSMETIC S.A.S
                 </h4>
-                <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="offerLenguage">Ingles</span></h4>
+                <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="cardOfferLenguage">Ingles</span></h4>
               </div>
               <div class="timeAndButtonOffer d-flex justify-content-between align-items-center">
                 <div class="offertTime">
                   Hace <span class="timeOffer">5</span> horas
                 </div>
-                <a class="btn btn-light buttonOffer" data-bs-toggle="tab" href="#card1" role="tab" aria-controls="card1">Detalles</a>
+                <a class="btn btn-light buttonOffer active" data-bs-toggle="tab" href="#card1" role="tab" aria-controls="card1">Detalles</a>
               </div>
             </div>
 
@@ -214,7 +214,7 @@
                 <h4 class="cardCompanyName">
                   COSMETIC S.A.S
                 </h4>
-                <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="offerLenguage">Ingles</span></h4>
+                <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="cardOfferLenguage">Ingles</span></h4>
               </div>
               <div class="timeAndButtonOffer d-flex justify-content-between align-items-center">
                 <div class="offertTime">
@@ -232,14 +232,13 @@
                 <h4 class="cardCompanyName">
                   COSMETIC S.A.S
                 </h4>
-                <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="offerLenguage">Ingles</span></h4>
+                <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="cardOfferLenguage">Ingles</span></h4>
               </div>
               <div class="timeAndButtonOffer d-flex justify-content-between align-items-center">
                 <div class="offertTime">
                   Hace <span class="timeOffer">5</span> horas
                 </div>
-                <button type="button" class="btn btn-light buttonOffer">Detalles</button>
-              </div>
+                <a class="btn btn-light buttonOffer" data-bs-toggle="tab" href="#card3" role="tab" aria-controls="card3">Detalles</a>              </div>
             </div>
 
             <div class="containerCardsOffer p-4 rounded-4 mb-4">
@@ -250,14 +249,13 @@
                 <h4 class="cardCompanyName">
                   COSMETIC S.A.S
                 </h4>
-                <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="offerLenguage">Ingles</span></h4>
+                <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="cardOfferLenguage">Ingles</span></h4>
               </div>
               <div class="timeAndButtonOffer d-flex justify-content-between align-items-center">
                 <div class="offertTime">
                   Hace <span class="timeOffer">5</span> horas
                 </div>
-                <button type="button" class="btn btn-light buttonOffer">Detalles</button>
-              </div>
+                <a class="btn btn-light buttonOffer" data-bs-toggle="tab" href="#card4" role="tab" aria-controls="card4">Detalles</a>              </div>
             </div>
 
           </div>
@@ -266,7 +264,9 @@
 
 
         <div class="col-md-8 containerOffer p-0 tab-pane">
+          
           <div class="tab-content">
+
             <div class="infoOffer rounded-4 tab-pane fade show" id="card1" role="tabpanel" aria-labelledby="card1-tab">
               <!-- Contenido de la oferta 1 -->
               <h3 class="offertTitle mb-3">Desarrolador/a Backend</h3>
@@ -283,13 +283,13 @@
   
               <div class="row rowButtonOffer d-flex justify-content-center mb-2">
                 <div class="col-md-3 buttonSalaryOffer d-flex justify-content-center ">
-                  <button type="button" class="btn btnStyleOffer">$ 3.000.000</button>
+                  <button type="button" class="btn btnStyleOffer salary">$ 3.000.000</button>
                 </div>
                 <div class="col-md-6 buttonContractOffer d-flex justify-content-center">
-                  <button type="button" class="btn btn btnStyleOffer">Contrato a termino Indefinido</button>
+                  <button type="button" class="btn btn btnStyleOffer contract">Contrato a termino Indefinido</button>
                 </div>
                 <div class="col-md-3 buttonWorkDayOffer d-flex justify-content-center">
-                  <button type="button" class="btn btn-light btnStyleOffer">Tiempo Completo</button>
+                  <button type="button" class="btn btn-light btnStyleOffer schedule">Tiempo Completo</button>
                 </div>
               </div>
   
@@ -304,10 +304,9 @@
               </p>
   
               <ol>
-                <h5>Requerimientos</h4>
-                <li>Educacion minimo</li>
-                <li>Ingles COnversacional</li>
-                <li>JAVA, Spring Boot, MySQL, Postman, Docker, Kubernetes.</li>
+                <h5 class="titleReq">Requerimientos</h4>
+                <li class="req1">Educacion minimo</li>
+                <li class="req2">JAVA, Spring Boot, MySQL, Postman, Docker, Kubernetes.</li>
               </ol>
   
               <div class="row rowButtonOffer d-flex justify-content-center align-content-end mt-5">
@@ -316,10 +315,10 @@
                 </div>
               </div>
             </div>
-  
-            <div class="infoOffer rounded-4 tab-pane fade" id="card2" role="tabpanel" aria-labelledby="card2-tab">
-              <!-- Contenido de la oferta 2 -->
-              <h3 class="offertTitle mb-3">Desarrolador/a FROMTED</h3>
+
+            <div class="infoOffer rounded-4 tab-pane fade show" id="card2" role="tabpanel" aria-labelledby="card2-tab">
+              <!-- Contenido de la oferta 1 -->
+              <h3 class="offertTitle mb-3">Desarrolador/a Backend</h3>
               <h4 class="companyName mb-3">
                 COSMETIC S.A.S
               </h4>
@@ -333,13 +332,13 @@
   
               <div class="row rowButtonOffer d-flex justify-content-center mb-2">
                 <div class="col-md-3 buttonSalaryOffer d-flex justify-content-center ">
-                  <button type="button" class="btn btnStyleOffer">$ 3.000.000</button>
+                  <button type="button" class="btn btnStyleOffer salary">$ 3.000.000</button>
                 </div>
                 <div class="col-md-6 buttonContractOffer d-flex justify-content-center">
-                  <button type="button" class="btn btn btnStyleOffer">Contrato a termino Indefinido</button>
+                  <button type="button" class="btn btn btnStyleOffer contract">Contrato a termino Indefinido</button>
                 </div>
                 <div class="col-md-3 buttonWorkDayOffer d-flex justify-content-center">
-                  <button type="button" class="btn btn-light btnStyleOffer">Tiempo Completo</button>
+                  <button type="button" class="btn btn-light btnStyleOffer schedule">Tiempo Completo</button>
                 </div>
               </div>
   
@@ -354,10 +353,9 @@
               </p>
   
               <ol>
-                <h5>Requerimientos</h4>
-                <li>Educacion minimo</li>
-                <li>Ingles COnversacional</li>
-                <li>JAVA, Spring Boot, MySQL, Postman, Docker, Kubernetes.</li>
+                <h5 class="titleReq">Requerimientos</h4>
+                <li class="req1">Educacion minimo</li>
+                <li class="req2">JAVA, Spring Boot, MySQL, Postman, Docker, Kubernetes.</li>
               </ol>
   
               <div class="row rowButtonOffer d-flex justify-content-center align-content-end mt-5">
@@ -366,9 +364,107 @@
                 </div>
               </div>
             </div>
+            
+            <div class="infoOffer rounded-4 tab-pane fade show" id="card3" role="tabpanel" aria-labelledby="card3-tab">
+              <!-- Contenido de la oferta 1 -->
+              <h3 class="offertTitle mb-3">Desarrolador/a Backend</h3>
+              <h4 class="companyName mb-3">
+                COSMETIC S.A.S
+              </h4>
+              <h4 class="modalityAndLenguage mb-5"><span class="offerModality">Remoto</span>/<span class="offerLenguage">Ingles</span></h4>
+  
+              <div class="row rowButtonOffer">
+                <div class="col-md-4 buttonapplyOffer d-flex justify-content-center"><button type="button" class="btn buttonVacancy btnStyleOffer">Aplicar a la Vacante</button></div>
+              </div>
+  
+              <hr class="border lineOffer border-1 opacity-100">
+  
+              <div class="row rowButtonOffer d-flex justify-content-center mb-2">
+                <div class="col-md-3 buttonSalaryOffer d-flex justify-content-center ">
+                  <button type="button" class="btn btnStyleOffer salary">$ 3.000.000</button>
+                </div>
+                <div class="col-md-6 buttonContractOffer d-flex justify-content-center">
+                  <button type="button" class="btn btn btnStyleOffer contract">Contrato a termino Indefinido</button>
+                </div>
+                <div class="col-md-3 buttonWorkDayOffer d-flex justify-content-center">
+                  <button type="button" class="btn btn-light btnStyleOffer schedule">Tiempo Completo</button>
+                </div>
+              </div>
+  
+              <p class="offerDescriptionParagraph">
+                Importante empresa de consumo masivo requiere para su equipo de trabajo profesional y/o estudiante de Ingeniería de Sistemas con experiencia en programación. Objetivo del cargo: Diseñar, analizar, desarrollar e implementar soluciones informáticas que permitan mejorar el desarrollo normal de los procesos en cada una de las dependencias de la organización, brindando soporte técnico a los usuarios de tal manera que se instale, opere y mantenga los equipos, los programas de computación y la red.
+                <br><br>
+  
+                SALARIO: Salario: $3.000.000 + Prestaciones Sociales. HORARIO: Lunes a viernes de 8:00 am a 12:00 m y de 1:00 pm a 5:30 pm, Sábados de 8:00 a 12:30 pm.
+                <br><br>
+  
+                Requerimos profesionales con experiencia y conocimieto en: lenguajes de programación , interfaces de usuarios, HTML y Frameworks Web, desarrollo de sitios web y aplicaciones, creación y mantenimiento de bases de datos, formulación en MS-Excel, sistemas operativos, metodologías de pruebas y control de calidad de software. Tambien debe contar con capacidad técnica de realizar tareas con menos nivel de supervisión, trabajar en un entorno de equipo, habilidades de comunicación tanto oral como escrita, capacidad de análisis y de resolución de problemas, Creatividad, Pensamiento lógico,. Capacidad de análisis, Orientación al detalle, Capacidad investigativa y hábitos de autoaprendizaje, Capacidad de entender y aprender el manejo de nuevas tecnologías de forma ágil. Sus principales funciones: Asistir al Gerente de Desarrollo con las etapas del desarrollo de software: análisis, desarrollo, prueba, implementación y documentación Conocimiento con suficiencia del código principal en cada una de las soluciones de software desarrollado Responder a las solicitudes del equipo de desarrollo Escribir y mantener código especializado Adoptar los principales estándares y metodologías de desarrollo de software Recopilar información de los usuarios sobre la funcionalidad del programa Redactar informes inherentes a las actividades desarrolladas por el equipo de desarrollo Crear, escribir y ejecutar pruebas unitarias complejas Asistir y contribuir a reuniones de desarrollo de la empresa Configura un ambiente de desarrollo por sí mismo Detecta y corrige errores de código de alta complejidad y lo hace más eficiente Ofercemos: Modalidad de trabajo hibrido, contrato término fijo (con opción a indefinido según rendimiento), bonificaciones cuatrimestrales, horarios flexibles, oportunidad de crecimiento en la organización, Fondo de empleados, entre otros. Salario 3.007.950 + 2.005.300 bonificación fija.
+              </p>
+  
+              <ol>
+                <h5 class="titleReq">Requerimientos</h4>
+                <li class="req1">Educacion minimo</li>
+                <li class="req2">JAVA, Spring Boot, MySQL, Postman, Docker, Kubernetes.</li>
+              </ol>
+  
+              <div class="row rowButtonOffer d-flex justify-content-center align-content-end mt-5">
+                <div class="col-md-4 buttonapplyOffer">
+                  <button type="button" class="btn btnStyleOffer">Aplicar a la Vacante</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="infoOffer rounded-4 tab-pane fade show active" id="card4" role="tabpanel" aria-labelledby="card4-tab">
+              <!-- Contenido de la oferta 1 -->
+              <h3 class="offertTitle mb-3">Desarrolador/a Backend</h3>
+              <h4 class="companyName mb-3">
+                COSMETIC S.A.S
+              </h4>
+              <h4 class="modalityAndLenguage mb-5"><span class="offerModality">Remoto</span>/<span class="offerLenguage">Ingles</span></h4>
+  
+              <div class="row rowButtonOffer">
+                <div class="col-md-4 buttonapplyOffer d-flex justify-content-center"><button type="button" class="btn buttonVacancy btnStyleOffer">Aplicar a la Vacante</button></div>
+              </div>
+  
+              <hr class="border lineOffer border-1 opacity-100">
+  
+              <div class="row rowButtonOffer d-flex justify-content-center mb-2">
+                <div class="col-md-3 buttonSalaryOffer d-flex justify-content-center ">
+                  <button type="button" class="btn btnStyleOffer salary">$ 3.000.000</button>
+                </div>
+                <div class="col-md-6 buttonContractOffer d-flex justify-content-center">
+                  <button type="button" class="btn btn btnStyleOffer contract">Contrato a termino Indefinido</button>
+                </div>
+                <div class="col-md-3 buttonWorkDayOffer d-flex justify-content-center">
+                  <button type="button" class="btn btn-light btnStyleOffer schedule">Tiempo Completo</button>
+                </div>
+              </div>
+  
+              <p class="offerDescriptionParagraph">
+                Importante empresa de consumo masivo requiere para su equipo de trabajo profesional y/o estudiante de Ingeniería de Sistemas con experiencia en programación. Objetivo del cargo: Diseñar, analizar, desarrollar e implementar soluciones informáticas que permitan mejorar el desarrollo normal de los procesos en cada una de las dependencias de la organización, brindando soporte técnico a los usuarios de tal manera que se instale, opere y mantenga los equipos, los programas de computación y la red.
+                <br><br>
+  
+                SALARIO: Salario: $3.000.000 + Prestaciones Sociales. HORARIO: Lunes a viernes de 8:00 am a 12:00 m y de 1:00 pm a 5:30 pm, Sábados de 8:00 a 12:30 pm.
+                <br><br>
+  
+                Requerimos profesionales con experiencia y conocimieto en: lenguajes de programación , interfaces de usuarios, HTML y Frameworks Web, desarrollo de sitios web y aplicaciones, creación y mantenimiento de bases de datos, formulación en MS-Excel, sistemas operativos, metodologías de pruebas y control de calidad de software. Tambien debe contar con capacidad técnica de realizar tareas con menos nivel de supervisión, trabajar en un entorno de equipo, habilidades de comunicación tanto oral como escrita, capacidad de análisis y de resolución de problemas, Creatividad, Pensamiento lógico,. Capacidad de análisis, Orientación al detalle, Capacidad investigativa y hábitos de autoaprendizaje, Capacidad de entender y aprender el manejo de nuevas tecnologías de forma ágil. Sus principales funciones: Asistir al Gerente de Desarrollo con las etapas del desarrollo de software: análisis, desarrollo, prueba, implementación y documentación Conocimiento con suficiencia del código principal en cada una de las soluciones de software desarrollado Responder a las solicitudes del equipo de desarrollo Escribir y mantener código especializado Adoptar los principales estándares y metodologías de desarrollo de software Recopilar información de los usuarios sobre la funcionalidad del programa Redactar informes inherentes a las actividades desarrolladas por el equipo de desarrollo Crear, escribir y ejecutar pruebas unitarias complejas Asistir y contribuir a reuniones de desarrollo de la empresa Configura un ambiente de desarrollo por sí mismo Detecta y corrige errores de código de alta complejidad y lo hace más eficiente Ofercemos: Modalidad de trabajo hibrido, contrato término fijo (con opción a indefinido según rendimiento), bonificaciones cuatrimestrales, horarios flexibles, oportunidad de crecimiento en la organización, Fondo de empleados, entre otros. Salario 3.007.950 + 2.005.300 bonificación fija.
+              </p>
+  
+              <ol>
+                <h5 class="titleReq">Requerimientos</h4>
+                <li class="req1">Educacion minimo</li>
+                <li class="req2">JAVA, Spring Boot, MySQL, Postman, Docker, Kubernetes.</li>
+              </ol>
+  
+              <div class="row rowButtonOffer d-flex justify-content-center align-content-end mt-5">
+                <div class="col-md-4 buttonapplyOffer">
+                  <button type="button" class="btn btnStyleOffer">Aplicar a la Vacante</button>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-        
         </div>
         
       </div>

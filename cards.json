@@ -1,95 +1,90 @@
 {
-    "ofertasLaborales": [
-      {
-        "puesto": "Desarrollador/a Backend",
-        "empresa": "COSMETIC S.A.S",
-        "ubicacion": "Remoto/Ingles",
-        "fechaPublicacion": "Hace 5 horas",
-        "descripcion": "Importante empresa de consumo masivo requiere para su equipo de trabajo profesional y/o estudiante de Ingeniería de Sistemas con experiencia en programación. Objetivo del cargo: Diseñar, analizar, desarrollar e implementar soluciones informáticas que permitan mejorar el desarrollo normal de los procesos en cada una de las dependencias de la organización, brindando soporte técnico a los usuarios de tal manera que se instale, opere y mantenga los equipos, los programas de computación y la red.",
-        "salario": "$3.000.000 + Prestaciones Sociales",
-        "horario": "Lunes a viernes de 8:00 am a 12:00 m y de 1:00 pm a 5:30 pm, Sábados de 8:00 a 12:30 pm.",
-        "requisitos": {
-          "educacionMinima": "Ingles Conversacional",
-          "conocimientos": ["JAVA", "Spring Boot", "MySQL", "Postman", "Docker", "Kubernetes"]
-        },
-        "beneficios": "Modalidad de trabajo hibrido, contrato término fijo (con opción a indefinido según rendimiento), bonificaciones cuatrimestrales, horarios flexibles, oportunidad de crecimiento en la organización, Fondo de empleados, entre otros.",
-        "salarioTotal": "$3.007.950 + $2.005.300 bonificación fija."
+  "ofertasLaborales": [
+    {
+      "puesto": "Desarrollador/a Backend",
+      "empresa": "COSMETIC S.A.S",
+      "modalidad": "Remoto",
+      "lenguage": "Ingles",
+      "fechaPublicacion": "5",
+      "descripcion": "COSMETIC S.A.S, una empresa líder en el sector de consumo masivo, busca incorporar a su equipo un profesional o estudiante de Ingeniería de Sistemas con habilidades destacadas en programación para el puesto de Desarrollador/a Backend. La modalidad de trabajo es remota, ofreciendo una oportunidad emocionante para contribuir al desarrollo tecnológico de la organización. En esta posición clave, el candidato seleccionado desempeñará un papel fundamental en el diseño, análisis, desarrollo e implementación de soluciones informáticas innovadoras. Se espera que utilice sus habilidades técnicas para mejorar los procesos operativos en todas las dependencias de la empresa y brindar soporte técnico integral a los usuarios, asegurando la eficiente instalación, operación y mantenimiento de equipos, programas de computación y la red.",
+      "salario": "$3.000.000 + Prestaciones Sociales",
+      "horario": "Tiempo Completo",
+      "requisitos": {
+        "educacionMinima": "Ingles Conversacional",
+        "conocimientos": "JAVA, Spring Boot, MySQL, Postman, Docker, Kubernetes"
       },
-      {
-        "puesto": "Ingeniero de Software",
-        "empresa": "Tech Innovators",
-        "ubicacion": "Presencial/Remoto",
-        "fechaPublicacion": "Hace 3 horas",
-        "descripcion": "Empresa líder en tecnología busca un Ingeniero de Software para colaborar en el desarrollo de soluciones innovadoras. Responsable de diseñar, implementar y mantener sistemas de software eficientes.",
-        "salario": "$4.500.000 + Beneficios",
-        "horario": "Lunes a viernes de 9:00 am a 6:00 pm",
-        "requisitos": {
-          "educacionMinima": "Licenciatura en Ingeniería de Software",
-          "conocimientos": ["Python", "Django", "React", "SQL", "Git"]
-        },
-        "beneficios": "Ambiente de trabajo colaborativo, oportunidades de capacitación, seguro de salud, bonos por desempeño.",
-        "salarioTotal": "$4.800.000"
+      "beneficios": "Modalidad de trabajo híbrido, contrato a término fijo (con opción a indefinido según rendimiento), bonificaciones cuatrimestrales, horarios flexibles, oportunidad de crecimiento en la organización, Fondo de empleados, entre otros.",
+      "salarioTotal": "$3.007.950"
+    },
+    {
+      "puesto": "Ingeniero de Software",
+      "empresa": "Tech Innovators",
+      "modalidad": "Presencial",
+      "lenguage": "Ingles",
+      "fechaPublicacion": "3",
+      "descripcion": "Empresa líder en tecnología, Tech Innovators, busca un Ingeniero de Software para colaborar en el desarrollo de soluciones innovadoras. El puesto es presencial, con horario de lunes a viernes de 9:00 am a 6:00 pm. El Ingeniero de Software será responsable de diseñar, implementar y mantener sistemas de software eficientes. Se ofrece un salario de $4.500.000 + Beneficios, incluyendo un ambiente de trabajo colaborativo, oportunidades de capacitación, seguro de salud y bonos por desempeño. El salario total es de $4.800.000.",
+      "requisitos": {
+        "educacionMinima": "Licenciatura en Ingeniería de Software",
+        "conocimientos": "Python, Django, React, SQL, Git"
       },
-      {
-        "puesto": "Analista de Datos",
-        "empresa": "Data Insights Corp.",
-        "ubicacion": "Remoto",
-        "fechaPublicacion": "Hace 1 día",
-        "descripcion": "Compañía especializada en análisis de datos busca un Analista de Datos para interpretar y visualizar información clave. Será responsable de realizar análisis estadísticos y generar informes detallados.",
-        "salario": "$3.800.000 + Beneficios",
-        "horario": "Flexible",
-        "requisitos": {
-          "educacionMinima": "Licenciatura en Estadísticas o campos relacionados",
-          "conocimientos": ["Python", "R", "SQL", "Tableau"]
-        },
-        "beneficios": "Trabajo remoto, seguro de vida, desarrollo profesional continuo.",
-        "salarioTotal": "$4.000.000"
+      "beneficios": "Ambiente de trabajo colaborativo, oportunidades de capacitación, seguro de salud, bonos por desempeño.",
+      "salarioTotal": "$4.800.000"
+    },
+    {
+      "puesto": "Analista de Datos",
+      "empresa": "Data Insights Corp.",
+      "modalidad": "Remoto",
+      "lenguage": "Ingles",
+      "fechaPublicacion": "1 día",
+      "descripcion": "Data Insights Corp., compañía especializada en análisis de datos, busca un Analista de Datos para interpretar y visualizar información clave. El trabajo es remoto, con horario flexible. El Analista de Datos será responsable de realizar análisis estadísticos y generar informes detallados. Se ofrece un salario de $3.800.000 + Beneficios, incluyendo trabajo remoto, seguro de vida y desarrollo profesional continuo. El salario total es de $4.000.000.",
+      "requisitos": {
+        "educacionMinima": "Licenciatura en Estadísticas o campos relacionados",
+        "conocimientos": "Python, R, SQL, Tableau"
       },
-      {
-        "puesto": "Desarrollador/a Frontend",
-        "empresa": "WebTech Solutions",
-        "ubicacion": "Presencial",
-        "fechaPublicacion": "Hace 6 horas",
-        "descripcion": "Empresa en crecimiento busca un Desarrollador/a Frontend para crear interfaces atractivas y funcionales. Colaborará en el diseño y desarrollo de aplicaciones web.",
-        "salario": "$3.200.000 + Beneficios",
-        "horario": "Lunes a viernes de 9:00 am a 5:00 pm",
-        "requisitos": {
-          "educacionMinima": "Licenciatura en Informática o carreras afines",
-          "conocimientos": ["HTML", "CSS", "JavaScript", "React", "Angular"]
-        },
-        "beneficios": "Ambiente de trabajo dinámico, bonificaciones trimestrales, oportunidades de crecimiento.",
-        "salarioTotal": "$3.500.000"
+      "beneficios": "Trabajo remoto, seguro de vida, desarrollo profesional continuo.",
+      "salarioTotal": "$4.000.000"
+    },
+    {
+      "puesto": "Desarrollador/a Frontend",
+      "empresa": "WebTech Solutions",
+      "modalidad": "Presencial",
+      "lenguage": "Ingles",
+      "fechaPublicacion": "6",
+      "descripcion": "WebTech Solutions, empresa en crecimiento, busca un Desarrollador/a Frontend para crear interfaces atractivas y funcionales. El trabajo es presencial, con horario de lunes a viernes de 9:00 am a 5:00 pm. El Desarrollador/a Frontend colaborará en el diseño y desarrollo de aplicaciones web. Se ofrece un salario de $3.200.000 + Beneficios, incluyendo un ambiente de trabajo dinámico, bonificaciones trimestrales y oportunidades de crecimiento. El salario total es de $3.500.000.",
+      "requisitos": {
+        "educacionMinima": "Licenciatura en Informática o carreras afines",
+        "conocimientos": "HTML, CSS, JavaScript, React, Angular"
       },
-      {
-        "puesto": "Especialista en Ciberseguridad",
-        "empresa": "SecureNet Solutions",
-        "ubicacion": "Presencial/Remoto",
-        "fechaPublicacion": "Hace 2 días",
-        "descripcion": "Empresa de seguridad informática busca un Especialista en Ciberseguridad para proteger la infraestructura y datos sensibles. Será responsable de implementar y mantener medidas de seguridad efectivas.",
-        "salario": "$5.000.000 + Beneficios",
-        "horario": "Flexible",
-        "requisitos": {
-          "educacionMinima": "Licenciatura en Seguridad Informática",
-          "conocimientos": ["Firewalls", "Antivirus", "Ethical Hacking", "SIEM"]
-        },
-        "beneficios": "Trabajo remoto, seguro de salud, formación continua en ciberseguridad.",
-        "salarioTotal": "$5.200.000"
+      "beneficios": "Ambiente de trabajo dinámico, bonificaciones trimestrales, oportunidades de crecimiento.",
+      "salarioTotal": "$3.500.000"
+    },
+    {
+      "puesto": "Especialista en Ciberseguridad",
+      "empresa": "SecureNet Solutions",
+      "modalidad": "Presencial",
+      "lenguage": "Ingles",
+      "fechaPublicacion": "2 días",
+      "descripcion": "SecureNet Solutions, empresa de seguridad informática, busca un Especialista en Ciberseguridad para proteger la infraestructura y datos sensibles. El trabajo es presencial, con horario flexible. El Especialista en Ciberseguridad será responsable de implementar y mantener medidas de seguridad efectivas. Se ofrece un salario de $5.000.000 + Beneficios, incluyendo trabajo remoto, seguro de salud y formación continua en ciberseguridad. El salario total es de $5.200.000.",
+      "requisitos": {
+        "educacionMinima": "Licenciatura en Seguridad Informática",
+        "conocimientos": "Firewalls, Antivirus, Ethical Hacking, SIEM"
       },
-      {
-        "puesto": "Analista de Soporte Técnico",
-        "empresa": "Tech Support Solutions",
-        "ubicacion": "Presencial",
-        "fechaPublicacion": "Hace 4 horas",
-        "descripcion": "Empresa de servicios de soporte técnico busca un Analista para brindar asistencia a usuarios. Responsable de diagnosticar y resolver problemas técnicos.",
-        "salario": "$2.800.000 + Beneficios",
-        "horario": "Lunes a viernes de 8:00 am a 6:00 pm",
-        "requisitos": {
-          "educacionMinima": "Técnico en Informática o carreras similares",
-          "conocimientos": ["Sistemas Operativos", "Redes", "Soporte Remoto"]
-        },
-        "beneficios": "Ambiente colaborativo, bonos por desempeño, oportunidades de formación.",
-        "salarioTotal": "$3.000.000"
-      }
-    ]
-  }
-  
+      "beneficios": "Trabajo remoto, seguro de salud, formación continua en ciberseguridad.",
+      "salarioTotal": "$5.200.000"
+    },
+    {
+      "puesto": "Analista de Soporte Técnico",
+      "empresa": "Tech Support Solutions",
+      "modalidad": "Presencial",
+      "lenguage": "Ingles",
+      "fechaPublicacion": "4",
+      "descripcion": "Tech Support Solutions, empresa de servicios de soporte técnico, busca un Analista para brindar asistencia a usuarios. El trabajo es presencial, con horario de lunes a viernes de 8:00 am a 6:00 pm. El Analista de Soporte Técnico será responsable de diagnosticar y resolver problemas técnicos. Se ofrece un salario de $2.800.000 + Beneficios, incluyendo un ambiente colaborativo, bonos por desempeño y oportunidades de formación. El salario total es de $3.000.000.",
+      "requisitos": {
+        "educacionMinima": "Técnico en Informática o carreras similares",
+        "conocimientos": "Sistemas Operativos, Redes, Soporte Remoto"
+      },
+      "beneficios": "Ambiente colaborativo, bonos por desempeño, oportunidades de formación.",
+      "salarioTotal": "$3.000.000"
+    }
+  ]
+}
