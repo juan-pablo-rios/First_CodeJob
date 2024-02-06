@@ -823,3 +823,27 @@ fetch("http://localhost:4000/ofertasLaborales")
 //     containerOffer.appendChild(infoOfferDiv);
 //   })
 //   .catch(error => console.error('Error al obtener datos:', error));
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if(entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
+});
+
+let apearLeft = document.querySelectorAll('.hidden'); // Corregido aquí
+let hiddenStatic = document.querySelectorAll('.appear')
+let appearRight = document.querySelectorAll('.appearRight')
+let verticalUpDown = document.querySelectorAll('.verticalUpDown')
+apearLeft.forEach((el) => observer.observe(el));
+hiddenStatic.forEach((el) => observer.observe(el));
+appearRight.forEach((el) => observer.observe(el));
+verticalUpDown.forEach((el) => observer.observe(el));
+
+function googleTranslateElementInit() {
+	new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
+        }
