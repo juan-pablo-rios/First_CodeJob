@@ -6,11 +6,6 @@ let openButtonSignInResponsive = document.getElementById(
   "openButtonSignInResponsive"
 );
 
-// let body = document.getElementById("body");
-// openButtonSignInResponsive.onclick = function () {
-//     body.classList.remove('open');
-// }
-
 // FUNCIÓN PARA ABRIR EL MODAL RESPONSIVE:
 function modal() {
   signInModal.style.display = "block";
@@ -64,62 +59,51 @@ function pressSignIn() {
     let email = document.getElementById("signInEmailInput").value;
     let password = document.getElementById("signInPasswordInput").value;
     
-    /*INPUTS DE DEL PROFILE LOS CUALES VAN A HACER CAMBIADOS*/
+    /* INFORMACIÓN DE LA PÁGINA 'PROFILE' PARA MODIFICARLA SEGÚN EL USUARIO QUE INICIE SESIÓN */
     let name = document.getElementById("nameUserProfile");
     let job = document.getElementById("job-profile");
     let city = document.getElementById("city");
     let aboutMe = document.getElementById("paragraph");
-
     let webSite = document.getElementById("profilePageWeb");
     let emailProfile = document.getElementById("profileEmail");
     let telNumberProfile = document.getElementById("profileTelNumber");
-
     let designItem1 = document.getElementById("designItem1");
     let designItem2 = document.getElementById("designItem2");
     let designItem3 = document.getElementById("designItem3");
-
     let techniques = document.getElementById("techniques");
     let process = document.getElementById("paragraphProcess"); 
-
     let UName = document.getElementById("UName"); 
     let UPostName = document.getElementById("UPostName"); 
     let UDate = document.getElementById("UDate"); 
     let ULocation = document.getElementById("ULocation"); 
-    
     let jobCompany1 = document.getElementById("jobCompany1")
     let jobPosition1 = document.getElementById("jobPosition1"); 
     let placeJob1 = document.getElementById("placeJob1"); 
     let fromTime1 = document.getElementById("fromTime1"); 
     let toTime1 = document.getElementById("toTime1"); 
     let exp1 = document.getElementById("exp1");
-
     let jobCompany2 = document.getElementById("jobCompany2")
     let jobPosition2 = document.getElementById("jobPosition2"); 
     let placeJob2 = document.getElementById("placeJob2"); 
     let fromTime2 = document.getElementById("fromTime2"); 
     let toTime2 = document.getElementById("toTime2"); 
     let exp2 = document.getElementById("exp2");
-
     let jobCompany3 = document.getElementById("jobCompany3")
     let jobPosition3 = document.getElementById("jobPosition3"); 
     let placeJob3 = document.getElementById("placeJob3"); 
     let fromTime3 = document.getElementById("fromTime3"); 
     let toTime3 = document.getElementById("toTime3"); 
     let exp3 = document.getElementById("exp3");
-
-    
     // FUNCIÓN fetch() PARA CONECTARSE CON EL json-server Y VERIFICAR LOS DATOS:
     fetch("http://localhost:3000/users")
     .then((response) => response.json())
     .then((element) => {
     let result = element.filter(function (element) {
         var userOnline = element.contact.mail == email && element.password == password;
-        console.log('Primer Fetch', userOnline);
         return userOnline
     });
     // CONDICIONAL PARA COMPROBAR QUE SE ENCONTRÓ UN USUARIO VALIDO:
     if (result.length > 0) {
-        
         // CERRAR MODAL:
         signInModal.style.display = "none";
         // DESAPARECER NAVBAR NORMAL:
@@ -133,55 +117,44 @@ function pressSignIn() {
         // MOSTRAR OPCIONES DEL NAVBAR RESPONSIVE:
         logOutOptionResponsive.classList.add('displayBlock');
         profileOptionResponsive.classList.add('displayBlock');
-        // INSERTAR NOMBRE DE USUARIO:
+        // INSERTAR NOMBRE DE USUARIO EN EL NAVBAR:
         putUserName.innerHTML = result[0].name;
-
         // ENVIAR USER NAME AL sessionStorage:
-        sessionStorage.setItem('name', result[0].name);// ----------------aaaaaaaaaaaaaaaaaaaaaaaaaaa
-        let effectTitleIntro = document.getElementById('effectTitleIntro');
+        sessionStorage.setItem('name', result[0].name);
         // SE ENVIA EL EMAIL Y LA PASSWORD DE LOS INPUTS AL SESSIONSTORAGE:
         sessionStorage.setItem('email', email);
         sessionStorage.setItem('password', password);
         // ENVIAR AUTORIZACIÓN DE INICIO DE SESIÓN AL sessionStorage:
         sessionStorage.setItem('auth', 1);
-
         // INSERTAR INFORMACIÓN DEL PERFIL:
         name.textContent = result[0].name;
         job.textContent = result[0].role;
         city.textContent = result[0].city;
         aboutMe.textContent = result[0].about_me;
-
         webSite.textContent = result[0].contact.link;
         emailProfile.textContent = result[0].contact.mail;
         telNumberProfile.textContent = result[0].contact.call;
-
         designItem1.textContent = result[0].skills.design[0]
         designItem2.textContent = result[0].skills.design[1]
         designItem3.textContent = result[0].skills.design[2]
-
         techniques.textContent = result[0].skills.techniques
         process.textContent = result[0].skills.processes
-
         UName.textContent = result[0].education.university
         UPostName.textContent = result[0].education.degree
         UDate.textContent = result[0].education.graduation_year
         ULocation.textContent = result[0].location
-
         jobCompany1.textContent = result[0].experience[0].company
         jobPosition1.textContent = result[0].experience[0].position
         placeJob1.textContent = result[0].experience[0].location
         fromTime1.textContent = result[0].experience[0].durationStart
         toTime1.textContent = result[0].experience[0].durationEnd
         exp1.textContent = result[0].experience[0].description
-        
-
         jobCompany2.textContent = result[0].experience[1].company
         jobPosition2.textContent = result[0].experience[1].position
         placeJob2.textContent = result[0].experience[1].location
         fromTime2.textContent = result[0].experience[1].durationStart
         toTime2.textContent = result[0].experience[1].durationEnd
         exp2.textContent = result[0].experience[1].description
-        
         jobCompany3.textContent = result[0].experience[2].company
         jobPosition3.textContent = result[0].experience[2].position
         placeJob3.textContent = result[0].experience[2].location
@@ -231,45 +204,36 @@ function pageChange(){
       // MOSTRAR OPCIONES DEL NAVBAR RESPONSIVE:
       logOutOptionResponsive.classList.add('displayBlock');
       profileOptionResponsive.classList.add('displayBlock');
-      
-
-      /* PROFILE */ // --------------------------------------------¿SE DEBE DE REPETIR LA DECLARACIÓN DE VARIABLES NUEVAMENTE?
-      /*INPUTS DE DEL PROFILE LOS CUALES VAN A HACER CAMBIADOS*/
+      /* PROFILE */
+      /* INFORMACIÓN DE LA PÁGINA 'PROFILE' PARA MODIFICARLA SEGÚN EL USUARIO QUE INICIE SESIÓN */
       let name = document.getElementById("nameUserProfile");
       let job = document.getElementById("job-profile");
       let city = document.getElementById("city");
       let aboutMe = document.getElementById("paragraph");
-
       let webSite = document.getElementById("profilePageWeb");
       let emailProfile = document.getElementById("profileEmail");
       let telNumberProfile = document.getElementById("profileTelNumber");
-
       let designItem1 = document.getElementById("designItem1");
       let designItem2 = document.getElementById("designItem2");
       let designItem3 = document.getElementById("designItem3");
-
       let techniques = document.getElementById("techniques");
       let process = document.getElementById("paragraphProcess"); 
-
       let UName = document.getElementById("UName"); 
       let UPostName = document.getElementById("UPostName"); 
       let UDate = document.getElementById("UDate"); 
       let ULocation = document.getElementById("ULocation"); 
-      
       let jobCompany1 = document.getElementById("jobCompany1")
       let jobPosition1 = document.getElementById("jobPosition1"); 
       let placeJob1 = document.getElementById("placeJob1"); 
       let fromTime1 = document.getElementById("fromTime1"); 
       let toTime1 = document.getElementById("toTime1"); 
       let exp1 = document.getElementById("exp1");
-
       let jobCompany2 = document.getElementById("jobCompany2")
       let jobPosition2 = document.getElementById("jobPosition2"); 
       let placeJob2 = document.getElementById("placeJob2"); 
       let fromTime2 = document.getElementById("fromTime2"); 
       let toTime2 = document.getElementById("toTime2"); 
       let exp2 = document.getElementById("exp2");
-
       let jobCompany3 = document.getElementById("jobCompany3")
       let jobPosition3 = document.getElementById("jobPosition3"); 
       let placeJob3 = document.getElementById("placeJob3"); 
@@ -281,44 +245,36 @@ function pageChange(){
       job.textContent = result[0].role;
       city.textContent = result[0].city;
       aboutMe.textContent = result[0].about_me;
-
       webSite.textContent = result[0].contact.link;
       emailProfile.textContent = result[0].contact.mail;
       telNumberProfile.textContent = result[0].contact.call;
-
       designItem1.textContent = result[0].skills.design[0]
       designItem2.textContent = result[0].skills.design[1]
       designItem3.textContent = result[0].skills.design[2]
-
       techniques.textContent = result[0].skills.techniques
       process.textContent = result[0].skills.processes
-
       UName.textContent = result[0].education.university
       UPostName.textContent = result[0].education.degree
       UDate.textContent = result[0].education.graduation_year
       ULocation.textContent = result[0].location
-
       jobCompany1.textContent = result[0].experience[0].company
       jobPosition1.textContent = result[0].experience[0].position
       placeJob1.textContent = result[0].experience[0].location
       fromTime1.textContent = result[0].experience[0].durationStart
       toTime1.textContent = result[0].experience[0].durationEnd
-      exp1.textContent = result[0].experience[0].description
-      
+      exp1.textContent = result[0].experience[0].description   
       jobCompany2.textContent = result[0].experience[1].company
       jobPosition2.textContent = result[0].experience[1].position
       placeJob2.textContent = result[0].experience[1].location
       fromTime2.textContent = result[0].experience[1].durationStart
       toTime2.textContent = result[0].experience[1].durationEnd
       exp2.textContent = result[0].experience[1].description
-      
       jobCompany3.textContent = result[0].experience[2].company
       jobPosition3.textContent = result[0].experience[2].position
       placeJob3.textContent = result[0].experience[2].location
       fromTime3.textContent = result[0].experience[2].durationStart
       toTime3.textContent = result[0].experience[2].durationEnd
       exp3.textContent = result[0].experience[2].description
-
       jobCompany4.textContent = result[0].experience[3].company
       jobPosition4.textContent = result[0].experience[3].position
       placeJob4.textContent = result[0].experience[3].location
@@ -328,9 +284,8 @@ function pageChange(){
     }
   });
 }
-
+// SE LLAMA A LA FUNCIÓN AL RECARGAR LA PÁGINA PARA COMPROBAR LA INFORMACIÓN CONSTANTEMENTE:
 pageChange();
-
 // ------------------------------------------------------------------ LOG OUT ------------------------------------------------------------------
 // FUNCIÓN PARA CERRAR SESIÓN:
 function logOut(){
@@ -351,7 +306,6 @@ function logOutIndex(){
   }
 }
 // ------------------------------------------------------------------ SIGN UP ------------------------------------------------------------------
-
 function createUser() {
   // CAPTURAR VALORES DE LOS INPUTS:
   let signUpNameInput = document.getElementById("signUpNameInput");
@@ -364,10 +318,9 @@ function createUser() {
   let signUpWebsiteInput = document.getElementById("signUpWebsiteInput");
   // let signUpCvInput = document.getElementById('signUpCvInput').value;
 
-  // Validación de campos vacíos
+  // VARIABLE PARA VALIDAR SI HAY CAMPOS VACÍOS:
   let isValid = true;
-
-  // Validación del campo de teléfono
+  // VALIDACIÓN DEL CAMPO DE TELÉFONO:
   if (signUpPhoneInput.value === "") {
     signUpPhoneInput.classList.add("is-invalid");
     isValid = false;
@@ -375,8 +328,7 @@ function createUser() {
     signUpPhoneInput.classList.remove("is-invalid");
     signUpPhoneInput.classList.add("is-valid");
   }
-
-  // Validación del campo de contraseña
+  // VALIDACIÓN DEL CAMPO DE CONTRASEÑA:
   if (signUpPasswordInput.value === "") {
     signUpPasswordInput.classList.add("is-invalid");
     isValid = false;
@@ -384,8 +336,7 @@ function createUser() {
     signUpPasswordInput.classList.remove("is-invalid");
     signUpPasswordInput.classList.add("is-valid");
   }
-
-  // Validación del campo de confirmación de contraseña
+  // // VALIDACIÓN DEL CAMPO DE CONFIRMAR CONTRASEÑA:
   if (
     signUpConfirmPasswordInput.value === "" ||
     signUpPasswordInput.value != signUpConfirmPasswordInput.value
@@ -396,8 +347,7 @@ function createUser() {
     signUpConfirmPasswordInput.classList.remove("is-invalid");
     signUpConfirmPasswordInput.classList.add("is-valid");
   }
-
-  // Validación del campo de fecha
+  // VALIDACIÓN DEL CAMPO FECHA:
   if (signUpDateInput.value === "") {
     signUpDateInput.classList.add("is-invalid");
     isValid = false;
@@ -405,8 +355,7 @@ function createUser() {
     signUpDateInput.classList.remove("is-invalid");
     signUpDateInput.classList.add("is-valid");
   }
-
-  // Validación del campo de ciudad
+  // VALIDACIÓN DEL CAMPO DE CIUDAD:
   if (signUpCityInput.value === "") {
     signUpCityInput.classList.add("is-invalid");
     isValid = false;
@@ -414,8 +363,7 @@ function createUser() {
     signUpCityInput.classList.remove("is-invalid");
     signUpCityInput.classList.add("is-valid");
   }
-
-  // Validación del campo de sitio web
+  // VALIDACIÓN DEL CAMPO DE SITIO WEB:
   if (signUpWebsiteInput.value === "") {
     signUpWebsiteInput.classList.add("is-invalid");
     isValid = false;
@@ -423,7 +371,6 @@ function createUser() {
     signUpWebsiteInput.classList.remove("is-invalid");
     signUpWebsiteInput.classList.add("is-valid");
   }
-
   // Validación del campo de CV
   // if (signUpCvInput === '') {
   //     document.getElementById('signUpCvInput').classList.add('is-invalid');
@@ -433,7 +380,7 @@ function createUser() {
   //     document.getElementById('signUpCvInput').classList.add('is-valid');
   // }
 
-  // Si todos los campos son válidos, realiza la solicitud fetch
+  // SI TODOS LOS CAMPOS SON VALIDOS, REALIZAR LA SOLICITUD FETCH:
   if (isValid) {
     // SE CREA UN OBJETO CON LOS NUEVOS VALORES DE LOS ELEMENTOS:
     infoUpdated = {
@@ -447,7 +394,7 @@ function createUser() {
       birthday: signUpDateInput.value,
       CV: "",
     };
-
+    // FUNCIÓN FETCH PARA ENVIAR LOS DATOS Y CREAR UN NUEVO USUARIO:
     fetch("http://localhost:3000/users", {
       method: "POST",
       headers: {
@@ -468,7 +415,6 @@ function createUser() {
     });
   }
 }
-
 function barraBusquedaIndex() {
 
   let inputSearchIndex = document.getElementById("inputBarraBusquedaIndex");
