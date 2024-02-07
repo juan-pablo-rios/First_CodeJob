@@ -66,7 +66,7 @@ body {
   color: #5BB403;
 }
 
-.containBarraBusqueda {
+.inputBarraBusquedaIndex {
   width: 95%;
 }
 
@@ -246,13 +246,16 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+.ContainerBtnDetails {
+  height: 100%;
+}
+
 .btnDetailsCards {
   background-color: #ffffff;
   color: #000000;
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-family: 'Josefin Sans', sans-serif;
-  position: absolute;
-  bottom: 33px;
+  border-radius: 25px;
 }
 
 .btnDetailsCards:hover {
@@ -266,11 +269,11 @@ body {
 
 /* Agrega estilos para el contenedor de resultados */
 #resultIndex {
-  width: 30%;
+  width: 29%;
   position: absolute;
   left: 7%;
   right: 0;
-  z-index: 1000; /* Asegura que el contenedor esté por encima de otros elementos */
+  z-index: 1; /* Asegura que el contenedor esté por encima de otros elementos */
   background-color: white; /* Fondo blanco para resaltar */
   border: 1px solid #ccc; /* Borde para resaltar */
   max-height: 300px; /* Altura máxima del contenedor de resultados, ajusta según sea necesario */
@@ -320,13 +323,14 @@ body {
     font-size: 1rem;
   }
 
-  .containBarraBusqueda {
+  .inputBarraBusquedaIndex {
     width: 100%;
     margin: 0;
     justify-content: center;
     flex-wrap: wrap;
   }
 
+  
   .inputBarraBusqueda {
     width: 100%;
     margin: 0 0 2% 0;

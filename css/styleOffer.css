@@ -26,7 +26,9 @@ body {
 }
 
 .rowBarraBusquedaInfo {
+  width: 100%;
   height: 10%;
+  margin-bottom: 2%;
 }
 
 .containBarraBusqueda {
@@ -237,11 +239,11 @@ body {
 
 /* Agrega estilos para el contenedor de resultados */
 #resultOffer {
-  width: 69%;
+  width: 68%;
   position: absolute;
   left: 10%;
   right: 0;
-  top: 29%;
+  top: 250px;
   z-index: 1000;
   background-color: white;
   border: 1px solid #ccc;
@@ -264,7 +266,21 @@ body {
   background-color: #f0f0f0; /* Cambia el color de fondo al pasar el mouse */
 }
 
+.ocultarCards {
+  display: none;
+}
+
+@media screen and (max-width: 700px) { 
+  #resultOffer {
+    left: 7%;
+    top: 200px;
+  }
+}
+
 @media screen and (max-width: 922px) {
+  .rowBarraBusquedaInfo {
+    width: auto;
+  }
 
   .inglesCheck,
   .espanolCheck,
