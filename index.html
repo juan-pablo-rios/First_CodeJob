@@ -18,7 +18,7 @@
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 <body class="body" id="body">
     <!-------------------------------------------- NAVBAR ------------------------------------------->
-    <nav class="container_menu" id="containerMenu">
+    <nav class="container_menu verticalUpDown" id="containerMenu">
         <!-- TOP BOX -->
         <div class="container_top_box" id="topBoxNormal">
             <ul class="container_list_top_box">
@@ -68,7 +68,7 @@
     </nav>
     <!-- ------------------------------------------- SIGN IN MODAL ------------------------------------------- -->
     <!-- MODAL SIGN IN CONTAINER -->
-    <div id="signInModal" class="signInModal">
+    <div id="signInModal" class="signInModal verticalUpDown">
         <div class="signInModalContent">
             <div class="containerModalsignInCloseButton">
                 <span class="questionSignUp">¿Aún no estás registrado/a?</span>
@@ -155,7 +155,7 @@
         <!-- Company Logos Section -->
         <div class="containerEmpresas">
             <div class="textrow">
-                <p class="d-flex justify-content-center p-2 titleEmpresas">¡Podrás ser parte de las <span
+                <p class="d-flex justify-content-center p-2 titleEmpresas verticalUpDown">¡Podrás ser parte de las <span
                         class="effectParradoIntro me-1 ms-1">empresas</span> más <span
                         class="effectParradoIntro me-1 ms-1">top</span>!</p>
             </div>
@@ -163,7 +163,7 @@
                 <div class="col-md-2 contenedorLogo">
                     <img src="./assets/img/openai.svg" class="logoEmpresa hidden" alt="logo open AI">
                 </div>
-                <div class="col-md-2 ">
+                <div class="col-md-2 contenedorLogo">
                     <img src="./assets/img/cisco.svg" class="logoEmpresa hidden" alt="logo cisco">
                 </div>
                 <div class="col-md-2 contenedorLogo ">
@@ -183,10 +183,10 @@
                 <div class="col-md-2 contenedorLogo">
                     <img src="./assets/img/amazon.svg" class="logoEmpresa appearRight" alt="logo open AI">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 contenedorLogo">
                     <img src="./assets/img/oracle.svg" class="logoEmpresa appearRight" alt="logo open AI">
                 </div>
-                <div class="col-md-2 contenedorLog">
+                <div class="col-md-2 contenedorLogo">
                     <img src="./assets/img/sony.svg" class="logoEmpresa appearRight" alt="logo open AI">
                 </div>
                 <div class="col-md-2 contenedorLogo">
@@ -214,11 +214,11 @@
             posibilidades que cada ruta tiene reservadas para ti. ¡Prepárate para desbloquear tu potencial y construir
             un futuro sólido en el campo tecnológico!</p>
         <!-- Container card -->
-        <div class="container-md containerCard">
+        <div class="container-fluid containerCard">
             <!-- Row card -->
-            <div class="row rowCard">
+            <div class="row rowCard d-flex justify-content-center">
                 <!-- Card and Column-->
-                <div class="col-md-4 appear columnCard mb-5">
+                <div class="col-md-3 appear columnCard mb-5">
                     <div class="card p-3 rounded-4">
                         <div class="d-flex justify-content-center contIMG">
                             <img src="./assets/img/card1.png" class="card-img-top imgCard" alt="...">
@@ -228,12 +228,16 @@
                             <hr class="border border-1 opacity-100 hrTitleCards">
                             <p class="card-text mb-4">Construye los cimientos sólidos de las aplicaciones. Desarrolla
                                 servidores potentes y maneja la lógica detrás de cada interacción.</p>
-                            <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+                            <div class="ContainerBtnDetails d-flex justify-content-center align-items-center">
+                                <div class="ContainerBtnDetails d-flex justify-content-center align-items-center">
+                                    <button href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black rounded-2">Ver Detalles</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- Card and Column-->
-                <div class="col-md-4 appear columnCard mb-5">
+                <div class="col-md-3 appear columnCard mb-5">
                     <div class="card p-3 rounded-4">
                         <div class="d-flex justify-content-center contIMG">
                             <img src="./assets/img/card2.png" class="card-img-top imgCard" alt="...">
@@ -243,12 +247,14 @@
                             <hr class="border border-1 opacity-100 hrTitleCards">
                             <p class="card-text mb-4">Sumérgete en la creación de experiencias visuales impactantes.
                                 Diseña interfaces intuitivas y dale vida a la interacción usuario-ordenador.</p>
-                            <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+                            <div class="ContainerBtnDetails d-flex justify-content-center align-items-center">
+                                <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- Card and Column-->
-                <div class="col-md-4 appear columnCard mb-5">
+                <div class="col-md-3 appear columnCard mb-5">
                     <div class="card p-3 rounded-4">
                         <div class="d-flex justify-content-center contIMG">
                             <img src="./assets/img/card3.png" class="card-img-top imgCard" alt="...">
@@ -258,16 +264,18 @@
                             <hr class="border border-1 opacity-100 hrTitleCards">
                             <p class="card-text mb-4">Conviértete en el guardián digital. Aprende a proteger sistemas y
                                 datos, y lucha contra amenazas cibernéticas en constante evolución.</p>
-                            <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+                            <div class="ContainerBtnDetails d-flex justify-content-center align-items-center">
+                                <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- add other similar cards for the row -->
             </div>
             <!-- Row card -->
-            <div class="row rowCard">
+            <div class="row rowCard justify-content-center">
                 <!-- Card and Column-->
-                <div class="col-md-4 appear columnCard mb-5">
+                <div class="col-md-3 appear columnCard mb-5">
                     <div class="card p-3 rounded-4">
                         <div class="d-flex justify-content-center contIMG">
                             <img src="./assets/img/data_Science.png" class="card-img-top imgCard" alt="...">
@@ -278,12 +286,14 @@
                             <p class="card-text mb-4">Explora el poder de los datos. Conviértete en un científico de
                                 datos y descubre patrones, tendencias y conocimientos valiosos para la toma de
                                 decisiones.</p>
-                            <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+                            <div class="ContainerBtnDetails d-flex justify-content-center align-items-center">
+                                <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- Card and Column-->
-                <div class="col-md-4 appear columnCard mb-5">
+                <div class="col-md-3 appear columnCard mb-5">
                     <div class="card p-3 rounded-4">
                         <div class="d-flex justify-content-center contIMG">
                             <img src="./assets/img/card4.png" class="card-img-top imgCard" alt="...">
@@ -293,13 +303,15 @@
                             <hr class="border border-1 opacity-100 hrTitleCards">
                             <p class="card-text mb-4">Adéntrate en el mundo de Apple. Desarrolla aplicaciones para
                                 dispositivos iOS y crea experiencias únicas para millones de usuarios.</p>
-                            <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+                            <div class="ContainerBtnDetails d-flex justify-content-center align-items-center">
+                                <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card and Column-->
-                <div class="col-md-4 appear columnCard mb-5">
+                <div class="col-md-3 appear columnCard mb-5">
                     <div class="card p-3 rounded-4">
                         <div class="d-flex justify-content-center contIMG">
                             <img src="./assets/img/card6.png" class="card-img-top imgCard" alt="...">
@@ -311,7 +323,9 @@
                                 amplia variedad de dispositivos y moldea la experiencia digital en dispositivos Android.
                             </p>
 
-                            <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+                            <div class="ContainerBtnDetails d-flex justify-content-center align-items-center">
+                                <a href="#" class="btn btn-primary btnDetailsCards rounded-0 border-black">Ver Detalles</a>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -94,13 +94,19 @@ function pressSignIn() {
     let fromTime3 = document.getElementById("fromTime3"); 
     let toTime3 = document.getElementById("toTime3"); 
     let exp3 = document.getElementById("exp3");
+
+    let jobCompany4 = document.getElementById("jobCompany4")
+    let jobPosition4 = document.getElementById("jobPosition4"); 
+    let placeJob4 = document.getElementById("placeJob4"); 
+    let fromTime4 = document.getElementById("fromTime4"); 
+    let toTime4 = document.getElementById("toTime4"); 
+    let exp4 = document.getElementById("exp4");
     // FUNCIÓN fetch() PARA CONECTARSE CON EL json-server Y VERIFICAR LOS DATOS:
     fetch("http://localhost:3000/users")
     .then((response) => response.json())
     .then((element) => {
     let result = element.filter(function (element) {
-        var userOnline = element.contact.mail == email && element.password == password;
-        return userOnline
+        return element.contact.mail == email && element.password == password;
     });
     // CONDICIONAL PARA COMPROBAR QUE SE ENCONTRÓ UN USUARIO VALIDO:
     if (result.length > 0) {
@@ -183,9 +189,7 @@ function pageChange(){
     .then((response) => response.json())
     .then((element) => {
     let result = element.filter(function (element) {
-        var userOnline = element.contact.mail == email && element.password == password;
-        console.log('Tercer Fetch: ',userOnline);
-        return userOnline
+        return element.contact.mail == email && element.password == password;
     });
     // INICIALIZACIÓN DE VARIABLE QUE CAPTURA LA AUTORIZACIÓN DEL sessionStorage:
     let auth = sessionStorage.getItem('auth');
@@ -240,6 +244,14 @@ function pageChange(){
       let fromTime3 = document.getElementById("fromTime3"); 
       let toTime3 = document.getElementById("toTime3"); 
       let exp3 = document.getElementById("exp3");
+
+      let jobCompany4 = document.getElementById("jobCompany4")
+      let jobPosition4 = document.getElementById("jobPosition4"); 
+      let placeJob4 = document.getElementById("placeJob4"); 
+      let fromTime4 = document.getElementById("fromTime4"); 
+      let toTime4 = document.getElementById("toTime4"); 
+      let exp4 = document.getElementById("exp4");
+
       // INSERTAR INFORMACIÓN DEL PERFIL:
       name.textContent = result[0].name;
       job.textContent = result[0].role;
@@ -416,8 +428,8 @@ function createUser() {
   }
 }
 function barraBusquedaIndex() {
-
   let inputSearchIndex = document.getElementById("inputBarraBusquedaIndex");
+  
   let formSearchIndex = document.getElementById("resultIndex");
   
   inputSearchIndex.onkeyup = (e) => {
@@ -438,11 +450,29 @@ function barraBusquedaIndex() {
   
             // Agrega el botón al formulario
             formSearchIndex.appendChild(ilContentListIndex);
-            
   
+            // Evento de clic al botón generado
             ilContentListIndex.addEventListener('click', function () {
-              verquepresiono(element.puesto, element.id);
+              
+              let selectedOfferTitle = element.puesto;
+              let infoOfferElements = document.querySelectorAll(".infoOffer");
+          
+              // Iteramos sobre los elementos .infoOffer
+              infoOfferElements.forEach(infoOffer => {
+
+                  let offerTitle = infoOffer.querySelector('.offertTitle').textContent.trim();
+                  
+                  // Comparamos el título de la oferta con el título de la oferta seleccionada
+                  if (offerTitle === selectedOfferTitle) {
+                      infoOffer.classList.add("active");
+                  } else {
+                      // Si no coinciden, aseguramos de quitar la clase "active"
+                      infoOffer.classList.remove("active");
+                  }
+              });
+              location.href = "./html/offers.html"; // Redirige a la página de ofertas
             });
+
           });
         })
         .catch(error => {
@@ -459,40 +489,65 @@ function barraBusquedaIndex() {
 }
 
 function barraBusquedaOffer() {
-
+  // Obtiene el elemento de entrada de búsqueda de ofertas
   let inputSearchOffer = document.getElementById("inputBarraBusquedaOffer");
+  // Obtiene el formulario de resultados de búsqueda de ofertas
   let formSearchOffer = document.getElementById("resultOffer");
-  
+
+  // Evento que se dispara al escribir en el campo de búsqueda
   inputSearchOffer.onkeyup = (e) => {
+    // Obtiene el texto ingresado por el usuario y lo convierte a minúsculas
     let userDataOffer = e.target.value.toLowerCase();
+    // Limpia el contenido del formulario de resultados
     formSearchOffer.textContent = '';
-  
+
+    // Verifica si la longitud del texto ingresado es mayor que 1
     if (userDataOffer.length > 1) {
+      // Realiza una petición fetch para obtener las ofertas laborales
       fetch("http://localhost:4000/ofertasLaborales")
-        .then(response => response.json())
+        .then(response => response.json()) // Convierte la respuesta a JSON
         .then(data => {
+          // Filtra las ofertas laborales que coinciden con el texto ingresado por el usuario
           const matchingOffersOffer = data.filter(element => element.puesto.toLowerCase().includes(userDataOffer));
-  
+
+          // Itera sobre las ofertas coincidentes
           matchingOffersOffer.forEach((element) => {
+            // Crea un elemento de botón para mostrar la oferta
             let ilContentListOffer = document.createElement('button');
             ilContentListOffer.setAttribute("type", "button");
             ilContentListOffer.classList.add('list-group-item', 'list-group-item-action');
             ilContentListOffer.textContent = element.puesto;
-  
-            // Agrega el botón al formulario
-            formSearchOffer.appendChild(ilContentListOffer);
-            
-  
+
+            // Evento de clic al botón generado
             ilContentListOffer.addEventListener('click', function () {
-              // console.log("CLICK ", element.id);
-              // verquepresiono(element.puesto, element);
+              
+              let selectedOfferTitle = element.puesto;
+              let infoOfferElements = document.querySelectorAll(".infoOffer");
+          
+              // Iteramos sobre los elementos .infoOffer
+              infoOfferElements.forEach(infoOffer => {
+
+                  let offerTitle = infoOffer.querySelector('.offertTitle').textContent.trim();
+                  
+                  // Comparamos el título de la oferta con el título de la oferta seleccionada
+                  if (offerTitle === selectedOfferTitle) {
+                      infoOffer.classList.add("active");
+                  } else {
+                      // Si no coinciden, aseguramos de quitar la clase "active"
+                      infoOffer.classList.remove("active");
+                  }
+              });
             });
+
+            // Agrega el botón al formulario de resultados
+            formSearchOffer.appendChild(ilContentListOffer);
           });
         })
         .catch(error => {
+          // Maneja cualquier error ocurrido durante la petición fetch
           console.error('ERROR', error);
         });
-  
+
       // Muestra el contenedor de resultados
       formSearchOffer.style.display = 'block';
     } else {
@@ -505,291 +560,95 @@ function barraBusquedaOffer() {
 fetch("http://localhost:4000/ofertasLaborales")
 .then((response) => response.json())
 .then((element) => {
-  // CARD1
-  let cardOfferTitle0 = document.querySelectorAll(".cardOfferTitle")[0]
-  let cardCompanyName0 = document.querySelectorAll(".cardCompanyName")[0]
-  let cardOfferModality0 = document.querySelectorAll(".cardOfferModality")[0]
-  let cardOfferLenguage0 = document.querySelectorAll(".cardOfferLenguage")[0]
-  let timeOffer0 = document.querySelectorAll(".timeOffer")[0]
 
-  cardOfferTitle0.textContent = element[0].puesto
-  cardCompanyName0.textContent = element[0].empresa
-  cardOfferModality0.textContent = element[0].modalidad
-  cardOfferLenguage0.textContent = element[0].lenguage
-  timeOffer0.textContent = element[0].fechaPublicacion
+  // Itera sobre las tarjetas de oferta y actualiza los elementos correspondientes
+for (let i = 0; i < 4; i++) {
+  // CARD
+  let cardOfferTitle = document.querySelectorAll(".cardOfferTitle")[i];
+  let cardCompanyName = document.querySelectorAll(".cardCompanyName")[i];
+  let cardOfferModality = document.querySelectorAll(".cardOfferModality")[i];
+  let cardOfferLenguage = document.querySelectorAll(".cardOfferLenguage")[i];
+  let timeOffer = document.querySelectorAll(".timeOffer")[i];
 
-  // CARD2
-  let cardOfferTitle1 = document.querySelectorAll(".cardOfferTitle")[1]
-  let cardCompanyName1 = document.querySelectorAll(".cardCompanyName")[1]
-  let cardOfferModality1 = document.querySelectorAll(".cardOfferModality")[1]
-  let cardOfferLenguage1 = document.querySelectorAll(".cardOfferLenguage")[1]
-  let timeOffer1 = document.querySelectorAll(".timeOffer")[1]
-
-    console.log(element[1]);
-  cardOfferTitle1.textContent = element[1].puesto
-  cardCompanyName1.textContent = element[1].empresa
-  cardOfferModality1.textContent = element[1].modalidad
-  cardOfferLenguage1.textContent = element[1].lenguage
-  timeOffer1.textContent = element[1].fechaPublicacion
-
-  // CARD3
-  let cardOfferTitle2 = document.querySelectorAll(".cardOfferTitle")[2]
-  console.log(cardOfferTitle2)
-  let cardCompanyName2 = document.querySelectorAll(".cardCompanyName")[2]
-  let cardOfferModality2 = document.querySelectorAll(".cardOfferModality")[2]
-  let cardOfferLenguage2 = document.querySelectorAll(".cardOfferLenguage")[2]
-  let timeOffer2 = document.querySelectorAll(".timeOffer")[2]
-
-  console.log(element);
-  cardOfferTitle2.textContent = element[2].puesto
-  cardCompanyName2.textContent = element[2].empresa
-  cardOfferModality2.textContent = element[2].modalidad
-  cardOfferLenguage2.textContent = element[2].lenguage
-  timeOffer2.textContent = element[2].fechaPublicacion
-
-  // CARD4
-  let cardOfferTitle3 = document.querySelectorAll(".cardOfferTitle")[3]
-  let cardCompanyName3 = document.querySelectorAll(".cardCompanyName")[3]
-  let cardOfferModality3 = document.querySelectorAll(".cardOfferModality")[3]
-  let cardOfferLenguage3 = document.querySelectorAll(".cardOfferLenguage")[3]
-  let timeOffer3 = document.querySelectorAll(".timeOffer")[3]
-
-  cardOfferTitle3.textContent = element[3].puesto
-  cardCompanyName3.textContent = element[3].empresa
-  cardOfferModality3.textContent = element[3].modalidad
-  cardOfferLenguage3.textContent = element[3].lenguage
-  timeOffer3.textContent = element[3].fechaPublicacion
-
+  cardOfferTitle.textContent = element[i].puesto;
+  cardCompanyName.textContent = element[i].empresa;
+  cardOfferModality.textContent = element[i].modalidad;
+  cardOfferLenguage.textContent = element[i].lenguage;
+  timeOffer.textContent = element[i].fechaPublicacion;
+}
 })
-
-
 
 fetch("http://localhost:4000/ofertasLaborales")
 .then((response) => response.json())
 .then((element) => {
 
-  // SECCION CARD1
-  let offertTitle0 = document.querySelectorAll(".offertTitle")[0]
-  let companyName0 = document.querySelectorAll(".companyName")[0]
-  let offerModality0 = document.querySelectorAll(".offerModality")[0]
-  let offerLenguage0 = document.querySelectorAll(".offerLenguage")[0]
-  let salary0 = document.querySelectorAll(".salary")[0]
-  let contract0 = document.querySelectorAll(".contract")[0]
-  let schedule0 = document.querySelectorAll(".schedule")[0]
-  let offerDescriptionParagraph0 = document.querySelectorAll(".offerDescriptionParagraph")[0]
-  let req10 = document.querySelectorAll(".req1")[0]
-  let req20 = document.querySelectorAll(".req2")[0]
+  // Itera sobre las secciones de las tarjetas y actualiza los elementos correspondientes
+  for (let i = 0; i < 4; i++) {
+    // SECCION CARD
+    let offertTitle = document.querySelectorAll(".offertTitle")[i];
+    let companyName = document.querySelectorAll(".companyName")[i];
+    let offerModality = document.querySelectorAll(".offerModality")[i];
+    let offerLenguage = document.querySelectorAll(".offerLenguage")[i];
+    let salary = document.querySelectorAll(".salary")[i];
+    let contract = document.querySelectorAll(".contract")[i];
+    let schedule = document.querySelectorAll(".schedule")[i];
+    let offerDescriptionParagraph = document.querySelectorAll(".offerDescriptionParagraph")[i];
+    let req1 = document.querySelectorAll(".req1")[i];
+    let req2 = document.querySelectorAll(".req2")[i];
 
-  offertTitle0.textContent = element[0].puesto
-  companyName0.textContent = element[0].empresa
-  offerModality0.textContent = element[0].modalidad
-  offerLenguage0.textContent = element[0].lenguage
-  salary0.textContent = element[0].salarioTotal
-  // contract0.textContent = element[0].
-  schedule0.textContent = element[0].horario
-  offerDescriptionParagraph0.textContent = element[0].descripcion
-  req10.textContent = element[0].requisitos.educacionMinima
-  req20.textContent = element[0].requisitos.conocimientos
-
-  // SECCION CARD2
-  let offertTitle1 = document.querySelectorAll(".offertTitle")[1]
-  let companyName1 = document.querySelectorAll(".companyName")[1]
-  let offerModality1 = document.querySelectorAll(".offerModality")[1]
-  let offerLenguage1 = document.querySelectorAll(".offerLenguage")[1]
-  let salary1 = document.querySelectorAll(".salary")[1]
-  let contract1 = document.querySelectorAll(".contract")[1]
-  let schedule1 = document.querySelectorAll(".schedule")[1]
-  let offerDescriptionParagraph1 = document.querySelectorAll(".offerDescriptionParagraph")[1]
-  let req11 = document.querySelectorAll(".req1")[1]
-  let req21 = document.querySelectorAll(".req2")[1]
-
-  offertTitle1.textContent = element[1].puesto
-  companyName1.textContent = element[1].empresa
-  offerModality1.textContent = element[1].modalidad
-  offerLenguage1.textContent = element[1].lenguage
-  salary1.textContent = element[1].salarioTotal
-  // contract1.textContent = element[1].
-  schedule1.textContent = element[1].horario
-  offerDescriptionParagraph1.textContent = element[1].descripcion
-  req11.textContent = element[1].requisitos.educacionMinima
-  req21.textContent = element[1].requisitos.conocimientos
-
-  // SECCION CARD3
-  let offertTitle2 = document.querySelectorAll(".offertTitle")[2]
-  let companyName2 = document.querySelectorAll(".companyName")[2]
-  let offerModality2 = document.querySelectorAll(".offerModality")[2]
-  let offerLenguage2 = document.querySelectorAll(".offerLenguage")[2]
-  let salary2 = document.querySelectorAll(".salary")[2]
-  let contract2 = document.querySelectorAll(".contract")[2]
-  let schedule2 = document.querySelectorAll(".schedule")[2]
-  let offerDescriptionParagraph2 = document.querySelectorAll(".offerDescriptionParagraph")[2]
-  let req12 = document.querySelectorAll(".req1")[2]
-  let req22 = document.querySelectorAll(".req2")[2]
-
-  offertTitle2.textContent = element[2].puesto
-  companyName2.textContent = element[2].empresa
-  offerModality2.textContent = element[2].modalidad
-  offerLenguage2.textContent = element[2].lenguage
-  salary2.textContent = element[2].salarioTotal
-  // contract1.textContent = element[1].
-  schedule2.textContent = element[2].horario
-  offerDescriptionParagraph2.textContent = element[2].descripcion
-  req12.textContent = element[2].requisitos.educacionMinima
-  req22.textContent = element[2].requisitos.conocimientos
-
-  // SECCION CARD4
-  let offertTitle3 = document.querySelectorAll(".offertTitle")[3]
-  let companyName3 = document.querySelectorAll(".companyName")[3]
-  let offerModality3 = document.querySelectorAll(".offerModality")[3]
-  let offerLenguage3 = document.querySelectorAll(".offerLenguage")[3]
-  let salary3 = document.querySelectorAll(".salary")[3]
-  let contract3 = document.querySelectorAll(".contract")[3]
-  let schedule3 = document.querySelectorAll(".schedule")[3]
-  let offerDescriptionParagraph3 = document.querySelectorAll(".offerDescriptionParagraph")[3]
-  let req13 = document.querySelectorAll(".req1")[3]
-  let req23 = document.querySelectorAll(".req2")[3]
-
-  offertTitle3.textContent = element[3].puesto
-  companyName3.textContent = element[3].empresa
-  offerModality3.textContent = element[3].modalidad
-  offerLenguage3.textContent = element[3].lenguage
-  salary3.textContent = element[3].salarioTotal
-  // contract1.textContent = element[1].
-  schedule3.textContent = element[3].horario
-  offerDescriptionParagraph3.textContent = element[3].descripcion
-  req13.textContent = element[3].requisitos.educacionMinima
-  req23.textContent = element[3].requisitos.conocimientos
-
+    offertTitle.textContent = element[i].puesto;
+    companyName.textContent = element[i].empresa;
+    offerModality.textContent = element[i].modalidad;
+    offerLenguage.textContent = element[i].lenguage;
+    salary.textContent = element[i].salarioTotal;
+    // contract.textContent = element[i].
+    schedule.textContent = element[i].horario;
+    offerDescriptionParagraph.textContent = element[i].descripcion;
+    req1.textContent = element[i].requisitos.educacionMinima;
+    req2.textContent = element[i].requisitos.conocimientos;
+  }
 
 })
 
-// // Crear y agregar elementos HTML utilizando JavaScript
-// const containerOffer = document.querySelector('.containerOffer');
-// const url = 'http://localhost:4000/ofertasLaborales';
-
-// // Realizar la petición al servidor
-// fetch(url)
-//   .then(response => response.json())
-//   .then(ofertasLaborales => {
-//     // Supongamos que seleccionamos la primera oferta en la respuesta
-//     const oferta = ofertasLaborales[0];
-
-//     const infoOfferDiv = document.createElement('div');
-//     infoOfferDiv.classList.add('infoOffer', 'rounded-4');
-
-//     const titleH3 = document.createElement('h3');
-//     titleH3.classList.add('offertTitle', 'mb-3');
-//     titleH3.textContent = oferta.puesto;
-
-//     const companyNameH4 = document.createElement('h4');
-//     companyNameH4.classList.add('companyName', 'mb-3');
-//     companyNameH4.textContent = oferta.empresa;
-
-//     const modalityAndLanguageH4 = document.createElement('h4');
-//     modalityAndLanguageH4.classList.add('modalityAndLenguage', 'mb-5');
-//     const offerModalitySpan = document.createElement('span');
-//     offerModalitySpan.classList.add('offerModality');
-//     offerModalitySpan.textContent = oferta.ubicacion.split('/')[0]; // Supongamos que 'Remoto/Ingles' está en ubicacion
-//     const offerLanguageSpan = document.createElement('span');
-//     offerLanguageSpan.classList.add('offerLenguage');
-//     offerLanguageSpan.textContent = oferta.ubicacion.split('/')[1];
-//     modalityAndLanguageH4.appendChild(offerModalitySpan);
-//     modalityAndLanguageH4.appendChild(document.createTextNode('/'));
-//     modalityAndLanguageH4.appendChild(offerLanguageSpan);
-
-//     const rowButtonOfferDiv = document.createElement('div');
-//     rowButtonOfferDiv.classList.add('row', 'rowButtonOffer', 'd-flex', 'justify-content-center', 'mb-2');
-
-//     const buttonSalaryOfferDiv = document.createElement('div');
-//     buttonSalaryOfferDiv.classList.add('col-md-3', 'buttonSalaryOffer', 'd-flex', 'justify-content-center');
-//     const salaryButton = document.createElement('button');
-//     salaryButton.setAttribute('type', 'button');
-//     salaryButton.classList.add('btn', 'btnStyleOffer');
-//     salaryButton.textContent = oferta.salario;
-//     buttonSalaryOfferDiv.appendChild(salaryButton);
-//     rowButtonOfferDiv.appendChild(buttonSalaryOfferDiv);
-
-//     const buttonContractOfferDiv = document.createElement('div');
-//     buttonContractOfferDiv.classList.add('col-md-6', 'buttonContractOffer', 'd-flex', 'justify-content-center');
-//     const contractButton = document.createElement('button');
-//     contractButton.setAttribute('type', 'button');
-//     contractButton.classList.add('btn', 'btnStyleOffer');
-//     contractButton.textContent = oferta.tipoContrato;
-//     buttonContractOfferDiv.appendChild(contractButton);
-//     rowButtonOfferDiv.appendChild(buttonContractOfferDiv);
-
-//     const buttonWorkDayOfferDiv = document.createElement('div');
-//     buttonWorkDayOfferDiv.classList.add('col-md-3', 'buttonWorkDayOffer', 'd-flex', 'justify-content-center');
-//     const workDayButton = document.createElement('button');
-//     workDayButton.setAttribute('type', 'button');
-//     workDayButton.classList.add('btn', 'btn-light', 'btnStyleOffer');
-//     workDayButton.textContent = oferta.jornadaLaboral;
-//     buttonWorkDayOfferDiv.appendChild(workDayButton);
-//     rowButtonOfferDiv.appendChild(buttonWorkDayOfferDiv);
-
-//     const lineOfferHr = document.createElement('hr');
-//     lineOfferHr.classList.add('border', 'lineOffer', 'border-1', 'opacity-100');
-
-//     const descriptionParagraphP = document.createElement('p');
-//     descriptionParagraphP.classList.add('offerDescriptionParagraph');
-//     descriptionParagraphP.innerHTML = oferta.descripcion;
-
-//     const requisitosList = document.createElement('ol');
-//     oferta.requisitos.forEach(requisito => {
-//       const requisitoLi = document.createElement('li');
-//       requisitoLi.textContent = requisito;
-//       requisitosList.appendChild(requisitoLi);
-//     });
-
-//     const requisitosH5 = document.createElement('h5');
-//     requisitosH5.textContent = 'Requerimientos';
-
-//     const applyButtonDiv = document.createElement('div');
-//     applyButtonDiv.classList.add('row', 'rowButtonOffer', 'd-flex', 'justify-content-center', 'align-content-end', 'mt-5');
-//     const applyButtonContainerDiv = document.createElement('div');
-//     applyButtonContainerDiv.classList.add('col-md-4', 'buttonapplyOffer');
-//     const applyButton = document.createElement('button');
-//     applyButton.setAttribute('type', 'button');
-//     applyButton.classList.add('btn', 'btnStyleOffer');
-//     applyButton.textContent = 'Aplicar a la Vacante';
-//     applyButtonContainerDiv.appendChild(applyButton);
-//     applyButtonDiv.appendChild(applyButtonContainerDiv);
-
-//     // Agregar los elementos al contenedor principal
-//     infoOfferDiv.appendChild(titleH3);
-//     infoOfferDiv.appendChild(companyNameH4);
-//     infoOfferDiv.appendChild(modalityAndLanguageH4);
-//     infoOfferDiv.appendChild(rowButtonOfferDiv);
-//     infoOfferDiv.appendChild(lineOfferHr);
-//     infoOfferDiv.appendChild(descriptionParagraphP);
-//     infoOfferDiv.appendChild(requisitosH5);
-//     infoOfferDiv.appendChild(requisitosList);
-//     infoOfferDiv.appendChild(applyButtonDiv);
-
-//     containerOffer.appendChild(infoOfferDiv);
-//   })
-//   .catch(error => console.error('Error al obtener datos:', error));
-
+/**
+ * Creación de un observador de intersección que aplica una clase CSS cuando los elementos entran en la vista.
+ */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
-    if(entry.isIntersecting) {
-      entry.target.classList.add('show');
+    console.log(entry); // Imprime la entrada del observador en la consola
+    if (entry.isIntersecting) {
+      // Si el elemento intersecta con el área visible de la página
+      entry.target.classList.add('show'); // Agrega la clase 'show' al elemento
     } else {
-      entry.target.classList.remove('show');
+      // Si el elemento ya no está intersectando con el área visible de la página
+      entry.target.classList.remove('show'); // Elimina la clase 'show' del elemento
     }
   });
 });
 
-let apearLeft = document.querySelectorAll('.hidden'); // Corregido aquí
-let hiddenStatic = document.querySelectorAll('.appear')
-let appearRight = document.querySelectorAll('.appearRight')
-let verticalUpDown = document.querySelectorAll('.verticalUpDown')
+/**
+ * Selección de elementos del DOM que se desvanecerán o aparecerán en la página.
+ */
+let apearLeft = document.querySelectorAll('.hidden'); // Selecciona elementos ocultos (corregido el nombre de la variable)
+let hiddenStatic = document.querySelectorAll('.appear'); // Selecciona elementos estáticos ocultos
+let appearRight = document.querySelectorAll('.appearRight'); // Selecciona elementos que aparecerán desde la derecha
+let verticalUpDown = document.querySelectorAll('.verticalUpDown'); // Selecciona elementos que se desplazarán verticalmente
+
+// Observa los elementos seleccionados y realiza acciones cuando se intersectan
 apearLeft.forEach((el) => observer.observe(el));
 hiddenStatic.forEach((el) => observer.observe(el));
 appearRight.forEach((el) => observer.observe(el));
 verticalUpDown.forEach((el) => observer.observe(el));
 
+/**
+ * Función de inicialización del widget de traducción de Google.
+ */
 function googleTranslateElementInit() {
-	new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
-        }
+  // Crea un nuevo widget de traducción de Google y lo inserta en el elemento con el ID "google_translate_element"
+  new google.translate.TranslateElement({
+    pageLanguage: 'es', // Idioma de la página original (español)
+    includedLanguages: 'en,es', // Idiomas incluidos en la traducción (inglés y español)
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // Diseño del widget
+    gaTrack: true // Habilita el seguimiento de Google Analytics
+  }, 'google_translate_element');
+}

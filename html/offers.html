@@ -1,9 +1,13 @@
+<!-- Definición del tipo de documento y el idioma -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metaetiquetas para la codificación de caracteres y la escala de la vista -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace al archivo CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- Enlaces a los archivos CSS personalizados -->
     <link rel="stylesheet" href="../css/styleOffer.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -11,254 +15,301 @@
     <link rel="stylesheet" href="../css/navbarsignin.css">
     <link rel="stylesheet" href="../css/modalsignin.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <!-- Script diferido para la lógica de la aplicación -->
     <script src="../js/app.js" defer></script>
+    <!-- Scripts para el uso de iconos -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Script diferido para la traducción -->
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+    <!-- Título de la página -->
     <title>Ofertas</title>
 </head>
 <body>
-    <!-------------------------------------------- NAVBAR ------------------------------------------->
+    <!-- Barra de navegación -->
     <nav class="container_menu" id="containerMenu">
-      <!-- TOP BOX -->
-      <div class="container_top_box" id="topBoxNormal">
-          <ul class="container_list_top_box">
-              <li class="item item_1">
-                  <a href="#" id="openButtonSignIn" onclick="modal()">Iniciar Sesión</a>
-              </li>
-              <li class="item item_2">
-                  <a href="./signup.html">Registrarse</a>
-              </li>
-              <div id="google_translate_element" class="google"></div>
-          </ul>
-      </div>
-      <!-- TOP BOX SIGN IN -->
-      <div class="container_top_box" id="topBoxSignIn">
-          <ul class="container_list_top_box_signin">
-              <a href="#" class="container_profile_image"><img src="../assets/img/profile_image.jpg" alt="profile" title="Profile" class="profile_image" id="profileImage"/></a>
-              <div class="container_name_top_box">
-              <span id="userName"></span>
-              </div>
-              <a href="#" id="logOutOption" class="log_out_option">Cerrar sesión</a>
-              <select name="" id="languageOption" class="select_navbar">
-                  <option value="">Español</option>
-                  <option value="">Inglés</option>
-              </select>
-          </ul>
-      </div>
-      <!-- BOTTOM BOX -->
-      <div class="container_bottom_box">
-          <!-- LINKS -->
-          <ul class="container_list_bottom_box_1">
-              <li class="item item_3"><a href="../index.html">Inicio</a></li>
-              <li class="item item_4"><a href="./offers.html">Ofertas</a></li>
-          </ul>
-          <!-- TITLE -->
-          <header class="header_container">
-              <span class="brackets bracket_1">{</span>
-              <a href="../index.html" class="title_navbar" title="{First_CodeJob}">First<span class="title_underscore">_</span>CodeJob</a>
-              <span class="brackets bracket_2">}</span>
-          </header>
-          <!-- LINKS -->
-          <ul class="container_list_bottom_box_2">
-              <li class="item item_5">
-              <a href="./nosotros.html">Nosotros</a>
-              </li>
-              <li class="item item_6"><a href="./profile.html">Perfil</a></li>
-          </ul>
-      </div>
-  </nav>
-    <!-- ------------------------------------------- SIGN IN MODAL ------------------------------------------- -->
-    <!-- MODAL SIGN IN CONTAINER -->
+        <!-- Contenedor de la parte superior de la barra de navegación -->
+        <div class="container_top_box" id="topBoxNormal">
+            <!-- Lista de elementos de la parte superior -->
+            <ul class="container_list_top_box">
+                <!-- Elemento: Iniciar Sesión -->
+                <li class="item item_1">
+                    <a href="#" id="openButtonSignIn" onclick="modal()">Iniciar Sesión</a>
+                </li>
+                <!-- Elemento: Registrarse -->
+                <li class="item item_2">
+                    <a href="./signup.html">Registrarse</a>
+                </li>
+                <!-- Contenedor del botón de traducción -->
+                <div id="google_translate_element" class="google"></div>
+            </ul>
+        </div>
+        <!-- Contenedor de la parte superior de la barra de navegación al iniciar sesión -->
+        <div class="container_top_box" id="topBoxSignIn">
+            <!-- Lista de elementos de la parte superior al iniciar sesión -->
+            <ul class="container_list_top_box_signin">
+                <!-- Elemento: Imagen de perfil -->
+                <a href="#" class="container_profile_image"><img src="../assets/img/profile_image.jpg" alt="profile" title="Profile" class="profile_image" id="profileImage"/></a>
+                <!-- Contenedor del nombre de usuario -->
+                <div class="container_name_top_box">
+                    <span id="userName"></span>
+                </div>
+                <!-- Elemento: Cerrar Sesión -->
+                <a href="#" id="logOutOption" class="log_out_option">Cerrar sesión</a>
+                <!-- Selector de idioma -->
+                <select name="" id="languageOption" class="select_navbar">
+                    <option value="">Español</option>
+                    <option value="">Inglés</option>
+                </select>
+            </ul>
+        </div>
+        <!-- Contenedor de la parte inferior de la barra de navegación -->
+        <div class="container_bottom_box">
+            <!-- Lista de elementos de la parte inferior izquierda -->
+            <ul class="container_list_bottom_box_1">
+                <!-- Elemento: Inicio -->
+                <li class="item item_3"><a href="../index.html">Inicio</a></li>
+                <!-- Elemento: Ofertas -->
+                <li class="item item_4"><a href="./offers.html">Ofertas</a></li>
+            </ul>
+            <!-- Título del centro de la barra de navegación -->
+            <header class="header_container">
+                <span class="brackets bracket_1">{</span>
+                <a href="../index.html" class="title_navbar" title="{First_CodeJob}">First<span class="title_underscore">_</span>CodeJob</a>
+                <span class="brackets bracket_2">}</span>
+            </header>
+            <!-- Lista de elementos de la parte inferior derecha -->
+            <ul class="container_list_bottom_box_2">
+                <!-- Elemento: Nosotros -->
+                <li class="item item_5">
+                    <a href="./nosotros.html">Nosotros</a>
+                </li>
+                <!-- Elemento: Perfil -->
+                <li class="item item_6"><a href="./profile.html">Perfil</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Modal de inicio de sesión -->
     <div id="signInModal" class="signInModal">
         <div class="signInModalContent">
+            <!-- Botón para registrarse -->
             <div class="containerModalsignInCloseButton">
                 <span class="questionSignUp">¿Aún no estás registrado/a?</span>
                 <a href="./signup.html" class="signUpOption">Regístrate ahora</a>
+                <!-- Botón para cerrar el modal -->
                 <span class="closeModalSignIn" id="closeModalSignIn">&times;</span>
             </div>
+            <!-- Formulario de inicio de sesión -->
             <div class="containerModalsignInForm">
                 <div class="signInTitleInfo">
                     <h2>¡Hola!</h2>
                     <p>Estás a un click de abrir miles de oportunidades</p>
                 </div>
                 <div class="containerSignInInputs">
+                    <!-- Entradas de correo electrónico y contraseña -->
                     <div class="secundaryContainerSignInInputs">
                         <input type="text" name="" id="signInEmailInput" class="signInInputs signInInputEmail" placeholder="Email">
                         <input type="password" name="" id="signInPasswordInput" class="signInInputs signInInputPassword" placeholder="Contraseña">
+                        <!-- Enlace para restablecer la contraseña -->
                         <a href="#" class="forgotPasswordOption">Olvidé la contraseña</a>
+                        <!-- Botón para iniciar sesión -->
                         <button type="submit" class="signInButton" onclick="pressSignIn()"><a href="#">Iniciar sesión</a></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-------------------------------------------- RESPONSIVE NAVBAR ------------------------------------------->
+    <!-- Botón de menú responsive -->
     <button class="button_burger" onclick="toggleMenu()"></button>
+    <!-- Fondo del menú responsive -->
     <div class="background"></div>
+    <!-- Menú responsive -->
     <div class="responsive_menu">
         <nav>
+            <!-- Elementos del menú responsive -->
             <a href="../index.html" class="burger_menu_item_1" style="animation-delay: 0.1s">Inicio</a>
             <a href="./offers.html" class="burger_menu_item_2" style="animation-delay: 0.3s">Ofertas</a>
             <a href="./nosotros.html" class="burger_menu_item_3" style="animation-delay: 0.4s">Nosotros</a>
             <a href="./profile.html" class="burger_menu_item_4" id="burger_menu_item_4" style="animation-delay: 0.5s">Perfil</a>
             <a href="#" id="signInOptionResponsive" class="burger_menu_item_5" style="animation-delay: 0.6s">Iniciar Sesión</a>
             <a href="./signup.html" class="burger_menu_item_6" id="burger_menu_item_6" style="animation-delay: 0.6s">Registrarse</a>
-            <!-- SIGN IN OPTIONS -->
+            <!-- Opciones de inicio de sesión -->
             <a href="./profile.html" class="burger_menu_item_4" id="burger_menu_item_4" style="animation-delay: 0.5s">Perfil</a>
             <a href="#" class="burger_menu_item_7" id="burger_menu_item_7" style="animation-delay: 0.5s">Cerrar sesión</a>
         </nav>
     </div>
-    <!-- --------------------------------------------------------------- MAIN --------------------------------------------------------------- -->
-    <!-- Row Search Bar -->
+    <!-- Contenido principal -->
+    <!-- Barra de búsqueda -->
     <div class="row rowBarraBusquedaInfo d-flex justify-content-center align-content-center mt-5 mb-5">
-        <!-- Search Bar -->
+        <!-- Formulario de búsqueda -->
         <form class="d-flex containBarraBusquedaOffer justify-content-center " role="search">
-          <input
-              class="form-control inputBarraBusqueda"
-              type="search"
-              placeholder="Frontend/Backend"
-              aria-label="Search"
-              id="inputBarraBusquedaOffer"
-              onclick="barraBusquedaOffer()"
-          />
-
-          <button class="btn btn-outline-success btnBarraBusqueda" type="submit">
-              Buscar
-          </button>
-      </form>
-      <div id="resultOffer" class="list-group"></div>
-
+            <input
+                class="form-control inputBarraBusqueda"
+                type="search"
+                placeholder="Frontend/Backend"
+                aria-label="Search"
+                id="inputBarraBusquedaOffer"
+                onclick="barraBusquedaOffer()"
+            />
+            <!-- Botón de búsqueda -->
+            <button class="btn btn-outline-success btnBarraBusqueda" type="submit">
+                Buscar
+            </button>
+        </form>
+        <!-- Resultados de la búsqueda -->
+        <div id="resultOffer" class="list-group"></div>
     </div>
 
+    <!-- Sección de información -->
     <section class="container-fluid info">
 
-        <div class="row rowFiltro mb-5 d-flex justify-content-center align-content-center">
+      <div class="row rowFiltro mb-5 d-flex justify-content-center align-content-center">
 
+          <!-- Filtros por idioma -->
           <div class="col-md-4 filterLenguage d-flex justify-content-center align-content-center">
-            <h2 class="titleIdiomaFilter">
-              Idioma
-            </h2>
+              <h2 class="titleIdiomaFilter">
+                  Idioma
+              </h2>
 
-            <div class="form-check espanolCheck d-flex justify-content-center align-content-center pe-5 ps-5">
-              <input class="form-check-input espanolInput me-2" type="checkbox" value="" id="defaultCheck1">
-              <label class="form-check-label espanolLabel" for="defaultCheck1">
-                Español
-              </label>
-            </div>
+              <!-- Opción de idioma: Español -->
+              <div class="form-check espanolCheck d-flex justify-content-center align-content-center pe-5 ps-5">
+                  <input class="form-check-input espanolInput me-2" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label espanolLabel" for="defaultCheck1">
+                      Español
+                  </label>
+              </div>
 
-            <div class="form-check inglesCheck d-flex justify-content-center align-content-center pe-5 ps-5">
-              <input class="form-check-input inglesInput me-2" type="checkbox" value="" id="defaultCheck1">
-              <label class="form-check-label ingleslabel" for="defaultCheck1">
-                Ingles
-              </label>
-            </div>
+              <!-- Opción de idioma: Inglés -->
+              <div class="form-check inglesCheck d-flex justify-content-center align-content-center pe-5 ps-5">
+                  <input class="form-check-input inglesInput me-2" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label ingleslabel" for="defaultCheck1">
+                      Inglés
+                  </label>
+              </div>
           </div>
 
+          <!-- Separador -->
           <div class="col-md-1">
-            <span class="bordeR d-flex justify-content-center align-content-center">|</span>
+              <span class="bordeR d-flex justify-content-center align-content-center">|</span>
           </div>
 
+          <!-- Filtros por modalidad -->
           <div class="col-md-4 filterModality d-flex justify-content-center">
-            <h2 class="titleModalidadFilter">
-              Modalidad
-            </h2>
+              <h2 class="titleModalidadFilter">
+                  Modalidad
+              </h2>
 
-            <div class="form-check presencialCheck d-flex justify-content-center align-content-center pe-5 ps-5">
-              <input class="form-check-input presencialInput me-2" type="checkbox" value="" id="defaultCheck1">
-              <label class="form-check-label presencialLabel" for="defaultCheck1">
-                Presencial
-              </label>
-            </div>
+              <!-- Opción de modalidad: Presencial -->
+              <div class="form-check presencialCheck d-flex justify-content-center align-content-center pe-5 ps-5">
+                  <input class="form-check-input presencialInput me-2" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label presencialLabel" for="defaultCheck1">
+                      Presencial
+                  </label>
+              </div>
 
-            <div class="form-check remotoCheck d-flex justify-content-center align-content-center pe-5 ps-5">
-              <input class="form-check-input remotoInput me-2" type="checkbox" value="" id="defaultCheck1">
-              <label class="form-check-label remotoLabel" for="defaultCheck1">
-                Remoto
-              </label>
-            </div>  
+              <!-- Opción de modalidad: Remoto -->
+              <div class="form-check remotoCheck d-flex justify-content-center align-content-center pe-5 ps-5">
+                  <input class="form-check-input remotoInput me-2" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label remotoLabel" for="defaultCheck1">
+                      Remoto
+                  </label>
+              </div>  
           </div>
-
-        </div>
-      
+      </div>
+        
+      <!-- Filas de información -->
       <div class="row h-100 rowInfo">
 
+        <!-- Columna para las tarjetas de ofertas -->
         <div class="col-md-4">
-        
-          <div class="overflow-auto caja" role="tablist" id="list-tab">
-            <div class="containerCardsOffer p-4 rounded-4 mb-4">
-              <div class="infoCardOffer">
-                <h3 class="cardOfferTitle">
-                  Desarrollador/a Backend
-                </h3>
-                <h4 class="cardCompanyName">
-                  COSMETIC S.A.S
-                </h4>
-                <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="cardOfferLenguage">Ingles</span></h4>
-              </div>
-              <div class="timeAndButtonOffer d-flex justify-content-between align-items-center">
-                <div class="offertTime">
-                  Hace <span class="timeOffer">5</span> horas
+            <!-- Contenedor con desplazamiento para las tarjetas -->
+            <div class="overflow-auto caja" role="tablist" id="list-tab">
+
+                <!-- Tarjeta de oferta 1 -->
+                <div class="containerCardsOffer p-4 rounded-4 mb-4">
+                    <!-- Información de la oferta -->
+                    <div class="infoCardOffer">
+                        <h3 class="cardOfferTitle">
+                            Desarrollador/a Backend
+                        </h3>
+                        <h4 class="cardCompanyName">
+                            COSMETIC S.A.S
+                        </h4>
+                        <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="cardOfferLenguage">Ingles</span></h4>
+                    </div>
+                    <!-- Tiempo transcurrido y botón de detalles -->
+                    <div class="timeAndButtonOffer d-flex justify-content-between align-items-center">
+                        <div class="offertTime">
+                            Hace <span class="timeOffer">5</span>
+                        </div>
+                        <a class="btn btn-light buttonOffer" data-bs-toggle="tab" href="#card1" role="tab" aria-controls="card1">Detalles</a>
+                    </div>
                 </div>
-                <a class="btn btn-light buttonOffer active" data-bs-toggle="tab" href="#card1" role="tab" aria-controls="card1">Detalles</a>
-              </div>
-            </div>
 
-            <div class="containerCardsOffer p-4 rounded-4 mb-4">
-              <div class="infoCardOffer ">
-                <h3 class="cardOfferTitle">
-                  Desarrollador/a Backend
-                </h3>
-                <h4 class="cardCompanyName">
-                  COSMETIC S.A.S
-                </h4>
-                <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="cardOfferLenguage">Ingles</span></h4>
-              </div>
-              <div class="timeAndButtonOffer d-flex justify-content-between align-items-center">
-                <div class="offertTime">
-                  Hace <span class="timeOffer">5</span> horas
+                <!-- Tarjeta de oferta 2 -->
+                <div class="containerCardsOffer p-4 rounded-4 mb-4">
+                    <!-- Información de la oferta -->
+                    <div class="infoCardOffer ">
+                        <h3 class="cardOfferTitle">
+                            Desarrollador/a Backend
+                        </h3>
+                        <h4 class="cardCompanyName">
+                            COSMETIC S.A.S
+                        </h4>
+                        <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="cardOfferLenguage">Ingles</span></h4>
+                    </div>
+                    <!-- Tiempo transcurrido y botón de detalles -->
+                    <div class="timeAndButtonOffer d-flex justify-content-between align-items-center">
+                        <div class="offertTime">
+                            Hace <span class="timeOffer">5</span>
+                        </div>
+                        <a class="btn btn-light buttonOffer" data-bs-toggle="tab" href="#card2" role="tab" aria-controls="card2">Detalles</a>
+                    </div>
                 </div>
-                <a class="btn btn-light buttonOffer" data-bs-toggle="tab" href="#card2" role="tab" aria-controls="card2">Detalles</a>
-              </div>
-            </div>
 
-            <div class="containerCardsOffer p-4 rounded-4 mb-4">
-              <div class="infoCardOffer ">
-                <h3 class="cardOfferTitle">
-                  Desarrollador/a Backend
-                </h3>
-                <h4 class="cardCompanyName">
-                  COSMETIC S.A.S
-                </h4>
-                <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="cardOfferLenguage">Ingles</span></h4>
-              </div>
-              <div class="timeAndButtonOffer d-flex justify-content-between align-items-center">
-                <div class="offertTime">
-                  Hace <span class="timeOffer">5</span> horas
+                <!-- Tarjeta de oferta 3 -->
+                <div class="containerCardsOffer p-4 rounded-4 mb-4">
+                    <!-- Información de la oferta -->
+                    <div class="infoCardOffer ">
+                        <h3 class="cardOfferTitle">
+                            Desarrollador/a Backend
+                        </h3>
+                        <h4 class="cardCompanyName">
+                            COSMETIC S.A.S
+                        </h4>
+                        <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="cardOfferLenguage">Ingles</span></h4>
+                    </div>
+                    <!-- Tiempo transcurrido y botón de detalles -->
+                    <div class="timeAndButtonOffer d-flex justify-content-between align-items-center">
+                        <div class="offertTime">
+                            Hace <span class="timeOffer">5</span>
+                        </div>
+                        <a class="btn btn-light buttonOffer" data-bs-toggle="tab" href="#card3" role="tab" aria-controls="card3">Detalles</a>              
+                    </div>
                 </div>
-                <a class="btn btn-light buttonOffer" data-bs-toggle="tab" href="#card3" role="tab" aria-controls="card3">Detalles</a>              </div>
-            </div>
-
-            <div class="containerCardsOffer p-4 rounded-4 mb-4">
-              <div class="infoCardOffer ">
-                <h3 class="cardOfferTitle">
-                  Desarrollador/a Backend
-                </h3>
-                <h4 class="cardCompanyName">
-                  COSMETIC S.A.S
-                </h4>
-                <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="cardOfferLenguage">Ingles</span></h4>
-              </div>
-              <div class="timeAndButtonOffer d-flex justify-content-between align-items-center">
-                <div class="offertTime">
-                  Hace <span class="timeOffer">5</span> horas
+                
+                <!-- Tarjeta de oferta 4 -->
+                <div class="containerCardsOffer p-4 rounded-4 mb-4">
+                    <!-- Información de la oferta -->
+                    <div class="infoCardOffer ">
+                        <h3 class="cardOfferTitle">
+                            Desarrollador/a Backend
+                        </h3>
+                        <h4 class="cardCompanyName">
+                            COSMETIC S.A.S
+                        </h4>
+                        <h4 class="modalityAndLenguage"><span class="cardOfferModality">Remoto</span>/<span class="cardOfferLenguage">Ingles</span></h4>
+                    </div>
+                    <!-- Tiempo transcurrido y botón de detalles -->
+                    <div class="timeAndButtonOffer d-flex justify-content-between align-items-center">
+                        <div class="offertTime">
+                            Hace <span class="timeOffer">5</span>
+                        </div>
+                        <a class="btn btn-light buttonOffer" data-bs-toggle="tab" href="#card4" role="tab" aria-controls="card4">Detalles</a>              
+                    </div>
                 </div>
-                <a class="btn btn-light buttonOffer" data-bs-toggle="tab" href="#card4" role="tab" aria-controls="card4">Detalles</a>              </div>
             </div>
-
-          </div>
-
         </div>
 
 
@@ -266,8 +317,8 @@
           
           <div class="tab-content">
 
-            <div class="infoOffer rounded-4 tab-pane fade show" id="card1" role="tabpanel" aria-labelledby="card1-tab">
-              <!-- Contenido de la oferta 1 -->
+            <!-- Contenido de la oferta 1 -->
+            <div class="infoOffer rounded-4 tab-pane fade show active" id="card1" role="tabpanel" aria-labelledby="card1-tab">
               <h3 class="offertTitle mb-3">Desarrolador/a Backend</h3>
               <h4 class="companyName mb-3">
                 COSMETIC S.A.S
@@ -315,8 +366,8 @@
               </div>
             </div>
 
+            <!-- Contenido de la oferta 2 -->
             <div class="infoOffer rounded-4 tab-pane fade show" id="card2" role="tabpanel" aria-labelledby="card2-tab">
-              <!-- Contenido de la oferta 1 -->
               <h3 class="offertTitle mb-3">Desarrolador/a Backend</h3>
               <h4 class="companyName mb-3">
                 COSMETIC S.A.S
@@ -364,8 +415,8 @@
               </div>
             </div>
             
+            <!-- Contenido de la oferta 3 -->
             <div class="infoOffer rounded-4 tab-pane fade show" id="card3" role="tabpanel" aria-labelledby="card3-tab">
-              <!-- Contenido de la oferta 1 -->
               <h3 class="offertTitle mb-3">Desarrolador/a Backend</h3>
               <h4 class="companyName mb-3">
                 COSMETIC S.A.S
@@ -413,8 +464,8 @@
               </div>
             </div>
 
-            <div class="infoOffer rounded-4 tab-pane fade show active" id="card4" role="tabpanel" aria-labelledby="card4-tab">
-              <!-- Contenido de la oferta 1 -->
+            <!-- Contenido de la oferta 4 -->
+            <div class="infoOffer rounded-4 tab-pane fade show" id="card4" role="tabpanel" aria-labelledby="card4-tab">
               <h3 class="offertTitle mb-3">Desarrolador/a Backend</h3>
               <h4 class="companyName mb-3">
                 COSMETIC S.A.S
