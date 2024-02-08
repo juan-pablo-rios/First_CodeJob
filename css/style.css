@@ -107,14 +107,19 @@ body {
 }
 
 .imgIndexContainer {
-  width: 80%;
-  height: 100%;
+  width: 90%; /* Ajusta el ancho según sea necesario */
+  height: 55vh; /* Ajusta la altura según sea necesario */
   border-radius: 25px;
-  background-color: #5BB403;
+  background-image: url(../assets/img/imgIndex.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 60%;
   background-position: 50%;
+  animation: moverImagen 5s ease-in-out infinite;
+  border-radius: 20px; /* Agrega el borde redondeado */
+  transition: all 2s;
+
 }
+
 
 .containerEmpresas {
   height: 100%;
@@ -296,6 +301,13 @@ body {
 }
 
 @media screen and (max-width: 770px){
+
+  #resultIndex {
+    width: 92%;
+    top: 53%;
+    left: 4%;
+  }
+
   .index {
     padding: 5px;
   }

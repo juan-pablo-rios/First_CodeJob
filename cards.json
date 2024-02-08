@@ -5,6 +5,7 @@
       "empresa": "COSMETIC S.A.S",
       "modalidad": "Remoto",
       "lenguage": "Ingles",
+      "tipoContrato": "Término fijo",
       "fechaPublicacion": "5 horas",
       "descripcion": "COSMETIC S.A.S, una empresa líder en el sector de consumo masivo, busca incorporar a su equipo un profesional o estudiante de Ingeniería de Sistemas con habilidades destacadas en programación para el puesto de Desarrollador/a Backend. La modalidad de trabajo es remota, ofreciendo una oportunidad emocionante para contribuir al desarrollo tecnológico de la organización. En esta posición clave, el candidato seleccionado desempeñará un papel fundamental en el diseño, análisis, desarrollo e implementación de soluciones informáticas innovadoras. Se espera que utilice sus habilidades técnicas para mejorar los procesos operativos en todas las dependencias de la empresa y brindar soporte técnico integral a los usuarios, asegurando la eficiente instalación, operación y mantenimiento de equipos, programas de computación y la red.",
       "salario": "$3.000.000 + Prestaciones Sociales",
@@ -21,6 +22,7 @@
       "empresa": "Tech Innovators",
       "modalidad": "Presencial",
       "lenguage": "Ingles",
+      "tipoContrato": "Término fijo",
       "fechaPublicacion": "3 horas",
       "descripcion": "Empresa líder en tecnología, Tech Innovators, busca un Ingeniero de Software para colaborar en el desarrollo de soluciones innovadoras. El puesto es presencial, con horario de lunes a viernes de 9:00 am a 6:00 pm. El Ingeniero de Software será responsable de diseñar, implementar y mantener sistemas de software eficientes. Se ofrece un salario de $4.500.000 + Beneficios, incluyendo un ambiente de trabajo colaborativo, oportunidades de capacitación, seguro de salud y bonos por desempeño. El salario total es de $4.800.000.",
       "requisitos": {
@@ -36,6 +38,7 @@
       "empresa": "Data Insights Corp.",
       "modalidad": "Remoto",
       "lenguage": "Ingles",
+      "tipoContrato": "Indefinido",
       "fechaPublicacion": "1 día",
       "descripcion": "Data Insights Corp., compañía especializada en análisis de datos, busca un Analista de Datos para interpretar y visualizar información clave. El trabajo es remoto, con horario flexible. El Analista de Datos será responsable de realizar análisis estadísticos y generar informes detallados. Se ofrece un salario de $3.800.000 + Beneficios, incluyendo trabajo remoto, seguro de vida y desarrollo profesional continuo. El salario total es de $4.000.000.",
       "requisitos": {
@@ -45,13 +48,13 @@
       "beneficios": "Trabajo remoto, seguro de vida, desarrollo profesional continuo.",
       "salarioTotal": "$4.000.000",
       "horario": "Flexible"
-
     },
     {
       "puesto": "Desarrollador/a Frontend",
       "empresa": "WebTech Solutions",
       "modalidad": "Presencial",
       "lenguage": "Ingles",
+      "tipoContrato": "Término fijo",
       "fechaPublicacion": "6 segundos",
       "descripcion": "WebTech Solutions, empresa en crecimiento, busca un Desarrollador/a Frontend para crear interfaces atractivas y funcionales. El trabajo es presencial, El Desarrollador/a Frontend colaborará en el diseño y desarrollo de aplicaciones web. Se ofrece un salario de $3.200.000 + Beneficios, incluyendo un ambiente de trabajo dinámico, bonificaciones trimestrales y oportunidades de crecimiento. El salario total es de $3.500.000.",
       "requisitos": {
@@ -67,6 +70,7 @@
       "empresa": "SecureNet Solutions",
       "modalidad": "Presencial",
       "lenguage": "Ingles",
+      "tipoContrato": "Indefinido",
       "fechaPublicacion": "2 días",
       "descripcion": "SecureNet Solutions, empresa de seguridad informática, busca un Especialista en Ciberseguridad para proteger la infraestructura y datos sensibles. El trabajo es presencial, con horario flexible. El Especialista en Ciberseguridad será responsable de implementar y mantener medidas de seguridad efectivas. Se ofrece un salario de $5.000.000 + Beneficios, incluyendo trabajo remoto, seguro de salud y formación continua en ciberseguridad. El salario total es de $5.200.000.",
       "requisitos": {
@@ -82,6 +86,7 @@
       "empresa": "Tech Support Solutions",
       "modalidad": "Presencial",
       "lenguage": "Ingles",
+      "tipoContrato": "Término fijo",
       "fechaPublicacion": "4 horas",
       "descripcion": "Tech Support Solutions, empresa de servicios de soporte técnico, busca un Analista para brindar asistencia a usuarios. El trabajo es presencial, con horario de lunes a viernes de 8:00 am a 6:00 pm. El Analista de Soporte Técnico será responsable de diagnosticar y resolver problemas técnicos. Se ofrece un salario de $2.800.000 + Beneficios, incluyendo un ambiente colaborativo, bonos por desempeño y oportunidades de formación. El salario total es de $3.000.000.",
       "requisitos": {

@@ -244,7 +244,7 @@ body {
   left: 10%;
   right: 0;
   top: 250px;
-  z-index: 1000;
+  z-index: 0;
   background-color: white;
   border: 1px solid #ccc;
   max-height: 300px;
